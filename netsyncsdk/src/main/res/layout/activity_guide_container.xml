@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <com.inka.netsync.view.pager.ScrollerViewPager
+            android:id="@+id/scroller_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.inka.netsync.view.pager.indicator.SpringIndicator
+            app:siIndicatorColors="@array/indicator_colors"
+            app:siIndicatorColor="@color/red"
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/viewpager_header_indicator_height"
+            android:layout_marginLeft="@dimen/viewpager_header_indicator_left_margin"
+            android:layout_marginRight="@dimen/viewpager_header_indicator_right_margin"
+            android:layout_above="@+id/indicator_bottom_empty"/>
+        <View
+            android:id="@+id/indicator_bottom_empty"
+            android:layout_width="match_parent"
+            android:layout_height="30.0dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

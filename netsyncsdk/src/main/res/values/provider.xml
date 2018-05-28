@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- -->
+    <integer name="provider_default_splash_delay">1000</integer>
+
+
+	<!-- -->
+	<color name="provider_default_color_splash_background">#fff4501e</color>
+
+
+	<!-- -->
+	<color name="provider_default_color_actionbar_main_bg">#fff4501e</color>
+	<color name="provider_default_color_statusbar_main_bg">#99f4501e</color>
+
+
+	<!-- dialog -->
+	<color name="provider_default_color_dialog_btn_confirm">#ff00bed4</color>
+
+
+	<!-- lms -->
+	<color name="provider_default_color_text_rate_for_lms">#fff4501e</color>
+	<color name="provider_default_color_text_rate_for_lms_dim">#99f4501e</color>
+
+
+</resources>

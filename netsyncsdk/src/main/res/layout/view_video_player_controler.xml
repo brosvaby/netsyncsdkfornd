@@ -1,0 +1,215 @@
+<!-- 플레이어 풋터 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/player_controler_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false">
+    <RelativeLayout
+        android:id="@+id/container_pos_on_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="16.0dp"
+        android:layout_marginLeft="16.0dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/posTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:padding="1.0dp"
+                android:text="00:00:00"
+                android:textColor="#a1a1a1"
+                android:textSize="12.0sp"
+                android:shadowColor="@color/black_outline"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+                android:textAllCaps="true"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1.0dp"
+                android:text="/"
+                android:textColor="#a1a1a1"
+                android:textSize="12.0sp"
+                android:shadowColor="@color/black_outline"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+                android:textAllCaps="true"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/durTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="1.0dp"
+                android:text="00:00:00"
+                android:textColor="#a1a1a1"
+                android:textSize="12.0sp"
+                android:shadowColor="@color/black_outline"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+                android:textAllCaps="true"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/decoderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1.0dp"
+                android:text="H / w"
+                android:textColor="#a1a1a1"
+                android:textSize="12.0sp"
+                android:shadowColor="@color/black_outline"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+                android:textAllCaps="true"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 풋터 위-->
+    <RelativeLayout
+        android:id="@+id/container_pos_and_seekbar_on_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/container_pos_on_player">
+        <!-- 시크바 -->
+        <SeekBar
+            android:id="@+id/seek_bar_on_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxHeight="2dip"
+            android:minHeight="2dip"
+            android:layout_marginLeft="-8dp"
+            android:layout_marginRight="-8dp"
+            android:background="@color/black_60"
+            android:progressDrawable="@drawable/progress_media_scan"
+            android:thumb="@drawable/btn_seek_handler"
+            android:thumbOffset="5.0dp" />
+        <!-- 시크바 위의 A 포인트 -->
+        <ImageView
+            android:id="@+id/repeat_point_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_point_a"
+            android:visibility="gone" />
+        <!-- 시크바 위의 B 포인트 -->
+        <ImageView
+            android:id="@+id/repeat_point_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_point_b"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!-- 풋터 아래 -->
+    <RelativeLayout
+        android:id="@+id/container_controler_on_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container_pos_and_seekbar_on_player"
+        android:gravity="center_vertical"
+        android:background="@color/black_60">
+        <!-- 재생/멈춤 -->
+        <ToggleButton
+            android:id="@+id/btn_playnpause"
+            android:layout_width="@dimen/player_function_play"
+            android:layout_height="@dimen/player_function_play"
+            android:textOn=""
+            android:textOff=""
+            android:background="@drawable/btn_media_play_pause"
+            android:layout_centerInParent="true"/>
+        <!-- 이전 -->
+        <Button
+            android:id="@+id/btn_retour"
+            android:layout_width="@dimen/player_function_width"
+            android:layout_height="@dimen/player_function_height"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/btn_playnpause"
+            android:background="@drawable/btn_media_rew"
+            android:layout_centerVertical="true"/>
+        <!-- 이전 파일 -->
+        <Button
+            android:id="@+id/btn_file_retour"
+            android:layout_width="@dimen/player_function_width"
+            android:layout_height="@dimen/player_function_height"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/btn_retour"
+            android:background="@drawable/btn_media_file_rew"
+            android:layout_centerVertical="true"/>
+        <!-- 앞으로 -->
+        <Button
+            android:id="@+id/btn_advance"
+            android:layout_width="@dimen/player_function_width"
+            android:layout_height="@dimen/player_function_height"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/btn_playnpause"
+            android:background="@drawable/btn_media_ff"
+            android:layout_centerVertical="true"/>
+        <!-- 파일 앞으로 -->
+        <Button
+            android:id="@+id/btn_file_advance"
+            android:layout_width="@dimen/player_function_width"
+            android:layout_height="@dimen/player_function_height"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/btn_advance"
+            android:background="@drawable/btn_media_file_ff"
+            android:layout_centerVertical="true"/>
+
+        <com.inka.netsync.view.widget.MultiCheckableImageView
+            android:id="@+id/img_repeat_mode_hor"
+            android:layout_toLeftOf="@+id/img_repeat_area_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30.0dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_repeatmode_off"
+            android:visibility="invisible" />
+
+        <com.inka.netsync.view.widget.MultiCheckableImageView
+            android:id="@+id/img_repeat_area_hor"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/img_me_repeat_off"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container_touch_lockscreen_hor"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/player_function_play"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/container_pos_and_seekbar_on_player"
+        android:gravity="center_vertical">
+        <com.inka.netsync.view.widget.CheckableImageView
+            android:id="@+id/img_touch_lockscreen_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/btn_media_lockscreen"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

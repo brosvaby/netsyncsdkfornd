@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.inka.netsync.view.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+	android:background="@drawable/selector_list_item" >
+
+    <!--북마크 시간 -->
+	<TextView
+		android:id="@+id/bookmark_location"
+		android:layout_width="100.0dp"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:padding="@dimen/margin_normal"
+		style="@style/listcellFont1" /> 
+		
+	<!-- 북마크 메모 -->
+	<TextView
+		android:id="@+id/bookmark_memo"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:typeface="sans"
+		android:textSize="14dip"
+		android:textColor="#000000"
+		android:padding="@dimen/margin_normal"
+		android:layout_gravity="left|center" />
+
+	<LinearLayout
+	    android:id="@+id/edit_area"
+	    android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center" 
+        android:visibility="gone" >
+	    <CheckBox
+	        android:id="@+id/bookmark_item_delete"
+	        android:focusable="false"
+        	android:clickable="false"
+	        android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" />
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/delete_area"
+	    android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center" 
+        android:visibility="gone" >
+	    <Button
+	        android:id="@+id/btn_bookmark_item_delete"
+	        android:focusable="false"
+        	android:clickable="true"
+	        android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" 
+        	android:background="#ffffff"/>
+	</LinearLayout>
+
+</com.inka.netsync.view.CheckableLinearLayout>

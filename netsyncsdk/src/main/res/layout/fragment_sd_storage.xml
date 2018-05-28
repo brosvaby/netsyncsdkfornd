@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+    	android:dividerPadding="6dp" >
+    	
+      	<FrameLayout
+        	android:layout_width="0px"
+        	android:layout_height="40dp" 
+        	android:layout_weight="8" >
+	        	
+      	    <HorizontalScrollView 
+      	        android:id="@+id/scrollView"
+    			android:layout_width="fill_parent"
+    			android:layout_height="fill_parent" 
+    			android:paddingLeft="10dp" >
+    	
+        		<!-- 현재 경로 -->
+        		<TextView 
+            		android:id="@+id/tv_current_path"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_gravity="left|center_vertical"
+            		style="@style/ExplorerCurrentPathFont"
+            		android:scrollHorizontally="true" 
+            		android:singleLine="true" />
+        	
+        	</HorizontalScrollView>
+        	        	
+   		</FrameLayout>
+
+	</LinearLayout>
+	
+    <!-- 구분선 -->
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_main_divider_edge"/>
+    
+    <!-- 구분선 -->
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_main_divider_body"/>
+    
+    <!-- 구분선 -->
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px" 
+        android:background="@color/color_main_divider_edge"/>
+    
+    <FrameLayout 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+        
+		<!-- 탐색기 리스트 영역 -->
+    	<LinearLayout
+        	android:id="@+id/mystoragelistarea"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:orientation="vertical" 
+        	android:background="@color/color_listview_background"/>
+
+		<android.support.v4.widget.SwipeRefreshLayout
+			android:id="@+id/swipe_refresh_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" >
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/recycler_list"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginLeft="2dp"
+				android:layout_marginRight="2dp"
+				android:scrollbars="vertical"
+				android:scrollbarSize="2.0dp"
+				android:scrollbarThumbVertical="@color/gray"
+				android:smoothScrollbar="true"
+				android:foreground="?android:attr/selectableItemBackground"/>
+		</android.support.v4.widget.SwipeRefreshLayout>
+
+        <!-- 아이콘 이미지 -->
+    	<ImageView
+        	android:id="@+id/iv_nosdcard"
+        	android:layout_width="100.0dp"
+        	android:layout_height="100.0dp"
+        	android:layout_gravity="center" />
+
+    </FrameLayout>
+</LinearLayout>

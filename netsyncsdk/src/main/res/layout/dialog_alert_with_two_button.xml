@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/dialog_alert_min_width"
+    android:minHeight="@dimen/dialog_alert_min_height"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_white"
+    android:padding="@dimen/padding_normal">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="19sp"
+        android:textColor="#575757"
+        android:textStyle="bold"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_marginTop="25.0dp"
+        android:layout_marginBottom="25.0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:maxLines="2"
+        android:gravity="center"
+        android:textColor="#797979"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_border_a"
+            android:padding="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:text="@string/dialog_cancel"
+            android:textSize="14sp"
+            android:textColor="@color/color_btn_with_border_text"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_btn_serial_auth"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/dialog_serial"
+            android:textSize="14sp"
+            android:textColor="@color/btn_font"/>
+    </LinearLayout>
+
+</LinearLayout>

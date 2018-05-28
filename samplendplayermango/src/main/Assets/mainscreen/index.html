@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<title>잉카엔트웍스 ND</title>
+
+<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/main.css" class="css">
+
+<!-- slider banner -->
+<link rel="stylesheet" href="dist/css/swiper.css">
+<script src="dist/js/swiper.js"></script>
+
+<script>
+	$(document).ready(function(){
+		var $windowH = $(window).height();
+		console.log($windowH);
+		$('.swiper-wrapper').css({'height':$windowH});
+	});
+</script>
+</head>
+
+<body>
+<wraper>
+<div class="mainBanner_t">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<!--**********************************************************************-->
+			<div class="swiper-slide" style="background-image:url('images/ND_mainbanner2_bg.png'); background-size:cover;">
+				<div class="contents">
+					<div class="container">
+						<div class="t_mainbanner_contents">
+							<h1>이미 많은 콘텐츠  판매 업체들이 ND를 통한<br/>신규 매출 상승을 이어가고 있습니다.</h1>
+						</div>
+						<div class="t_mainbanner_img">
+							<img src="images/ND_mainbanner2_t_shorttermsales.png" alt="이미 많은 콘텐츠 판매 업체들이 ND를 통한 신규 매출 상승을 이어가고 있습니다.">
+						</div>
+						<div class="t_mainbanner_contents">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--**********************************************************************-->
+			<div class="swiper-slide" style="background-image:url('images/ND_mainbanner3_bg.png'); background-size:cover;">
+				<div class="contents">
+					<div class="container">
+						<div class="t_mainbanner_contents">
+							<h1> 네트워크 연결 없이 어떤 디바이스에서도<br/>언제 어디서나 편리하게 콘텐츠 이용이 가능합니다.</h1>
+						</div>
+						<div class="t_mainbanner_img">
+							<img src="images/ND_mainbanner3_t_nowifi.png" alt="ND One-stop 서비스를 통해 네트워크 연결 없이 어떤 디바이스에서도 DRM이 적용된 콘텐츠가 안전하게 재생할 수 있습니다">
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination"></div>
+	</div>
+</div>
+
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper('.swiper-container', {
+	spaceBetween: 0,
+	centeredSlides: true,
+	autoplay: {
+		delay: 6000,
+		disableOnInteraction: false,
+	},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			// nextEl: '.swiper-button-next',
+			// prevEl: '.swiper-button-prev',
+		},
+	});
+</script>
+</wraper>
+</body>
+</html>

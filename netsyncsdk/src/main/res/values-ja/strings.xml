@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- common -->
+	<string name="close">終了</string>
+	<string name="setting">設定</string>
+	<string name="internal_memory">インストールSD</string>
+	<string name="external_memory">EXTERNAL SD MEMORY</string>
+	<string name="total_lecture">Total %s Lectures</string>
+
+
+	<!-- text -->
+	<string name="text_favorite_empty_message">There are no favorite videos.</string>
+	<string name="text_recently_played_empty_message">No recent playlists.</string>
+	<string name="text_empty_message">No contents.</string>
+
+	<!-- sort -->
+	<string name="sort">並べ替え</string>
+	<string name="sort_name_asc">Name Asc</string>
+	<string name="sort_name_des">Name Des</string>
+
+
+	<!-- search -->
+	<string name="search_hint">Search All.</string>
+	<string name="search_input_message">Please enter a search term.</string>
+	<string name="search_empty_message">No results were found for your search.</string>
+
+
+	<!-- Player Layout -->
+	<string name="player_locked">Locked</string>
+	<string name="player_unlocked">Unlocked</string>
+	<string name="player_bookmark_list">ブックマークリスト</string>
+	<string name="player_dialog_bookmark_check_memo">メモ</string>
+	<string name="player_dialog_bookmark_check_input_memo">メモを入力してください</string>
+
+	<!-- Player Message -->
+	<string name="player_function_bposition_ahead_of_aposition">現在時刻は、開始時間より早いです.</string>
+	<string name="player_function_section_shorter_than_tensecond">このセクションは短すぎます。10秒以上に長くすべきです。</string>
+	<string name="player_function_no_memo">メモがございません</string>
+	<string name="player_function_start_section_repeat">セクションを再生します.</string>
+	<string name="player_function_repeatmode1">Repeat off</string>
+	<string name="player_function_repeatmode2">Repeat one</string>
+	<string name="player_function_repeatmode3">Repeat all</string>
+
+	<!-- Player Error -->
+	<string name="player_error_surface_calling">ネイティブプレーヤーの場合、データソース（ ）メソッド設定を呼び出す前に、表面が作成されなくてはなりません</string>
+
+
+	<!-- Setting Common -->
+	<string name="setting_info_player">Player</string>
+	<string name="setting_info_decoder">Decoder</string>
+	<string name="setting_info_gesture_availble">Gesture availble</string>
+	<string name="setting_info_swxplay">再生デコーダ</string>
+	<string name="setting_info_app_name">名前</string>
+	<string name="setting_info_app_version">バージョン</string>
+	<string name="setting_info_app_company">提携のお問い合わせ</string>
+	<string name="setting_info_contact">提携のお問い合わせ</string>
+	<string name="setting_info_fnc_privacy">個人情報の処理方針</string>
+
+	<string name="setting_decoder_hardware">H/W</string>
+	<string name="setting_decoder_software">S/W</string>
+	<string name="setting_none">N/A</string>
+	<string name="setting_player_base">Base Player</string>
+	<string name="setting_player_double_speed">Double Speed Player</string>
+
+	<string name="setting_description_native_player">基本プレイヤー使用追加</string>
+	<string name="setting_description_decoder">基本的な H/W再生に問題がある場合にのみ使用し、S/Wしよう.</string>
+	<string name="setting_description_restricted_internet">Block phone messages Wi-Fi, Bluetooth from mobile networks to avoid interference when playing content..</string>
+
+	<string name="setting_section_networkandplayer">ネットワークとプレイヤー</string>
+	<string name="setting_section_basic_information">アプリ情報</string>
+	<string name="setting_section_basic_function">基本機能</string>
+
+	<string name="setting_result_enable_market_version_update">Update</string>
+	<string name="setting_result_disable_market_version_update">Newest version</string>
+
+
+	<!-- Dialog -->
+	<string name="dialog_ok">OK</string>
+	<string name="dialog_cancel">Cancel</string>
+	<string name="dialog_serial">Authenticate</string>
+	<string name="dialog_remove_selected_bookmark">Delete selection</string>
+
+	<string name="dialog_title_path">Path Info</string>
+	<string name="dialog_title_warning">警告</string>
+	<string name="dialog_title_close">終了</string>
+	<string name="dialog_title_error">エラー</string>
+	<string name="dialog_title_download">Registration</string>
+	<string name="dialog_title_sdtype_a_download">Device Registration</string>
+	<string name="dialog_title_serial_number">Serial Number</string>
+	<string name="dialog_title_serial">Serial authentication</string>
+	<string name="dialog_title_input_homeurl">Home Url</string>
+	<string name="dialog_title_device_authentication">Device Authentication</string>
+
+	<string name="dialog_description_sd_not_exist_sdcard">The SD card is unmounted and moved to the home.</string>
+	<string name="dialog_description_serial">The Device must be online during serial authentication.</string>
+
+	<string name="dialog_message_close_application">アプリ終了しても宜しいでしょうか。?</string>
+	<string name="dialog_result_no_selected">選択アイテムがございません。</string>
+
+	<string name="dialog_player_title_skip_time">Player skip time</string>
+	<string name="dialog_player_title_screen_rate">Aspect ratio</string>
+	<string name="dialog_player_title_screen_lock_title">Lock screen rotation</string>
+
+	<string name="dialog_progress_please_wait">Please wait..</string>
+	<string name="dialog_progress_initializing_player">Initializing player..</string>
+	<string name="dialog_progress_load_contents">Reflesh contents</string>
+	<string name="dialog_progress_sync_contents">Sync contents</string>
+
+
+	<!-- guide -->
+	<string name="guide_text_next">next</string>
+	<string name="guide_text_start">start</string>
+	<string name="guide_text_title_ndplayer">ND PLAYER</string>
+	<string name="guide_text_description_ndplayer">This player can be used \ nin order to securely purchase \ nthe content you have purchased and \ nthat is essential for learning.</string>
+	<string name="guide_text_title_ndplayer_2">With the first online certification, you can easily use content even in an environment without the Internet.</string>
+	<string name="guide_text_description_ndplayer_2">Lets hit the road.</string>
+	<string name="guide_text_default_storage_description">First, choose a repository from the menu.</string>
+
+
+	<!-- 이용 안내 -->
+	<string name="help_text_question_01">How do I view a video (lecture)?</string>
+	<string name="help_text_answer_01">To play video (lecture), "serial authentication" is always required.
+        \nRun app> Select "Internal storage" or "SD card" or "USB storage"> Select "Video (Lecture)"> Authenticate serial> Play</string>
+	<string name="help_text_question_02">How is serial authentication done?</string>
+	<string name="help_text_answer_02">Serial authentication can be done with "serial photography" and "direct input". (Authentication is required only for first playback.)
+        \n\nThe serial authentication process is only available online (eg LTE, WIFI ...)..
+        \n1. Take a serial number photo : Select "[OK]" button> Taking pictures (serial number) > Select "OK" button
+        \n2. Direct input: Enter serial number in serial field> Select "OK" button</string>
+	<string name="help_text_question_03">mp4, wmv ... Can not play video?</string>
+	<string name="help_text_answer_03">In PallyCon SD Player app, only DRM-packaged video provided by Inca Entworks can be played.
+        \n(Inquiries: nd@pallycon.com / Inca Entwicks ND Team)</string>
+	<string name="help_text_question_04">How do I use the video (lecture) player?</string>
+	<string name="help_text_answer_04">The video (lecture) player has the following functions.
+        \n\n1. Play button - Select this when playing back images.
+        \n2. Stop and pause button - Select to stop or pause video playback.
+        \n3. Playback bar - Check the playback status and drag it to the position of the desired part on the playback bar.
+        \n4. Adjust the volume - Select this to adjust the volume of the picture.</string>
+	<string name="help_text_question_05">The video (lecture) does not play.</string>
+	<string name="help_text_answer_05">If the video (lecture) does not play smoothly, please exit the app and run it again.
+        \n\nIf you can not rerun your app,
+        \n\n1. Delete app data
+        \n- Settings> General> Apps or Applications> PallyCon SD Player app Touch> Touch storage> Clear data
+        \n(Serial authentication is required. Enter the serial number of the most authenticated user.)
+        \n\n2. Reinstall the app
+        \n- Please uninstall and re-install the app.
+        \n(Serial authentication is required. Enter the serial number of the most authenticated user.)</string>
+	<string name="help_text_question_06">If you touch the video (lecture), the phrase "Invalid palyback period" pops up and it can not be played.</string>
+	<string name="help_text_answer_06">If the video (lecture) has a time limit, it can be played only during playback.</string>
+	<string name="help_text_question_07">When attempting authentication in "Serial authentication", "OVER LIMIT DEVICE COUNT: Can not register this device !!" The phrase is up and I can not get certified.</string>
+	<string name="help_text_answer_07">The serial number you entered is the serial number already used.</string>
+	<string name="help_text_question_08">I can not see the file in the repository.</string>
+	<string name="help_text_answer_08">Please re-run the app or try refreshing. (Sweeping the screen from top to bottom will refresh.)
+        \n\n1. Internal Storage: Shows images stored in the internal storage of the smartphone.
+        \n2. SD card: It shows the image stored in SD card external storage.
+        \n3. USB storage: OTG (USB) Shows images stored in external storage.</string>
+
+
+	<!-- toast message -->
+	<!-- splash -->
+	<string name="message_for_toast_status_downloading">既にコンテンツがダウンロードされています。現在のダウンロードを完了もしくはキャンセル後に、再度お試しください</string>
+	<string name="message_for_toast_status_playing">既にコンテンツ再生しています。アプリケーション終了後に再度お試しください</string>
+	<string name="message_for_toast_status_guest_user">ゲストアカウントはアプリを起動することはできません. 所有者のアカウントに切り替えて使用してください</string>
+
+	<!-- player -->
+	<string name="message_for_toast_bookmark_limit_time">ブックマークの間に少なくとも10秒のインターバルが必要です</string>
+	<string name="message_for_toast_bookmark_limit_count">Up to 20 bookmarks can be registered.</string>
+	<string name="message_for_toast_not_exist_bookmark">保存するブックマークがございません</string>
+	<string name="message_for_toast_not_add_bookmark">再生モードでは、ブックマーク画面に遷移出来ません</string>
+	<string name="message_for_toast_play_not_bookmark">ブックマーク再生では利用できません</string>
+	<string name="message_for_toast_play_not_search">검색결과 재생에서는 지원하지 않는 기능입니다.</string>
+	<string name="message_for_toast_done_add_bookmark">\'%s\'ファイルはブックマークに追加されます</string>
+	<string name="message_for_toast_not_exist_advance">次のファイルが存在しません</string>
+	<string name="message_for_toast_not_exist_retour">以前のファイルが存在しません</string>
+	<string name="message_for_toast_player_repeat_hidden">The repeat function is automatically released under the following conditions when playing an audio file.\n- When the screen is turned off\n- When the player goes background</string>
+
+	<!-- favorite -->
+	<string name="message_for_toast_favorite_content_use">お気に入りに追加されました.</string>
+	<string name="message_for_toast_favorite_content_no_use">お気に入りが解除されました.</string>
+
+	<!-- dialog -->
+	<string name="message_for_toast_select_item_for_delete">Select item for delete.</string>
+	<string name="message_for_toast_success_for_deleted_item_on_bookmark">Success for deleted item bookmark.</string>
+
+	<!-- message -->
+	<string name="message_for_dialog_download_no_serial">Please input correct serial number.</string>
+	<string name="message_for_toast_file_not_exist">ファイルが存在しません. 以前にファイルを受け取ったメモリカードを挿入するか、講義削除した後、再ダウンロードしてください</string>
+	<string name="message_for_toast_file_is_not_ncg">このファイルは、NCGファイルではございません.</string>
+
+	<!-- view -->
+	<string name="message_for_toast_view_navigation_root">Already Top level.</string>
+
+	<!-- network -->
+	<string name="network_connect_fail">Not connected to network. Please try again after connecting to a network.</string>
+	<string name="network_serial_auth_code_invalid_number">The serial has invalid number of digit.</string>
+	<string name="network_serial_auth_code_invalid_content_Id">Invalid content Id.</string>
+	<string name="network_serial_auth_code_exceeded_device_count_limit">Exceeded device count limit: Cannot register this device.</string>
+	<string name="network_serial_auth_code_invalid_playback_period">Invalid playback period.</string>
+	<string name="network_serial_auth_code_invalid_drm_type">Invalid DRM type.</string>
+	<string name="network_serial_auth_code_invalid_date_format">Invalid date format.</string>
+	<string name="network_cannot_connect_wifi">Please connect to Wifi.</string>
+	<string name="network_connected_3gs">Connecting to 3G/LTE network.</string>
+	<string name="network_download_3g_alert2">Downloading via 3G/LTE network. There can be additional charge for mobile data.</string>
+	<string name="network_download_no_connection">No network available. Please check 3G/LTE or WiFi network."</string>
+	<string name="network_download_no_wifi_connection">No WiFi available for download. Please change settings if you want to use 3G/LTE network.</string>
+	<string name="network_splash_3g_warning">Downloading via 3G/LTE network due to no WiFi available. You can save additional charge for mobile data if you use WiFi.</string>
+	<string name="network_splash_no_connection">No network available.</string>
+
+</resources>

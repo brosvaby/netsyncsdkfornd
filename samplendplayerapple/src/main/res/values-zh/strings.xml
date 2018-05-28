@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="link_privacy_policy_url">http://ndpro.co.kr/en/privacypolicy/ndprivacypolicy.html</string>
+
+	<string name="fragment_narmal_file_not_exist">파일이 존재하지 않습니다. SD Card에 파일이 존재하는지 확인해주십시요.</string>
+	<string name="setting_section_networkandplayer">플레이어 설정</string>
+	<string name="log_result_fail_to_get_proprietary_info">시원스쿨 일본어탭(전용 학습기)에서만 이용 가능한 서비스입니다.</string>
+
+
+	<!-- DrawerMenu Section -->
+	<string name="drawermenu_section_main">Main</string>
+	<string name="drawermenu_section_storage">Storage</string>
+	<string name="drawermenu_section_function">Function</string>
+	<string name="drawermenu_section_information">Information</string>
+
+
+	<!-- DrawerMenu Title -->
+	<string name="drawermenu_title_menu">메뉴</string>
+	<string name="drawermenu_title_home">홈</string>
+	<string name="drawermenu_title_storage">강의듣기</string>
+	<string name="drawermenu_title_favorite">즐겨찾기</string>
+	<string name="drawermenu_title_playedlist">최근재생</string>
+	<string name="drawermenu_title_webview1">시원스쿨</string>
+	<string name="drawermenu_title_webview2">강좌소개</string>
+	<string name="drawermenu_title_webview3">수강안내</string>
+	<string name="drawermenu_title_webview4">커뮤니티</string>
+	<string name="drawermenu_title_webview5">고객센터 02-6409-0878</string>
+	<string name="drawermenu_title_setting">설정</string>
+	<string name="drawermenu_title_help">이용안내</string>
+
+	<!-- Fragment Title -->
+	<string name="title_webview_fragment_tag">Home</string>
+	<string name="title_storage_fragment_tag">Storage</string>
+	<string name="title_mytitle_fragment_tag">Title</string>
+	<string name="title_mycontent_fragment_tag">Lecture</string>
+	<string name="title_mybookmark_fragment_tag">Bookmarks</string>
+	<string name="title_myfavorite_fragment_tag">Favorites</string>
+	<string name="title_playedlist_fragment_tag">Recently played</string>
+	<string name="title_setting_fragment_tag">Settings</string>
+	<string name="title_explorer_fragment_tag">PallyCon SD</string>
+	<string name="title_explorer_internal_fragment_tag">Inner SD</string>
+	<string name="title_explorer_external_fragment_tag">External SD</string>
+	<string name="title_explorer_other_fragment_tag">USB</string>
+	<string name="title_media_fragment_tag">Media List</string>
+	<string name="title_info_fragment_tag">Info</string>
+	<string name="drawermenu_title_guide">Guide</string>
+
+</resources>

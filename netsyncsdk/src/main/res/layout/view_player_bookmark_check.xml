@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_bookmark_check"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="10dp"
+	android:paddingBottom="10dp"
+	android:background="#ffffff">
+
+	<!--<LinearLayout-->
+	    <!--android:layout_width="match_parent"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:orientation="horizontal" >-->
+		<!--<TextView-->
+		    <!--android:layout_width="0px"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_weight="1"-->
+			<!--android:maxLines="1"-->
+			<!--android:text="@string/player_dialog_bookmark_check_time"-->
+			<!--android:textSize="20sp"-->
+			<!--android:gravity="center" />-->
+		<!--<TextView-->
+		    <!--android:id="@+id/bookmark_time"-->
+		    <!--android:layout_width="0px"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_weight="2"-->
+			<!--android:paddingLeft="2dp"-->
+			<!--android:maxLines="1"-->
+			<!--android:ellipsize="middle"-->
+			<!--android:textSize="20sp"-->
+			<!--android:gravity="center_vertical" />-->
+	<!--</LinearLayout>-->
+
+	<!--<LinearLayout-->
+	    <!--android:layout_width="fill_parent"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:orientation="horizontal" >-->
+		<!--<TextView-->
+		    <!--android:layout_width="0px"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_weight="1"-->
+			<!--android:text="@string/player_dialog_bookmark_check_memo"-->
+			<!--android:maxLines="1"-->
+			<!--android:textSize="20sp"-->
+			<!--android:gravity="center"-->
+			<!--android:layout_gravity="center_vertical" />-->
+		<!--<EditText-->
+		    <!--android:id="@+id/bookmark_description"-->
+		    <!--android:layout_width="0px"-->
+		    <!--android:layout_weight="2"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:hint="@string/player_dialog_bookmark_check_input_memo"-->
+			<!--android:maxLines="1"-->
+			<!--android:focusable="true"-->
+			<!--android:ellipsize="middle"-->
+			<!--android:textSize="15sp"-->
+			<!--android:gravity="center_vertical" />-->
+	<!--</LinearLayout>-->
+
+</LinearLayout>

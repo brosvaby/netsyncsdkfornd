@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset*/
+body{
+    padding:0; margin:0;
+    background:#fff;
+    font-family: 'Arial', sans-serif; 
+    font-size:17px; 
+    line-height:1.5;
+}
+
+body div{margin:0; padding:0;}
+
+.mainBanner_t{
+	width:100%; position:relative; color:#fff;text-align:center; 
+}
+.mainBanner_t img{width:85%; height:auto; max-width:600px; max-height:600px;}
+.t_mainbanner_contents{position:relative; font-size:1rem;  padding-bottom:1rem;}
+.t_mainbanner_contents h1{ font-weight:normal; padding:1em .7em; letter-spacing: -1px; word-break:keep-all;}

@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_extra_option_on_player"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_normal"
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:clickable="false">
+    <!-- 북마크 하기 -->
+    <Button
+        android:id="@+id/btn_bookmark_check"
+        android:layout_width="45.0dp"
+        android:layout_height="45.0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_bookmark_check" />
+        
+    <!-- 북마크 보여주기 -->
+    <Button
+        android:id="@+id/btn_bookmark_view"
+        android:layout_width="45.0dp"
+        android:layout_height="45.0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_bookmark_view"/>
+
+    <!-- 즐겨찾기 -->
+    <ToggleButton
+        android:id="@+id/btn_favorite"
+        android:layout_width="45.0dp"
+        android:layout_height="45.0dp"
+        android:textOn=""
+        android:textOff=""
+        android:checked="false"
+        android:background="@drawable/btn_favorite_on_off" />
+</LinearLayout>

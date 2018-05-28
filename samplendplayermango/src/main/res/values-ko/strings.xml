@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="link_privacy_policy_url">http://ndpro.co.kr/privacypolicy/ndprivacypolicy.html</string>
+
+    <string name="fragment_narmal_file_not_exist">파일이 존재하지 않습니다. SD Card에 파일이 존재하는지 확인해주십시요.</string>
+    <string name="setting_section_networkandplayer">플레이어 설정</string>
+    <string name="log_result_fail_to_get_proprietary_info">전용 학습기 에서만 이용 가능한 서비스입니다.</string>
+    
+    <!-- DrawerMenu Title -->
+    <string name="drawermenu_title_menu">메뉴</string>
+    <string name="drawermenu_title_home">홈</string>
+    <string name="drawermenu_title_storage">강의듣기</string>
+    <string name="drawermenu_title_favorite">즐겨찾기</string>
+    <string name="drawermenu_title_playedlist">최근재생</string>
+    <string name="drawermenu_title_webview1">시원스쿨</string>
+    <string name="drawermenu_title_webview2">강좌소개</string>
+    <string name="drawermenu_title_webview3">수강안내</string>
+    <string name="drawermenu_title_webview4">커뮤니티</string>
+    <string name="drawermenu_title_webview5">고객센터 02-6409-0878</string>
+    <string name="drawermenu_title_setting">설정</string>
+    <string name="drawermenu_title_help">이용 안내</string>
+    <string name="drawermenu_title_guide">가이드</string>
+
+
+    <!-- Fragment Title -->
+    <string name="title_webview_fragment_tag">홈</string>
+    <string name="title_storage_fragment_tag">저장소</string>
+    <string name="title_explorer_internal_fragment_tag">내장 메모리</string>
+    <string name="title_explorer_external_fragment_tag">외장 메모리</string>
+    <string name="title_explorer_other_fragment_tag">USB</string>
+    <string name="title_mycontent_fragment_tag">강의</string>
+    <string name="title_mytitle_fragment_tag">단원</string>
+    <string name="title_mybookmark_fragment_tag">북마크</string>
+    <string name="title_myfavorite_fragment_tag">즐겨찾기</string>
+    <string name="title_playedlist_fragment_tag">최근재생목록</string>
+    <string name="title_setting_fragment_tag">설정</string>
+    <string name="title_explorer_fragment_tag">PallyCon SD</string>
+    <string name="title_media_fragment_tag">미디어 목록</string>
+    <string name="title_info_fragment_tag">이용 안내</string>
+
+</resources>

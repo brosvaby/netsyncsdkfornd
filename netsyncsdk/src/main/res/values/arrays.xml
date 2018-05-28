@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="indicator_colors">
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+    </array>
+
+    <!--  setting -->
+    <string-array name="array_setting_check_player">
+        <item>@string/setting_player_base</item>
+        <item>@string/setting_player_double_speed</item>
+    </string-array>
+
+    <string-array name="array_setting_check_decoder">
+        <item>@string/setting_decoder_hardware</item>
+        <item>@string/setting_decoder_software</item>
+    </string-array>
+
+    <!-- -->
+    <string-array name="repeat_time">
+        <item>10sec</item>
+        <item>20sec</item>
+        <item>30sec</item>
+        <item>40sec</item>
+        <item>50sec</item>
+        <item>60sec</item>
+    </string-array>
+
+    <!-- other -->
+    <string-array name="log_level">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="crash_report">
+        <item>on</item>
+        <item>off</item>
+    </string-array>
+
+    <string-array name="menu_sort_folder">
+        <item>@string/sort_name_asc</item>
+        <item>@string/sort_name_des</item>
+    </string-array>
+
+</resources>

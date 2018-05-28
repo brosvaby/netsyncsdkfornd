@@ -1,0 +1,33 @@
+<resources>
+    <!-- SD Business Process -->
+    <string name="sd_business_logic_success_to_device_certification">Device certification succeeded.</string>
+    <string name="sd_business_logic_fail_to_device_certification">Device certification failed.</string>
+    <string name="sd_business_logic_success_to_init_certification">Initial certification succeeded.</string>
+    <string name="sd_business_logic_fail_to_init_certification">Initial certification failed.</string>
+    <string name="sd_business_logic_different_deviceid">This card is already certified on other device.</string>
+    <string name="sd_business_logic_not_exist_hidden">Please check if the normal content card is installed and re-execute.\nError code : 0001</string>
+    <string name="sd_business_logic_unauthorized_card">Failed to authenticate file.\nThis SD card is not genuine.\nError code : 0003</string>
+    <string name="sd_business_logic_decrypt_fail_card">Failed to authenticate file.\nThis SD card is not genuine.\nError code : 0004</string>
+    <string name="sd_business_logic_crash_card">Failed to authenticate file.\nPlease contact support.\nError code : 0005</string>
+    <string name="sd_business_logic_wrong_card">This card is already certified.</string>
+    <string name="sd_business_logic_copied_file">Initial certification failed. \nError code : 0002</string>
+    <string name="sd_business_logic_change_content_path">We are configuring the content path according to OS update.\nPlease wait a moment.</string>
+    <string name="sd_business_logic_change_storage_menu_for_authentication">Authentication is required. Please go to %s and try playing the content.</string>
+
+
+    <!-- Business Process -->
+    <string name="business_logic_buyer_certificate_fail">Failed to authenticate customer.</string>
+    <string name="business_logic_serial_authentication_success">Succeeded to authenticate serial</string>
+    <string name="business_logic_file_certificate_fail">Failed to authenticate content.</string>
+    <string name="business_logic_invalid_ncg_file">正しくないタイプのNCGファイルです.</string>
+    <string name="business_logic_use_favorite_after_certification">ファイル認証後にお気に入り機能を使用してください.</string>
+    <string name="business_logic_sdcard_permission_fail">Select external SD memory and press Select button at the bottom.</string>
+
+
+    <!-- Notification -->
+    <string name="webserver_notification_screen_recorder_detected">録画アプリが検出されました。（本コンテンツは、著作権法の保護を受けています）。プレーヤーを終了します</string>
+    <string name="webserver_notification_hdmi_detected">HDMIが検出されました。 （本コンテンツは、著作権法の保護を受けています）\ nプレーヤーを終了します</string>
+
+    <!-- player -->
+    <string name="player_function_start_play">Starting playback</string>
+</resources>

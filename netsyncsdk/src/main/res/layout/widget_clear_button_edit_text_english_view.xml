@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_edittext"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/text_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iv_clear"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:textSize="18.0sp" />
+    <ImageButton
+        android:id="@+id/iv_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_media_close"
+        android:visibility="gone" />
+
+    <!--<View-->
+        <!--style="@style/DividerDefaultWhite"-->
+        <!--android:layout_alignParentBottom="true"/>-->
+
+</RelativeLayout>

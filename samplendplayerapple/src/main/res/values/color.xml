@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<resources>
+	<!-- ActionBar Color-->
+	<color name="provider_color_actionbar_main_bg">#ff8EC63F</color>
+	<color name="provider_color_statusbar_main_bg">#aa8EC63F</color>
+
+	<!-- Background color -->
+	<color name="provider_color_splash_background">#ff8ec63f</color>
+
+	<!-- dialog -->
+	<color name="provider_dialog_button_bg_color">#ff8EC63F</color>
+
+	<!-- lms -->
+	<color name="provider_color_text_rate_for_lms">#ff8EC63F</color>
+	<color name="provider_color_text_rate_for_lms_dim">#aa8EC63F</color>
+
+</resources>

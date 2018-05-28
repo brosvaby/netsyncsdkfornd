@@ -1,0 +1,28 @@
+<resources>
+    <string name="license_valid_license">ライセンス無効</string>
+    <string name="license_unlimited_content">期間限定ません</string>
+    <string name="license_not_exist_license">ライセンスが存在しません</string>
+    <string name="license_expired_license">ライセンス期限が切れております</string>
+    <string name="license_beforestartDate">無効ライセンス-開始前</string>
+    <string name="license_exceeded_play_count">ライセンス数を超えています</string>
+    <string name="license_external_device_disallowed">内部ディスプレイが許可をされていません</string>
+    <string name="license_rooted_device_disallowed">根本となる端末が許可されていません</string>
+    <string name="license_device_time_modified">機器の時間操作を検出して再生を許可していません。設定の機器の時間を現在の時刻に合わせたり、自動時間設定に変更後の再試行ください</string>
+    <string name="license_offline_not_supported">オフライン環境で再生を許可していません</string>
+    <string name="license_offline_status_too_long">オフライン環境が続く場合は、必要に応じた講座受講が困難である. オンライン状態で再試行ください</string>
+    <string name="license_fail_to_update_online">オンライン更新に失敗しました。機器のオンラインステータス確認後、再試行下さい</string>
+    <string name="license_screen_recorder_detected">Security Detection : %s\n録画アプリが検出されました。 （本コンテンツは、著作権法の保護を受けています）</string>
+    <string name="license_invalid_license">無効なラインセンス形式</string>
+    <string name="license_fail_to_get_license">ライセンス取得失敗</string>
+    <string name="license_not_ncg_file">このファイルは、NCGファイルではございません</string>
+    <string name="license_fail_to_update_license_info">ライセンス情報の更新に失敗しました</string>
+    <string name="license_invalid_license_info">ライセンス情報が正しくありません.</string>
+    <string name="license_exception_network_error">ネットワーク接続に問題があります。接続の状態を確認の上、もう一度試してください</string>
+    <string name="license_exception_no_authority">コンテンツの使用権が終了しました</string>
+    <string name="license_exception_server_error">ライセンス発行に失敗したか、コンテンツの使用権が終了しました  \nError Code : %s</string>
+    <string name="license_exception_ncg_error">内部エラーのため、ライセンス発行に失敗しました.</string>
+    <string name="license_exception_other_error">ライセンスの発行に失敗しました.</string>
+    <string name="license_check_exception_network_error">ネットワーク接続に問題があり、ライセンスのチェックに失敗しました。接続確認後、もう一度やり直してください.</string>
+    <string name="license_check_exception_ncg_error">内部エラーのため、ライセンスチェックに失敗しました.</string>
+    <string name="license_check_exception_other_error">ライセンスチェックに失敗しました.</string>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="list_divider">#fff0f0f0</color>
+
+    <color name="list_item_hiright">#fff5f5f5</color>
+    <color name="list_item_hiright_dim">#ffeaeaea</color>
+
+    <color name="background_common">#f2f1f0</color>
+    <color name="background_guide_common">#bbe6f8</color>
+    <color name="black_70">#b2000000</color>
+
+    <!-- common -->
+    <color name="light_gray">#dbdbdb</color>
+    <color name="gray">#7e7e7e</color>
+    <color name="semi_gray">#979797</color>
+    <color name="dark_gray">#696969</color>
+    <color name="bg_color">#f7f7f7</color>
+    <color name="black">#000000</color>
+    <color name="black_60">#aa000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black_effective">#2a2a2a</color>
+    <color name="shadow">#d0d8dc</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent_white">#88ffffff</color>
+    <color name="blue">#448AFF</color>
+    <color name="black_outline">#343434</color>
+    <color name="red">#ff0000</color>
+
+
+    <!-- font -->
+    <color name="font_black">#ff000000</color>
+    <color name="font_black_20">#33000000</color>
+    <color name="font_black_30">#4d000000</color>
+    <color name="font_black_40">#66000000</color>
+    <color name="font_black_50">#99000000</color>
+    <color name="font_black_70">#b2000000</color>
+    <color name="font_black_1">#ff3b3b3b</color>
+    <color name="font_black_2">#ff174744</color>
+
+    <color name="font_white">#ffffffff</color>
+    <color name="font_white_20">#33ffffff</color>
+    <color name="font_white_30">#4dffffff</color>
+    <color name="font_white_40">#66ffffff</color>
+    <color name="font_white_70">#b3ffffff</color>
+    <color name="font_white_95">#f2ffffff</color>
+
+    <color name="font_gray1">#ff222222</color>
+    <color name="font_gray2">#ff444444</color>
+    <color name="font_gray3">#ff666666</color>
+    <color name="font_gray3_1">#ff777777</color>
+    <color name="font_gray3_2">#ff7f7f7f</color>
+    <color name="font_gray4">#ff999999</color>
+    <color name="font_gray5">#ffc6c6c6</color>
+    <color name="font_gray6">#ffffffff</color>
+    <color name="font_gray7">#ffbbbbbb</color>
+    <color name="font_gray8">#ff8d8150</color>
+
+    <color name="font_common">#ff3b3b3b</color>
+    <color name="font_common2">#ffffffff</color>
+    <color name="font_common_dim">#ffc7c7c7</color>
+    <color name="font_common2_dim">#ffb2b2b2</color>
+    <color name="font_common3_dim">#ffc6c6c6</color>
+
+
+    <color name="si_default_text_color">#FF0000</color>
+    <color name="si_default_text_color_selected">#FF00FF</color>
+    <color name="si_default_indicator_bg">#ee9999</color>
+    <color name="si_default_indicator_color">#66ffffff</color>
+
+    <color name="color_disable">#a1a1a1</color>
+    <color name="color_enable">#0064e8</color>
+
+    <color name="list_row_color_disable">#aaffffff</color>
+
+    <color name="color_btn_with_border_text">#00bed4</color>
+    <color name="color_btn_with_border_text_disable">#33000000</color>
+
+
+    <!-- divider -->
+    <color name="divider_default">#e0e0e0</color>
+
+
+    <!-- list explorer -->
+    <color name="text_color_explorer_rate_number_none">#666666</color>
+    <color name="text_color_explorer_rate_number">#05b79b</color>
+
+
+    <!-- list bookmark -->
+    <color name="row_bookmark_dark">#333333</color>
+
+
+    <!-- ListView Background Color-->
+    <color name="color_listview_background">#ececec</color>
+    <color name="color_main_divider_edge">#9b9b9b</color>
+    <color name="color_main_divider_body">#d6d6d6</color>
+    <color name="color_webview_main">#ffffff</color>
+    <color name="color_listview_group">#ffffff</color>
+    <color name="color_listview_child">#ececec</color>
+    <color name="color_listcell_setting_release_device_enable">#bbe6f8</color>
+    <color name="color_listcell_setting_release_device_disenable">#d1d1d1</color>
+
+
+    <!-- search -->
+    <color name="search_edittext_hint">#e1e1e1</color>
+
+
+    <!-- setting -->
+
+
+    <!-- dialog -->
+    <color name="time_add_bookmark">#00bed4</color>
+    <color name="float_transparent">#00000000</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="button_text_color_gray">#A1A1A1</color>
+    <color name="dialog_button_text_color">#0064e8</color>
+
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
+    <color name="dark_btn_bg_color">@color/black</color>
+    <color name="dark_btn_bg_pressed_color">@color/black_70</color>
+
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="text_color">#575757</color>
+    <color name="material_blue_grey_80">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
+
+    <!-- player -->
+    <color name="seek">#ff00bed4</color>
+
+    <!-- permission -->
+    <color name="permission_check_start_auth_title_description">#a1a1a1</color>
+
+
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <!-- list -->
+    <dimen name="list_min_height">200.0dp</dimen>
+
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     <declare-styleable name="CheckableLinearLayout">
+        <attr name="checkable" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SpringIndicator">
+        <attr name="siTextColor" format="reference"/>
+        <attr name="siSelectedTextColor" format="reference"/>
+        <attr name="siTextBg" format="reference"/>
+        <attr name="siTextSize" format="dimension"/>
+        <attr name="siIndicatorColor" format="reference"/>
+        <attr name="siIndicatorColors" format="reference"/>
+        <attr name="siRadiusMax" format="dimension"/>
+        <attr name="siRadiusMin" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleAnimatedCheckBox">
+        <attr name="cb_color" format="color" />
+        <attr name="cb_pressed_ring_width" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MaterialEditText">
+        <attr name="met_baseColor" format="color" />
+        <attr name="met_primaryColor" format="color" />
+        <attr name="met_floatingLabel">
+            <enum name="none" value="0" />
+            <enum name="normal" value="1" />
+            <enum name="highlight" value="2" />
+        </attr>
+        <attr name="met_errorColor" format="color" />
+        <attr name="met_minCharacters" format="integer" />
+        <attr name="met_maxCharacters" format="integer" />
+        <attr name="met_singleLineEllipsis" format="boolean" />
+        <attr name="met_minBottomTextLines" format="integer" />
+        <attr name="met_helperText" format="string" />
+        <attr name="met_helperTextColor" format="color" />
+        <attr name="met_accentTypeface" format="string" />
+        <attr name="met_typeface" format="string" />
+        <attr name="met_floatingLabelText" format="string" />
+        <attr name="met_floatingLabelPadding" format="dimension" />
+        <attr name="met_hideUnderline" format="boolean" />
+        <attr name="met_underlineColor" format="color" />
+        <attr name="met_autoValidate" format="boolean" />
+        <attr name="met_iconLeft" format="reference" />
+        <attr name="met_iconRight" format="reference" />
+        <attr name="met_iconPadding" format="dimension" />
+        <attr name="met_clearButton" format="boolean" />
+        <attr name="met_floatingLabelTextSize" format="dimension" />
+        <attr name="met_floatingLabelTextColor" format="color" />
+        <attr name="met_bottomTextSize" format="dimension" />
+        <attr name="met_floatingLabelAlwaysShown" format="boolean" />
+        <attr name="met_helperTextAlwaysShown" format="boolean" />
+        <attr name="met_floatingLabelAnimating" format="boolean"/>
+        <attr name="met_textColor" format="color" />
+        <attr name="met_textColorHint" format="color" />
+        <attr name="met_validateOnFocusLost" format="boolean"/>
+        <attr name="met_checkCharactersCountAtBeginning" format="boolean"/>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="Rotate3dAnimation">
+        <attr name="rollType" format="enum">
+            <enum name="x" value="0"/>
+            <enum name="y" value="1"/>
+            <enum name="z" value="2"/>
+        </attr>
+        <attr name="fromDeg" format="float" />
+        <attr name="toDeg" format="float" />
+        <attr name="pivotX" format="fraction"/>
+        <attr name="pivotY" format="fraction" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FancyButtonsAttrs">
+        <attr name="android:enabled" />
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+        <attr name="android:textAllCaps" />
+        <attr name="android:textStyle" />
+
+        <attr name="fb_defaultColor" format="color" />
+        <attr name="fb_text" format="string" />
+
+        <attr name="fb_textColor" format="color" />
+        <attr name="fb_iconColor" format="color" />
+
+        <attr name="fb_textFont" format="string" />
+        <attr name="fb_iconFont" format="string" />
+
+        <attr name="fb_textSize" format="dimension" />
+        <attr name="fb_iconResource" format="integer" />
+        <attr name="fb_fontIconResource" format="string" />
+        <attr name="fb_fontIconSize" format="dimension" />
+        <attr name="fb_iconPosition" format="enum">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+
+        <attr name="fb_textPosition" format="enum">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+
+        <attr name="fb_textGravity" format="enum">
+            <enum name="top" value="0x30" />
+            <enum name="bottom" value="0x50" />
+            <enum name="left" value="0x03" />
+            <enum name="right" value="0x05" />
+            <enum name="center_vertical" value="0x10" />
+            <enum name="fill_vertical" value="0x70" />
+            <enum name="center_horizontal" value="0x01" />
+            <enum name="fill_horizontal" value="0x07" />
+            <enum name="center" value="0x11" />
+            <enum name="fill" value="0x77" />
+            <enum name="clip_vertical" value="0x80" />
+            <enum name="clip_horizontal" value="0x08" />
+            <enum name="start" value="0x00800003" />
+            <enum name="end" value="0x00800005" />
+        </attr>
+
+        <attr name="fb_iconPaddingLeft" format="dimension" />
+        <attr name="fb_iconPaddingRight" format="dimension" />
+        <attr name="fb_iconPaddingTop" format="dimension" />
+        <attr name="fb_iconPaddingBottom" format="dimension" />
+
+        <attr name="fb_radiusTopLeft" format="dimension"/>
+        <attr name="fb_radiusTopRight" format="dimension"/>
+        <attr name="fb_radiusBottomLeft" format="dimension"/>
+        <attr name="fb_radiusBottomRight" format="dimension"/>
+
+        <attr name="fb_borderColor" format="color" />
+        <attr name="fb_borderWidth" format="dimension" />
+        <attr name="fb_focusColor" format="color" />
+        <attr name="fb_disabledColor" format="color" />
+        <attr name="fb_disabledTextColor" format="color" />
+        <attr name="fb_disabledBorderColor" format="color" />
+        <attr name="fb_radius" format="dimension" />
+        <attr name="fb_textAllCaps" format="boolean" />
+
+        <attr name="fb_ghost" format="boolean" />
+        <attr name="fb_useSystemFont" format="boolean" />
+    </declare-styleable>
+
+
+</resources> 
+

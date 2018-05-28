@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+
+    <!-- list -->
+    <dimen name="list_item_row_height">70.0dp</dimen>
+    <dimen name="list_item_file_row_height">90.0dp</dimen>
+    <dimen name="list_item_row_setting_height">55.0dp</dimen>
+
+    <!-- no file -->
+    <dimen name="img_no_file">170.0dp</dimen>
+
+
+    <!-- dialog -->
+    <dimen name="dialog_alert_min_width">250.0dp</dimen>
+    <dimen name="dialog_alert_min_height">150.0dp</dimen>
+
+</resources>

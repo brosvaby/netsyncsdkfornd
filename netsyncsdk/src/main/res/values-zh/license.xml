@@ -1,0 +1,28 @@
+<resources>
+    <string name="license_valid_license">有效的证书.</string>
+    <string name="license_unlimited_content">不受限制的内容.</string>
+    <string name="license_not_exist_license">证书不存在.</string>
+    <string name="license_expired_license">允许播放的期限已满.</string>
+    <string name="license_beforestartDate">尚未到允许播放的时间.</string>
+    <string name="license_exceeded_play_count">允许播放的次数已达上限.</string>
+    <string name="license_external_device_disallowed">连接了外部输出装置导致无法播放.</string>
+    <string name="license_rooted_device_disallowed">目前状态下不允许播放.</string>
+    <string name="license_device_time_modified">系统感应到设备时间被修改导致不允许播放。在设置中校准当前时间，或改为自动设置时间后重新尝试.</string>
+    <string name="license_offline_not_supported">在无网络连接的状态下不允许播放.</string>
+    <string name="license_offline_status_too_long">持续处于无网络连接状态时将无法顺利收看讲座，请连接网络后重新尝试.</string>
+    <string name="license_fail_to_update_online">线上更新失败，请在确认设备的网络连接状态后重新尝试.</string>
+    <string name="license_screen_recorder_detected">安全检测：%s\n 系统感应到录像设备（本内容受版权法相关法律法规保护）</string>
+    <string name="license_invalid_license">不可知的证书形式.</string>
+    <string name="license_fail_to_get_license">获取证书失败.</string>
+    <string name="license_not_ncg_file">源文件.</string>
+    <string name="license_fail_to_update_license_info">证书信息更新失败.</string>
+    <string name="license_invalid_license_info">证书信息有误.</string>
+    <string name="license_exception_network_error">网络连接有误，请检查连接状态后重新尝试.</string>
+    <string name="license_exception_no_authority">内容使用的权限已到期.</string>
+    <string name="license_exception_server_error">证书发放失败或内容使用权限到期. \n 错误代码： %s</string>
+    <string name="license_exception_ncg_error">内部错误导致证书发放失败.</string>
+    <string name="license_exception_other_error">证书发放失败.</string>
+    <string name="license_check_exception_network_error">网络连接有误导致查看证书失败，请检查连接状态后重新尝试.</string>
+    <string name="license_check_exception_ncg_error">内部错误导致查看证书失败.</string>
+    <string name="license_check_exception_other_error">查看证书失败.</string>
+</resources>

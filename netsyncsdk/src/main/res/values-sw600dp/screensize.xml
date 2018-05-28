@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- setting -->
+    <dimen name="setting_row_height">80.0dp</dimen>
+    <dimen name="setting_row_audio_height">90.0dp</dimen>
+    <dimen name="setting_row_title_height">40.0dp</dimen>
+    <dimen name="setting_row_title_text">18.0sp</dimen>
+    <dimen name="setting_row_text">22.0sp</dimen>
+    <dimen name="setting_row_sub_text">16.0sp</dimen>
+    <dimen name="setting_row_checkbox_width">36.0dp</dimen>
+    <dimen name="setting_row_checkbox_height">35.0dp</dimen>
+</resources>

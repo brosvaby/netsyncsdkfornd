@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_edittext"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <com.inka.netsync.view.widget.MaterialEditText
+            android:id="@+id/edit_serial_number1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2.0dp"
+            android:gravity="center"
+            android:maxLength="6"
+            android:textSize="15sp"
+            android:inputType="textVisiblePassword"
+            android:singleLine="true"
+            app:met_primaryColor="#00bed4" />
+        <com.inka.netsync.view.widget.MaterialEditText
+            android:id="@+id/edit_serial_number2"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2.0dp"
+            android:gravity="center"
+            android:maxLength="6"
+            android:textSize="15sp"
+            android:inputType="textVisiblePassword"
+            android:singleLine="true"
+            app:met_primaryColor="#00bed4" />
+        <com.inka.netsync.view.widget.MaterialEditText
+            android:id="@+id/edit_serial_number3"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2.0dp"
+            android:gravity="center"
+            android:maxLength="6"
+            android:textSize="15sp"
+            android:inputType="textVisiblePassword"
+            android:singleLine="true"
+            app:met_primaryColor="#00bed4" />
+        <com.inka.netsync.view.widget.MaterialEditText
+            android:id="@+id/edit_serial_number4"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2.0dp"
+            android:gravity="center"
+            android:maxLength="6"
+            android:textSize="15sp"
+            android:inputType="textVisiblePassword"
+            android:singleLine="true"
+            app:met_primaryColor="#00bed4"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bg_player_guide">
+
+	<RelativeLayout
+		android:id="@+id/container_guide_second_portrait"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/confirm_button"
+		android:visibility="gone" >
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="@dimen/margin_normal"
+			android:gravity="center">
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:src="@drawable/img_tutorial2_1"
+				android:layout_marginBottom="@dimen/margin_large" />
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:src="@drawable/img_tutorial2_2"
+				android:layout_marginBottom="@dimen/margin_large" />
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:src="@drawable/img_tutorial2_3"
+				android:layout_marginBottom="@dimen/margin_large" />
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:src="@drawable/img_tutorial2_4"
+				android:layout_marginBottom="@dimen/margin_large" />
+		</LinearLayout>
+	</RelativeLayout>
+
+
+	<RelativeLayout
+		android:id="@+id/container_guide_second_landscape"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/confirm_button"
+		android:visibility="gone" >
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="@dimen/margin_normal" >
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_centerInParent="true"
+				android:gravity="center">
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:src="@drawable/img_tutorial2_1"
+					android:layout_margin="@dimen/margin_normal"
+					android:layout_marginBottom="@dimen/margin_large" />
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:src="@drawable/img_tutorial2_2"
+					android:layout_margin="@dimen/margin_normal"
+					android:layout_marginBottom="@dimen/margin_large" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:src="@drawable/img_tutorial2_3"
+					android:layout_margin="@dimen/margin_normal"
+					android:layout_marginBottom="@dimen/margin_large" />
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:src="@drawable/img_tutorial2_4"
+					android:layout_margin="@dimen/margin_normal"
+					android:layout_marginBottom="@dimen/margin_large" />
+			</LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
+
+
+
+	<Button
+		android:id="@+id/confirm_button"
+		android:layout_width="match_parent"
+		android:layout_height="45.0dp"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="30.0dp"
+		android:layout_marginLeft="30.0dp"
+		android:layout_marginRight="30.0dp"
+		android:background="@drawable/selector_btn_serial_auth"
+		android:padding="@dimen/padding_normal"
+		android:text="@string/dialog_ok"
+		android:textSize="14sp" />
+
+</RelativeLayout>

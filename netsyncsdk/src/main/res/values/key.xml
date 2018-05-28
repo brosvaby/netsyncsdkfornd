@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- preference name -->
+    <string name="PREF_NAME_SMARTNETSYNC_VALUE">SMARTNETSYNC_VALUE</string>
+    
+    <!-- preference key -->
+	<string name="PREF_KEY_REPEAT_TIME">REPEAT_TIME</string>
+	<string name="PREF_KEY_IS_DB_CONVERTED">IS_DB_CONVERTED</string>
+	<string name="PREF_KEY_IS_FILE_CERTIFICATED">IS_FILE_CERTIFICATED</string>
+	<string name="PREF_KEY_IS_EX_DEVICEID">IS_EX_DEVICEID</string>
+	<string name="PREF_KEY_DEVICEID">device_id</string>
+	<string name="PREF_KEY_HOMEURL">URL_HOMEURL</string>
+	<string name="PREF_KEY_LOGINURL">URL_LOGINURL</string>
+	<string name="PREF_KEY_MANUAL_EXTERNAL_SD">MANUAL_EXTERNAL_SD</string>
+	<string name="PREF_KEY_REGISTRATION_ID">REGISTRAIONID</string>
+	<string name="PREF_KEY_IS_SDPATH_CONVERTED">IS_SDPATH_CONVERTE</string>
+	
+	<!-- bundle key -->
+	<string name="bundle_key_dialog_message">dialog_message</string> 
+	
+</resources>

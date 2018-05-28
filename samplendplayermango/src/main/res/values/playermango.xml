@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- -->
+    <string name="mango_home_url">@string/link_home_url</string>
+    <string name="mango_subhome_url">@string/link_sub_home_url</string>
+    <string name="mango_privacy_policy_url">@string/link_privacy_policy_url</string>
+
+    <!-- 이용안내 -->
+    <string name="mango_help_url">@string/link_ndplayerfaq_url</string>
+
+    <!-- 앱 정보 -->
+    <string name="mango_app_name">@string/app_name</string>
+    <string name="mango_app_company">@string/app_company</string>
+    <string name="mango_contact">@string/contact</string>
+
+    <!-- -->
+	<string name="mango_external_path">@string/external_path</string>
+
+</resources>

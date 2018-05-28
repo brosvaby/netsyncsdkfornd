@@ -1,0 +1,31 @@
+<resources>
+    <!-- SD Business Process -->
+    <string name="sd_business_logic_success_to_device_certification">디바이스 인증에 성공 하였습니다.</string>
+    <string name="sd_business_logic_fail_to_device_certification">디바이스 인증에 실패하였습니다.</string>
+    <string name="sd_business_logic_success_to_init_certification">초기 인증에 성공하였습니다.</string>
+    <string name="sd_business_logic_fail_to_init_certification">초기 인증에 실패하였습니다.</string>
+    <string name="sd_business_logic_different_deviceid">이미 다른 단말에서 인증 받았거나 현재 단말에서 인증된 카드가 아닙니다.</string>
+    <string name="sd_business_logic_not_exist_hidden">정상적인 콘텐츠 카드가 장착 되어있는지 확인 후 재실행 바랍니다.\n오류코드 : 0001</string>
+    <string name="sd_business_logic_unauthorized_card">파일 인증에 실패 했습니다.\n구매하신 콘텐츠 보안 카드가 아닙니다.\n오류코드 : 0003</string>
+    <string name="sd_business_logic_decrypt_fail_card">파일 인증에 실패 했습니다.\n구매하신 콘텐츠 보안 카드가 아닙니다.\n오류코드 : 0004</string>
+    <string name="sd_business_logic_crash_card">파일 인증에 실패 했습니다.\n고객센터에 문의 바랍니다.\n오류코드 : 0005</string>
+    <string name="sd_business_logic_wrong_card">이미 인증을 받은 카드입니다.</string>
+    <string name="sd_business_logic_copied_file">초기 인증에 실패하였습니다. \n오류코드 : 0002</string>
+    <string name="sd_business_logic_change_content_path">OS 업데이트에 따른 컨텐츠 경로를 구성 하고 있습니다.\n반드시 작업이 완료 될 때까지 기다려 주십시요.</string>
+    <string name="sd_business_logic_change_storage_menu_for_authentication">인증이 필요합니다. %s로 이동하여 콘텐츠 재생을 시도하기 바랍니다.</string>
+
+    <!-- Business Process -->
+    <string name="business_logic_buyer_certificate_fail">구매자인증 실패</string>
+    <string name="business_logic_serial_authentication_success">시리얼인증 성공</string>
+    <string name="business_logic_file_certificate_fail">파일인증 실패</string>
+    <string name="business_logic_invalid_ncg_file">올바르지 않은 타입의 NCG 파일입니다.</string>
+    <string name="business_logic_use_favorite_after_certification">선택한 영상을 1회 실행한 이후에 즐겨찾기 기능을 사용할 수 있습니다.</string>
+    <string name="business_logic_sdcard_permission_fail">외장 SD 메모리를 선택후 하단의 선택버튼을 눌러주세요</string>
+
+    <!-- webserver -->
+    <string name="webserver_notification_screen_recorder_detected">녹화 어플이 감지 되었습니다. (본 콘텐츠는 저작권법의 보호를 받고 있습니다) \n플레이어를 종료합니다.</string>
+    <string name="webserver_notification_hdmi_detected">HDMI 감지가 되었습니다. (본 콘텐츠는 저작권법의 보호를 받고 있습니다) \n플레이어를 종료합니다.</string>
+
+    <!-- player -->
+    <string name="player_function_start_play">재생을 시작합니다.</string>
+</resources>

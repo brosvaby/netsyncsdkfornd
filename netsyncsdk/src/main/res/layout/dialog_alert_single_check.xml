@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/alert_width"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_white">
+    <RadioGroup
+        android:id="@+id/radio_group_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal">
+        <RadioButton
+            android:id="@+id/radio_sort_asc"
+            android:layout_width="match_parent"
+            android:layout_height="55.0dp"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:checked="true"
+            android:button="@null"
+            android:drawableRight="@drawable/btn_radio"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_level_3"
+            android:textColor="@drawable/selector_text_color_for_dark" />
+        <RadioButton
+            android:id="@+id/radio_sort_desc"
+            android:layout_width="match_parent"
+            android:layout_height="55.0dp"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:button="@null"
+            android:drawableRight="@drawable/btn_radio"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_level_3"
+            android:textColor="@drawable/selector_text_color_for_dark" />
+    </RadioGroup>
+</LinearLayout>

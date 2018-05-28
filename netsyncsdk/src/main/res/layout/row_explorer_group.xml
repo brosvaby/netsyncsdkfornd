@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.inka.netsync.view.CheckableLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_root"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/list_item_row_height"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:background="@drawable/selector_list_item">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+		<!-- 아이콘 이미지 -->
+		<ImageView
+			android:id="@+id/iv_fileitem_image"
+			android:layout_width="40.0dp"
+			android:layout_height="40.0dp"
+			android:layout_marginLeft="@dimen/margin_normal"
+			android:src="@drawable/img_directory"/>
+		<!-- 컨텐츠 정보 -->
+		<RelativeLayout
+			android:id="@+id/linear_fileitem"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="@dimen/margin_normal"
+			android:layout_marginRight="@dimen/margin_normal">
+			<!-- Item name -->
+			<TextView
+				android:id="@+id/tv_fileitem_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="directory"
+				android:textSize="@dimen/font_level_3"
+				android:textColor="@color/black"
+				android:typeface="normal"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/tv_fileitem_register_ymdt"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentBottom="true"
+				android:text="17.06.26"
+				android:textSize="@dimen/font_level_1"
+				android:textColor="@color/font_black_20"
+				android:typeface="normal"
+				android:singleLine="true" />
+		</RelativeLayout>
+	</LinearLayout>
+
+</com.inka.netsync.view.CheckableLinearLayout>

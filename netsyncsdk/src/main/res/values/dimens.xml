@@ -1,0 +1,135 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- padding -->
+    <dimen name="padding_xxlarge">25.0dip</dimen>
+    <dimen name="padding_xlarge">20.0dip</dimen>
+    <dimen name="padding_larger">20.0dip</dimen>
+    <dimen name="padding_large">13.0dip</dimen>
+    <dimen name="padding_normal">10.0dip</dimen>
+    <dimen name="padding_smaller">8.0dip</dimen>
+    <dimen name="padding_small">6.0dip</dimen>
+    <dimen name="padding_tiny">5.0dip</dimen>
+
+    <!-- maring -->
+    <dimen name="margin_tiny">5.0dip</dimen>
+    <dimen name="margin_small">6.0dip</dimen>
+    <dimen name="margin_smaller">8.0dip</dimen>
+    <dimen name="margin_normal">10.0dip</dimen>
+    <dimen name="margin_large">13.0dip</dimen>
+    <dimen name="margin_large_m">15.0dip</dimen>
+    <dimen name="margin_large_h">17.0dip</dimen>
+    <dimen name="margin_xlarge">20.0dip</dimen>
+    <dimen name="margin_xxlarge">25.0dip</dimen>
+
+    <!-- font level - sp -->
+    <dimen name="font_level_min">10.0sp</dimen>
+    <dimen name="font_level_0">11.0sp</dimen>
+    <dimen name="font_level_1">12.0sp</dimen>
+    <dimen name="font_level_2">13.0sp</dimen>
+    <dimen name="font_level_3">15.0sp</dimen>
+    <dimen name="font_level_4">17.0sp</dimen>
+    <dimen name="font_curation_size">18.0sp</dimen>
+    <dimen name="font_level_5">20.0sp</dimen>
+    <dimen name="font_level_6">22.0sp</dimen>
+    <dimen name="font_level_7">24.0sp</dimen>
+    <dimen name="font_level_8">26.0sp</dimen>
+
+
+    <!-- guide -->
+    <dimen name="margin_guide_player_top">36.0dp</dimen>
+
+
+    <dimen name="navigation_drawer_width">240dp</dimen>
+
+    <dimen name="si_default_text_size">18.0sp</dimen>
+    <dimen name="si_default_radius_max">6.0dp</dimen>
+    <dimen name="si_default_radius_min">3.0dp</dimen>
+
+    <!-- indicator -->
+    <dimen name="viewpager_header_indicator_point_radius">12.0dp</dimen>
+    <dimen name="viewpager_header_indicator_height">26.0dp</dimen>
+    <dimen name="viewpager_header_indicator_left_margin">24.0dp</dimen>
+    <dimen name="viewpager_header_indicator_right_margin">24.0dp</dimen>
+
+
+    <!-- list -->
+    <dimen name="list_min_height">300.0dp</dimen>
+
+    <dimen name="list_item_row_section_height">30.0dp</dimen>
+    <dimen name="list_item_row_height">70.0dp</dimen>
+    <dimen name="list_item_file_row_height">90.0dp</dimen>
+    <dimen name="list_item_row_setting_height">55.0dp</dimen>
+    <dimen name="list_item_row_setting_check_footer_height">50.0dp</dimen>
+    <dimen name="list_item_row_img_icon_width">40.0dp</dimen>
+    <dimen name="list_item_row_img_icon_height">40.0dp</dimen>
+    <dimen name="list_item_row_container_progress_height">30.0dp</dimen>
+
+
+    <!-- player function -->
+    <dimen name="player_function_play">60.0dp</dimen>
+    <dimen name="player_function_width">40.0dp</dimen>
+    <dimen name="player_function_height">40.0dp</dimen>
+    <dimen name="player_function_controler_margin">30.0dp</dimen>
+
+
+    <!-- setting -->
+    <dimen name="setting_row_height">50.0dp</dimen>
+    <dimen name="setting_row_audio_height">60.0dp</dimen>
+    <dimen name="setting_row_title_height">30.0dp</dimen>
+    <dimen name="setting_row_title_text">14.0sp</dimen>
+    <dimen name="setting_row_text">16.0sp</dimen>
+    <dimen name="setting_row_sub_text">12.0sp</dimen>
+    <dimen name="setting_row_checkbox_width">26.0dp</dimen>
+    <dimen name="setting_row_checkbox_height">25.0dp</dimen>
+
+
+    <!-- info -->
+    <dimen name="notice_item_height">60dp</dimen>
+    <dimen name="notice_item_arrow_margin_right">9dp</dimen>
+    <dimen name="notice_item_content_padding_top">9dp</dimen>
+    <dimen name="notice_item_content_padding_left">24dp</dimen>
+    <dimen name="notice_item_content_padding_bottom">24dp</dimen>
+    <dimen name="notice_item_new_img_padding_left">3dp</dimen>
+    <dimen name="notice_item_new_img_padding_right">9dp</dimen>
+
+
+    <!-- dialog -->
+    <dimen name="bookmark_row_height">50.0dp</dimen>
+
+
+    <!-- floating btn -->
+    <dimen name="fab_margin">0dp</dimen>
+    <dimen name="design_fab_size_mini" tools:override="true">52.0dp</dimen>
+    <dimen name="design_fab_size_normal" tools:override="true">52.0dp</dimen>
+    <dimen name="design_fab_content_size" tools:override="true">52.0dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">52.0dp</dimen>
+
+
+    <!-- widget -->
+    <dimen name="default_padding_top">8dp</dimen>
+    <dimen name="default_padding_bottom">8dp</dimen>
+    <dimen name="inner_padding_left">0dp</dimen>
+    <dimen name="inner_padding_right">0dp</dimen>
+    <dimen name="floating_label_text_size">12sp</dimen>
+    <dimen name="bottom_text_size">12sp</dimen>
+    <dimen name="inner_components_spacing">8dp</dimen>
+    <dimen name="bottom_ellipsis_height">4dp</dimen>
+
+
+    <!-- dialog -->
+    <dimen name="alert_width">330dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
+    <dimen name="common_dialog_progress_img_width">62.0dp</dimen>
+    <dimen name="common_dialog_progress_img_height">52.0dp</dimen>
+    <dimen name="dialog_alert_min_width">300.0dp</dimen>
+    <dimen name="dialog_alert_min_height">200.0dp</dimen>
+
+    
+    <!-- premission -->
+    <dimen name="img_sdcard_auth_guide_margin">40.0dp</dimen>
+    <dimen name="btn_sdcard_request_auth_width">440.0dp</dimen>
+    <dimen name="btn_sdcard_request_auth_height">100.0dp</dimen>
+
+
+</resources>

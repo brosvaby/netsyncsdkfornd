@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/loading"
+	android:layout_width="@dimen/alert_width"
+	android:layout_height="wrap_content"
+	android:gravity="center"
+	android:layout_gravity="center"
+	android:orientation="vertical"
+	android:background="@color/black_70">
+	<TextView
+		android:id="@+id/title_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/margin_normal"
+		android:layout_marginBottom="@dimen/margin_normal"
+		android:gravity="center"
+		android:text="@string/player_dialog_bookmark_check_memo"
+		android:textColor="@color/white"
+		android:textSize="@dimen/font_level_5"
+		android:textStyle="normal"
+		android:maxLines="1" />
+	<LinearLayout
+		android:id="@+id/container_edit_bookmark"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_margin="@dimen/margin_normal">
+		<TextView
+			android:id="@+id/text_bookmark_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/margin_normal"
+			android:gravity="center"
+			android:layout_gravity="center_horizontal"
+			android:text="시간 00:05:23"
+			android:textColor="@color/time_add_bookmark"
+			android:textSize="@dimen/font_level_3"
+			android:textStyle="normal"
+			android:maxLines="1" />
+		<com.inka.netsync.view.widget.MaterialEditText
+			android:id="@+id/container_edittext_bookmark_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="@dimen/margin_normal"
+			android:layout_marginRight="@dimen/margin_normal"
+			android:ems="15"
+			android:hint="@string/player_dialog_bookmark_check_input_memo"
+			android:inputType="text"
+			android:textColor="@color/color_disable"
+			android:textSize="@dimen/font_level_3"
+			android:textStyle="normal"
+			android:maxLines="1"
+			app:met_textColorHint="@color/color_disable"
+			app:met_underlineColor="@color/color_disable"
+			app:met_baseColor="@android:color/white"
+			app:met_floatingLabel="normal"
+			app:met_maxCharacters="20"
+			app:met_primaryColor="@color/color_disable"
+			app:met_singleLineEllipsis="true" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/margin_large"
+		android:gravity="center">
+		<Button
+			android:id="@+id/cancel_button"
+			android:layout_width="match_parent"
+			android:layout_height="50.0dp"
+			android:padding="@dimen/padding_normal"
+			android:background="@drawable/bg_button_border_transparent"
+			android:layout_weight="1"
+			android:text="@string/dialog_cancel"
+			android:textColor="@color/button_text_color_gray"
+			android:textSize="14sp"
+			android:visibility="gone" />
+		<Button
+			android:id="@+id/confirm_button"
+			android:layout_width="match_parent"
+			android:layout_height="50.0dp"
+			android:padding="@dimen/padding_normal"
+			android:background="@drawable/bg_button_border_transparent"
+			android:layout_weight="1"
+			android:text="@string/dialog_ok"
+			android:textColor="@color/dialog_button_text_color"
+			android:textSize="14sp"/>
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string name="permission_check_title_for_account">사용자 정보 권한</string>
+    <string name="permission_check_description_for_account">서비스의 일부기능을 사용하기 위해서 해당 권한이 필요합니다. \n거절시 서비스를 정상적으로 사용할 수 없습니다.</string>
+
+    <string name="permission_check_title_for_device_state">디바이스 상태 정보 권한</string>
+    <string name="permission_check_description_for_device_state">디바이스의 기본적인 정보를 사용하기 위해서는 이 권한 요청이 필요합니다. \n거절시에는 서비스를 정상적으로 사용할 수 없습니다.</string>
+
+    <string name="permission_check_title_for_storage">외부 메모리 접근 권한</string>
+    <string name="permission_check_description_for_storage">메모리에서 미디어 파일을 불러오기 위해서는 권한 요청이 필요합니다. \n거절시에는 미디어 목록이 보이지 않을 수 있습니다.</string>
+
+    <string name="permission_check_start_auth">시작하기</string>
+    <string name="permission_check_title_for_sdcard">SD카드를 넣으셨나요? \n그렇다면 <b><i>SD카드 사용 권한을 설정</i></b>해 주세요.</string>
+    <string name="permission_check_title_description_for_sdcard">앱이 SD카드에 엑세스할 수 있게 합니다.</string>
+    <string name="permission_check_subtitle_for_sdcard">아래의 지침에 따라 먼저 앱을 SD카드에 액세스 할 수 있게 하십시오.</string>
+    <string name="permission_check_description_for_sdcard">1. 좌측 메뉴에서 SD 카드를 선택해 주세요. \n2. 하단의 선택 버튼을 눌러주세요.</string>
+</resources>

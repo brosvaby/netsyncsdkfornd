@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_row_setting_height"
+    android:orientation="horizontal"
+    android:background="@drawable/selector_list_item">
+    <!-- setting wifi -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_normal">
+        <TextView
+            android:id="@+id/list_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="wifi_setting"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_level_3"
+            android:background="@null"/>
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/list_switch_allow"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:theme="@style/SwitchStyleBlue"/>
+    </RelativeLayout>
+    <View
+        style="@style/DividerDefault" />
+</LinearLayout>

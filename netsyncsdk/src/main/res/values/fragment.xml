@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Fragment Tag -->
+    <string name="tag_webview_fragment">tag_webview_fragment</string>
+    <string name="tag_storage_fragment">tag_storage_fragment</string>
+    <string name="tag_storage_external_fragment">tag_storage_external_fragment</string>
+    <string name="tag_storage_internal_fragment">tag_storage_internal_fragment</string>
+    <string name="tag_storage_other_fragment">tag_storage_other_fragment</string>
+    <string name="tag_mybookmark_fragment">tag_mybookmark_fragment</string>
+    <string name="tag_myfavorite_fragment">tag_myfavorite_fragment</string>
+    <string name="tag_menu_favorite_fragment">tag_menu_favorite_fragment</string>
+    <string name="tag_mytitle_fragment">tag_mytitle_fragment</string>
+    <string name="tag_playedlist_fragment">tag_playedlist_fragment</string>
+    <string name="tag_setting_fragment">tag_setting_fragment</string>
+    <string name="tag_progress_fragment">tag_progress_fragment</string>
+    <string name="tag_explorer_fragment">tag_explorer_fragment</string>
+    <string name="tag_media_fragment">tag_media_fragment</string>
+    <string name="tag_info_fragment">tag_info_fragment</string>
+
+    <!-- Fragment Bundle key 값 -->
+    <string name="key_tag_fragment">key_tag_fragment</string>
+    <string name="key_name_fragment">key_name_fragment</string>
+    <string name="key_selected_tab">key_selected_tab</string>
+    <string name="key_selected_drawer">key_selected_drawer</string>
+    <string name="key_sdpath">key_sdpath</string>
+
+
+</resources>

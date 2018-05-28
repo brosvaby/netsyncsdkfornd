@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_root"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/list_item_row_height"
+	android:orientation="horizontal"
+	android:gravity="center"
+	android:background="@drawable/selector_list_item">
+    <!-- 아이콘 이미지 -->
+    <ImageView
+        android:id="@+id/iv_fileitem_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp" />
+    <!-- 컨텐츠 정보 -->
+    <LinearLayout 
+        android:id="@+id/linear_fileitem"
+        android:layout_width="0px"
+    	android:layout_height="match_parent"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:layout_weight="13"
+        android:orientation="vertical" >
+    	<!-- Item name -->
+        <TextView 
+            android:id="@+id/tv_fileitem_name"
+            android:layout_width="match_parent"
+    		android:layout_height="0px"
+    		android:layout_weight="1"
+        	android:gravity="bottom" 
+        	style="@style/listcellExplorerFont1" />
+        <LinearLayout
+            android:layout_width="match_parent" 
+			android:layout_height="0px"
+			android:layout_weight="1"
+			android:orientation="horizontal" >
+        	<TextView
+            	android:id="@+id/tv_fileitem_data"
+            	android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+        		android:gravity="top"
+        		android:layout_weight="1" 
+        		style="@style/listcellExplorerFont2" />
+        	<TextView
+            	android:id="@+id/tv_fileitem_size"
+            	android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+        		android:gravity="top"
+        		android:layout_weight="1" 
+        		style="@style/listcellExplorerFont2" />
+        </LinearLayout>
+	</LinearLayout>
+</LinearLayout>

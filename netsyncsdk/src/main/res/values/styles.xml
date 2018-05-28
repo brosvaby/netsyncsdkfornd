@@ -1,0 +1,262 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="listcellFont1">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left|center</item>
+    </style>
+
+    <!-- ListCell의 상단 작은 문자열 -->
+    <style name="listcellFont2">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">10dip</item>
+        <item name="android:textColor">#838383</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left|top</item>
+    </style>
+
+    <!-- Drawer Menu 속성 정의 -->
+    <style name="drawerHeader">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">11dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#aaaaaa</item>
+    </style>
+
+    <!-- Drawer Item Title1 속성 정의 -->
+    <style name="drawerTitle1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/font_black_1</item>
+    </style>
+
+    <!-- Drawer Item Title2 속성 정의 -->
+    <style name="drawerTitle2">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!-- ListCell의 LargeFont -->
+    <style name="listcellcategoryLargeFont">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">17dip</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left|center</item>
+    </style>
+
+    <!-- ListCell의 SmallFont -->
+    <style name="listcellcategorySmallFont">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">9dip</item>
+        <item name="android:textColor">#838383</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left|center</item>
+    </style>
+
+    <!-- ListCell의 NumberOfContentFont -->
+    <style name="listcellcategoryNumberOfContentFont">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">#6A6A6A</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left|bottom</item>
+    </style>
+
+
+    <!-- Explorer ListCell의 상단 파일 이름 문자열 -->
+    <style name="listcellExplorerFont1">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">15dip</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- Explorer ListCell의 상단 파일 갯수/크기 문자열 -->
+    <style name="listcellExplorerFont2">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">#838383</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- Explorer Current Path 속성 정의 -->
+    <style name="ExplorerCurrentPathFont">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">13dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#aaaaaa</item>
+    </style>
+
+    <!-- ListCell의 Icon Style -->
+    <style name="listcellIcon">
+        <item name="android:layout_width">86px</item>
+        <item name="android:layout_height">76px</item>
+        <item name="android:layout_marginLeft">4px</item>
+        <item name="android:layout_marginTop">4px</item>
+    </style>
+
+
+
+
+    <!-- Setting Header 속성 정의 -->
+    <style name="settingHeader">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">11dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#aaaaaa</item>
+    </style>
+
+    <!-- Setting Item Title1 속성 정의 -->
+    <style name="settingTitle1">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">15dip</item>
+    </style>
+
+    <!-- Setting Item Title2 속성 정의 -->
+    <style name="settingTitle2">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">13dip</item>
+    </style>
+
+    <style name="settingValue">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">12dip</item>
+    </style>
+
+    <!-- Setting Description 속성 정의 -->
+    <style name="settingDescription">
+        <item name="android:textSize">10dip</item>
+        <item name="android:textColor">#888888</item>
+    </style>
+
+    <!-- -->
+    <style name="explorer_eternal_directory_title">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+    <!-- -->
+    <style name="DividerDefault">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/divider_default</item>
+    </style>
+
+
+    <style name="SwitchStyleBlue">
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="android:colorForeground">@color/blue_btn_bg_color</item>
+    </style>
+
+
+    <style name="RadionStyle1" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radio_selector</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <!-- -->
+    <style name="TransparentDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/float_transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="alert_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/float_transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="dialog_border_button" parent="android:Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_button_border_a</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">10.0dp</item>
+        <item name="android:textColor">@color/blue_btn_bg_color</item>
+    </style>
+
+    <style name="dialog_blue_button" parent="android:Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_blue_background</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">10.0dp</item>
+        <item name="android:textColor">@color/button_text_color</item>
+    </style>
+
+    <style name="dialog_gradation_button" parent="android:Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_btn_serial_auth</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">10.0dp</item>
+        <item name="android:textColor">@color/button_text_color</item>
+    </style>
+
+
+</resources>

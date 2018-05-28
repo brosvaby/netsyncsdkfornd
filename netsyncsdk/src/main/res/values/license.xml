@@ -1,0 +1,28 @@
+<resources>
+    <string name="license_valid_license">Valid license</string>
+    <string name="license_unlimited_content">Unlimited playback license</string>
+    <string name="license_not_exist_license">License not exists</string>
+    <string name="license_expired_license">License date expired</string>
+    <string name="license_beforestartDate">Invalid license - before starting time</string>
+    <string name="license_exceeded_play_count">License count exceeded</string>
+    <string name="license_external_device_disallowed">External display is not allowed.</string>
+    <string name="license_rooted_device_disallowed">Rooted device is not allowed.</string>
+    <string name="license_device_time_modified">Cannot play content because device<![CDATA[\']]>s time manipulation is detected. Please retry after adjusting the device time to current time or set to auto time.</string>
+    <string name="license_offline_not_supported">Does not allow playback in an offline environment.</string>
+    <string name="license_offline_status_too_long">Content playback is limited in offline environment. Please retry while online.</string>
+    <string name="license_fail_to_update_online">Failed to update license. Please retry while online.</string>
+    <string name="license_screen_recorder_detected">Security Detection : %s\nScreen recording app is detected. (This content is protected by copyright)</string>
+    <string name="license_invalid_license">Invalid license format.</string>
+    <string name="license_fail_to_get_license">Failed to get license.</string>
+    <string name="license_not_ncg_file">This file is not a NCG file.</string>
+    <string name="license_fail_to_update_license_info">License information update failed</string>
+    <string name="license_invalid_license_info">The license information is invalid.</string>
+    <string name="license_exception_network_error">There is a problem with the network connection. Please check your connection and try again.</string>
+    <string name="license_exception_no_authority">The content license has expired.</string>
+    <string name="license_exception_server_error">Failed to issue license, or the license is expired. \nError Code : %s</string>
+    <string name="license_exception_ncg_error">Failed to issue license due to an internal error.</string>
+    <string name="license_exception_other_error">Failed to issue license.</string>
+    <string name="license_check_exception_network_error">Failed to check license due to network issue. Please try again after checking network connection.</string>
+    <string name="license_check_exception_ncg_error">Failed to check license due to an internal error.</string>
+    <string name="license_check_exception_other_error">Failed to check licenses.</string>
+</resources>

@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.inka.playerapple"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        useLibrary 'org.apache.http.legacy'
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0.0.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(keystore)
+            storePassword keystore_pass
+            keyAlias key_alias
+            keyPassword key_pass
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    //output.outputFile = new File("${rootDir}/a_out_apk_files", output.outputFile.name.replace("debug.apk", "debug_nd_" + ndBuildVersionName + "_app_" + versionName + "_" + versionCode + ".apk"))
+//                }
+//            }
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+}
+
+dependencies {
+    api project(':netsyncsdk');
+    api project(':visualonplayer');
+
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportAppcompatVersion"
+    api "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+    api "com.android.support:recyclerview-v7:$rootProject.ext.supportRecyclerViewVersion"
+    api "com.android.support:design:$rootProject.ext.supportDesignVersion"
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+

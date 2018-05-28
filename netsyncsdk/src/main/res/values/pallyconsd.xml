@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="serial_authentication_url">http://sd.pallycon.com/side/serialauth.do</string>
+    <string name="privacy_policy_url">http://www.pallycon.com/privacy/privacy.html</string>
+    
+	<!-- Sheme Spec -->
+	<string name="schemedownload">pallyconsdplayerdownload</string>
+	<string name="schemedownloads">pallyconsdplayerdownloads</string>
+	<string name="schemeplay">pallyconsdplayerplay</string>
+	<string name="schemerefund">pallyconsdplayerrefund</string>
+	
+    <!-- 업체인증 -->
+    <string name="acquisition_url">http://tokyo.pallycon.com/ri/licenseManager.do</string>
+
+	<!-- 이용안내 -->
+	<string name="help_url">http://ndpro.co.kr/faq/ndplayerfaq.html</string>
+
+    <!-- 앱 정보 -->
+    <string name="app_name">PallyCon SD Player</string>
+    <string name="app_company">INKA ENTWORKS</string>
+    <string name="contact">cbiz@inka.co.kr</string>
+    <string name="player_name"></string>
+    <string name="splash_delay">2000</string>
+
+	<!-- RecordEnterPrise -->
+	<!-- Lib 단에서 사용됨 -->
+	<string name="enterprise_code">IIII</string>
+	<!-- Ex 단에서 사용됨 -->
+	<string name="enterprise_name">PallyConSD</string>
+	<string name="enterprise_kor_name">팰리컨SD</string>
+	<string name="play_type">2</string>
+	<string name="log_type">2</string>
+</resources>

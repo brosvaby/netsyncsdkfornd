@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_layout"
+    android:layout_width="@dimen/alert_width"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_white"
+    android:padding="@dimen/padding_normal">
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/dialog_progress_load_contents"
+        android:textSize="20.0sp"
+        android:textColor="#000000"
+        android:textStyle="normal"
+        android:maxLines="1" />
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="25.0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/dialog_progress_please_wait"
+        android:textColor="#0064e8"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:maxLines="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_alignParentBottom="true" >
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:shadowColor="#CC000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1.5"
+            android:maxLines="1"
+            android:textColor="#d6d6d6"
+            android:textSize="12.0sp"
+            android:textStyle="normal"/>
+        <ProgressBar
+            android:id="@+id/info_progress"
+            android:layout_below="@+id/info_text"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/progress_media_scan"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

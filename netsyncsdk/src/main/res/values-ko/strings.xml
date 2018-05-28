@@ -1,0 +1,205 @@
+<resources>
+
+    <!-- common -->
+    <string name="close">닫기</string>
+    <string name="setting">설정</string>
+    <string name="internal_memory">내장메모리</string>
+    <string name="external_memory">외장메모리</string>
+    <string name="total_lecture">총 %s 강</string>
+
+    
+    <!-- text -->
+    <string name="text_favorite_empty_message">즐겨찾기 영상이 없습니다.</string>
+    <string name="text_recently_played_empty_message">최근 재생 목록이 없습니다.</string>
+    <string name="text_empty_message">미디어 목록이 없습니다.</string>
+
+    <!-- sort -->
+    <string name="sort">정렬</string>
+    <string name="sort_name_asc">이름 (오름차순)</string>
+    <string name="sort_name_des">이름 (내림차순)</string>
+
+
+    <!-- search -->
+    <string name="search_hint">전체 파일을 검색합니다.</string>
+    <string name="search_input_message">검색어를 입력해 주세요.</string>
+    <string name="search_empty_message">검색 결과가 없습니다.</string>
+
+
+    <!-- Player Layout -->
+    <string name="player_locked">잠김</string>
+    <string name="player_unlocked">잠김 풀림</string>
+    <string name="player_bookmark_list">북마크 목록</string>
+    <string name="player_dialog_bookmark_check_memo">북마크 추가</string>
+    <string name="player_dialog_bookmark_check_input_memo">북마크 이름을 입력하세요</string>
+    <string name="player_function_bposition_ahead_of_aposition">시작 시간보다 앞서 있습니다.</string>
+    <string name="player_function_section_shorter_than_tensecond">구간이 너무 짧습니다. 최소 10초 이하 일 경우 설정되지 않습니다.</string>
+    <string name="player_function_no_memo">메모 없음</string>
+    <string name="player_function_start_section_repeat">구간반복을 시작 합니다.</string>
+    <string name="player_function_repeatmode1">반복재생 OFF</string>
+    <string name="player_function_repeatmode2">1개 반복재생</string>
+    <string name="player_function_repeatmode3">전체 반복재생</string>
+    <string name="player_error_surface_calling">기본 플레이어의 경우 setDataSource() 메소드를 호출하기 전에 Surface 를 생성해야 합니다.</string>
+
+
+    <!-- Setting Common -->
+    <string name="setting_info_player">플레이어 선택</string>
+    <string name="setting_info_decoder">재생 디코더</string>
+    <string name="setting_info_gesture_availble">제스쳐 사용 유무</string>
+    <string name="setting_info_swxplay">재생 디코더</string>
+    <string name="setting_info_app_name">이름</string>
+    <string name="setting_info_app_version">버전정보</string>
+    <string name="setting_info_app_company">제작</string>
+    <string name="setting_info_contact">제휴문의</string>
+    <string name="setting_info_fnc_privacy">개인정보처리방침</string>
+
+    <string name="setting_decoder_hardware">H/W</string>
+    <string name="setting_decoder_software">S/W</string>
+    <string name="setting_none">N/A</string>
+    <string name="setting_player_base">기본 플레이어</string>
+    <string name="setting_player_double_speed">배속 플레이어</string>
+
+    <string name="setting_description_native_player">기본플레이어 사용 시 배속 기능 이용이 불가합니다.</string>
+    <string name="setting_description_decoder">H/W배속 재생에 문제 있을 시에만 S/W 설정을 사용 하십시요.</string>
+    <string name="setting_description_restricted_internet">콘텐츠 재생 시 방해를 받지 않도록 전화 메세지 모바일네트워크 Wi Fi, 블루투스를 차단합니다.</string>
+
+    <string name="setting_section_networkandplayer">플레이어 설정</string>
+    <string name="setting_section_basic_information">앱정보</string>
+    <string name="setting_section_basic_function">기타 정보</string>
+
+    <string name="setting_result_enable_market_version_update">업데이트 하기</string>
+    <string name="setting_result_disable_market_version_update">최신버전</string>
+
+
+    <!-- Dialog -->
+    <string name="dialog_ok">확인</string>
+    <string name="dialog_cancel">취소</string>
+    <string name="dialog_serial">인증하기</string>
+    <string name="dialog_remove_selected_bookmark">선택항목 삭제</string>
+
+    <string name="dialog_title_sd_not_exist_sdcard">SD 카드가 없습니다.</string>
+    <string name="dialog_title_path">경로 정보</string>
+    <string name="dialog_title_warning">경고</string>
+    <string name="dialog_title_close">종료</string>
+    <string name="dialog_title_error">에러</string>
+    <string name="dialog_title_download">등록</string>
+    <string name="dialog_title_sdtype_a_download">디바이스 인증하기</string>
+    <string name="dialog_title_serial">시리얼 인증하기</string>
+    <string name="dialog_title_serial_number">시리얼 번호</string>
+    <string name="dialog_title_input_homeurl">메인페이지 주소 입력</string>
+    <string name="dialog_title_device_authentication">디바이스 인증하기</string>
+
+    <string name="dialog_description_sd_not_exist_sdcard">SD 카드가 마운트 해제되어 홈으로 이동합니다.</string>
+    <string name="dialog_description_serial">시리얼 인증시 단말은 온라인 상태여야 합니다.</string>
+
+    <string name="dialog_message_close_application">앱을 종료 하시겠습니까?</string>
+    <string name="dialog_result_no_selected">선택되지 않았습니다.</string>
+
+    <string name="dialog_player_title_skip_time">플레이어 스킵 시간</string>
+    <string name="dialog_player_title_screen_rate">화면 비율</string>
+    <string name="dialog_player_title_screen_lock_title">화면 회전 고정</string>
+
+    <string name="dialog_progress_please_wait">잠시만 기다려주십시요.</string>
+    <string name="dialog_progress_initializing_player">재생 준비중 입니다.</string>
+    <string name="dialog_progress_load_contents">리스트 갱신 중입니다.</string>
+    <string name="dialog_progress_sync_contents">데이타 동기화 중입니다.</string>
+
+
+    <!-- guide -->
+    <string name="guide_text_next">다음</string>
+    <string name="guide_text_start">시작</string>
+    <string name="guide_text_title_ndplayer">ND 플레이어</string>
+    <string name="guide_text_description_ndplayer">본 플레이어는 구매하신 보안 콘텐츠를\n 편리하게 사용 할 수 있으며\n 학습에 꼭 필요한 기능으로 구성되어 있습니다.</string>
+    <string name="guide_text_title_ndplayer_2">최초 1회 온라인 인증 만으로 인터넷이 없는 환경에서도 편하게 콘텐츠를 사용 할 수 있습니다.</string>
+    <string name="guide_text_description_ndplayer_2">지금 만나보세요.</string>
+    <string name="guide_text_default_storage_description">먼저, 메뉴에서 저장소를 선택하세요.</string>
+
+
+    <!-- 이용 안내 -->
+    <string name="help_text_question_01">영상강의를 보려면 어떻게 하나요?</string>
+    <string name="help_text_answer_01">영상(강의) 재생을 위해선 반드시 "시리얼 인증"이 필요합니다.
+        \n앱 실행 > "내부저장소" or "SD카드" or "USB저장소" 선택 > "영상(강의)" 선택 > 시리얼 인증하기 > 재생</string>
+    <string name="help_text_question_02">시리얼 인증은 어떻게 하나요?</string>
+    <string name="help_text_answer_02">시리얼 인증은 "시리얼 촬영" 과 "직접 입력" 으로 할 수 입니다. (처음 재생에서만 인증이 필요함.)
+        \n\n시리얼 인증 과정은 Online (예: LTE, WIFI...) 에서만 가능합니다.
+        \n1. 시리얼 촬영 : "시리얼 촬영" 버튼 선택 > 촬영 > "확인" 버튼 선택
+        \n2. 직접 입력 :  시리얼 입력란에 시리얼 넘버 입력 > "확인" 버튼 선택</string>
+    <string name="help_text_question_03">mp4, wmv... 영상은 재생이 안되나요?</string>
+    <string name="help_text_answer_03">PallyCon SD Player  앱에서는 잉카엔트웍스에서 제공하는 DRM으로 패키징된 영상만 재생가능합니다.
+        \n(문의 : nd@pallycon.com  / 잉카엔트웍스 ND팀 )</string>
+    <string name="help_text_question_04">영상(강의) 플레이어는 어떻게 사용하나요?</string>
+    <string name="help_text_answer_04">영상(강의) 플레이어는 다음과 같은 기능이 있습니다.
+        \n\n1. 재생 버튼 - 영상을 재생할 때 선택합니다.
+        \n2. 정지 및 일시정지 버튼 - 영상 재생을 정지하거나 혹은 일시 정지하려 할 때 선택합니다.
+        \n3. 재생바  - 재생 상태를 확인하고, 재생바에서 원하는 부분의 위치로 드래그하면 바로 이동됩니다.
+        \n4. 소리 크기 조절 - 영상의 소리 크기를 조절할 때 선택합니다.</string>
+    <string name="help_text_question_05">영상(강의)이 재생 되지 않아요.</string>
+    <string name="help_text_answer_05">영상(강의)가 원활하게 재생되지 않은 경우, 앱을 종료 후 다시 실행해주시기 바랍니다.
+        \n\n앱을 재실행해도 안될 경우,
+        \n\n1. 앱 데이터 삭제
+        \n- 설정 > 일반 > 앱 or 어플리케이션 > PallyCon SD Player 앱 터치 > 저장공간 터치 > 데이터 지우기
+        \n(시리얼 인증하기 작업이 필요합니다. 최초 인증한 시리얼 넘버를 입력하시면 됩니다.)
+        \n\n2. 앱 재설치
+        \n- 앱 삭제 후 다시 설치하여 실행해주시기 바랍니다.
+        \n(시리얼 인증하기 작업이 필요합니다. 최초 인증한 시리얼 넘버를 입력하시면 됩니다.)</string>
+    <string name="help_text_question_06">영상(강의)을 터치하면 "Invalid palyback period" 문구가 뜨고 재생이 되지 않아요.</string>
+    <string name="help_text_answer_06">영상(강의)에 기간제한이 적용되어 있을 경우, 재생 기간내에서만 재생이 가능합니다.</string>
+    <string name="help_text_question_07">"시리얼 인증하기" 에서 인증 시도시 "OVER LIMIT DEVICE COUNT: Cannot register this device!!" 문구가 뜨고, 인증이 되지 않아요.</string>
+    <string name="help_text_answer_07">입력하신 시리얼 넘버는 이미 사용된 시리얼 넘버 입니다.</string>
+    <string name="help_text_question_08">저장소에 파일이 보이지 않아요.</string>
+    <string name="help_text_answer_08">앱을 재실행 하거나, 새로고침을 시도하여 주시기 바랍니다. (화면을 위에서 아래로 쓸어내리면 새로고침됩니다.)
+        \n\n1. 내부저장소 : 스마트폰 내부저장소에 담긴 영상을 보여줍니다.
+        \n2. SD카드 : SD카드 외부 저장소에 담긴 영상을 보여줍니다.
+        \n3. USB 저장소 : OTG (USB) 외부 저장소에 담긴 영상을 보여줍니다.</string>
+
+
+    <!-- toast message -->
+    <!-- splash -->
+    <string name="message_for_toast_status_downloading">이미 다운로드 중인 컨텐츠가 있습니다. 다운로드가 완료되거나 취소 후 다시 시도해주세요.</string>
+    <string name="message_for_toast_status_playing">이미 재생중인 컨텐츠가 있습니다. 종료 후 다시 실행해주세요</string>
+    <string name="message_for_toast_status_guest_user">손님계정은 앱을 실행 할 수 없습니다. 소유자 계정으로 전환하여 사용 해 주십시요.</string>
+
+    <!-- player -->
+    <string name="message_for_toast_bookmark_limit_time">북마크는 최소 10초 간격으로 추가할 수 있습니다.</string>
+    <string name="message_for_toast_bookmark_limit_count">북마크는 최대 20개 까지만 등록 가능 합니다.</string>
+    <string name="message_for_toast_not_exist_bookmark">저장된 북마크가 없습니다.</string>
+    <string name="message_for_toast_not_add_bookmark">반복재생 중에는 북마크 페이지로 이동할 수 없습니다.</string>
+    <string name="message_for_toast_play_not_bookmark">북마크 재생에서는 지원하지 않는 기능입니다.</string>
+    <string name="message_for_toast_play_not_search">검색결과 재생에서는 지원하지 않는 기능입니다.</string>
+    <string name="message_for_toast_not_exist_advance">다음 파일이 없습니다.</string>
+    <string name="message_for_toast_not_exist_retour">이전 파일이 없습니다.</string>
+    <string name="message_for_toast_done_add_bookmark">\'%s\' 파일을 북마크에 추가 하였습니다.</string>
+    <string name="message_for_toast_player_repeat_hidden">반복 기능은 음원 파일 재생 시 아래의 경우 자동 해제 됩니다.\n- 화면이 off 될 때\n- 플레이어가 내려갈 때</string>
+
+    <!-- favorite -->
+    <string name="message_for_toast_favorite_content_use">즐겨찾기에 추가 되었습니다.</string>
+    <string name="message_for_toast_favorite_content_no_use">즐겨찾기가 해제 되었습니다.</string>
+
+    <!-- dialog -->
+    <string name="message_for_toast_select_item_for_delete">삭제할 항목을 선택해 주세요.</string>
+    <string name="message_for_toast_success_for_deleted_item_on_bookmark">북마크를 삭제 하였습니다.</string>
+
+    <!-- message -->
+    <string name="message_for_dialog_download_no_serial">시리얼 번호를 올바르게 입력해 주십시요.</string>
+    <string name="message_for_toast_file_not_exist">파일이 존재하지 않습니다. 이전에 파일을 받으신 메모리 카드를 삽입하시거나 강의 삭제 후 재 다운로드 해 주십시요.</string>
+    <string name="message_for_toast_file_is_not_ncg">NCG 파일이 아닙니다</string>
+
+    <!-- view -->
+    <string name="message_for_toast_view_navigation_root">최상위 입니다.</string>
+
+    <!-- network -->
+    <string name="network_connect_fail">네트워크가 연결되어 있지 않습니다. 연결 후에 다시 시도해 주십시요.</string>
+    <string name="network_serial_auth_code_invalid_number">시리얼 번호가 유효하지 않습니다.</string>
+    <string name="network_serial_auth_code_invalid_content_Id">해당 상품의 시리얼 번호가 아닙니다.</string>
+    <string name="network_serial_auth_code_exceeded_device_count_limit">등록할 수 있는 디바이스 개수를 초과 하였습니다.</string>
+    <string name="network_serial_auth_code_invalid_playback_period">재생 기간이 만료 되었습니다.</string>
+    <string name="network_serial_auth_code_invalid_drm_type">정상적이지 않은 컨텐츠 입니다.</string>
+    <string name="network_serial_auth_code_invalid_date_format">정상적이지 않은 컨텐츠 입니다.</string>
+    <string name="network_cannot_connect_wifi">온라인 환경이 필요합니다. 네트워크를 연결 해 주세요.</string>
+    <string name="network_connected_3gs">3G/LTE 로 접속합니다.</string>
+    <string name="network_download_3g_alert2">3G/LTE 로 접속합니다. 3G/LTE 접속시 과도한 데이터 통화료가 부과될 수 있습니다.</string>
+    <string name="network_download_no_connection">네트워크에 연결할 수 없습니다. 3G/LTE 또는 WiFi 연결을 확인해 주시기 바랍니다."</string>
+    <string name="network_download_no_wifi_connection">WiFi 연결이 안되어 연결이 제한되었습니다. 3G/LTE 환경에서 연결을 원하시면 환경설정 탭에서 설정을 변경하시기 바랍니다</string>
+    <string name="network_splash_3g_warning">3G/LTE 로 접속합니다. Wi-Fi 네트워크를 찾지 못하였습니다. Wi-Fi가 지원되는 휴대폰은 Wi-Fi를 통해 접속하시면 통화료가 발생하지 않습니다.</string>
+    <string name="network_splash_no_connection">네트워크 접속이 원활하지 않습니다.</string>
+
+</resources>

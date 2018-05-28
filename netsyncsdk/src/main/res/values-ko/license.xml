@@ -1,0 +1,28 @@
+<resources>
+    <string name="license_valid_license">유효한 라이선스 입니다.</string>
+    <string name="license_unlimited_content">무제한 컨텐츠 입니다.</string>
+    <string name="license_not_exist_license">라이선스가 존재하지 않습니다.</string>
+    <string name="license_expired_license">재생가능한 기간이 만료 되었습니다.</string>
+    <string name="license_beforestartDate">재생가능한 시작시간 이전입니다.</string>
+    <string name="license_exceeded_play_count">재생횟수가 만료 되었습니다.</string>
+    <string name="license_external_device_disallowed">외부출력 장치가 연결되어서 재생할 수 없습니다.</string>
+    <string name="license_rooted_device_disallowed">루팅된 환경에서 재생을 허용하지 않습니다.</string>
+    <string name="license_device_time_modified">기기 시간 조작 감지 되어 재생을 허용하지 않습니다. 설정에서 기기 시간을 현재 시간으로 맞추거나 자동 시간 설정으로 변경 후 재시도 바랍니다.</string>
+    <string name="license_offline_not_supported">오프라인 환경에서는 재생을 허용하지 않습니다.</string>
+    <string name="license_offline_status_too_long">오프라인 환경이 지속되면 원할한 강좌 수강이 어렵습니다. 온라인 상태에서 재시도 바랍니다.</string>
+    <string name="license_fail_to_update_online">온라인 갱신에 실패하였습니다. 기기의 온라인 상태 확인 후 재시도 바랍니다.</string>
+    <string name="license_screen_recorder_detected">보안 감지 : %s\n녹화 어플이 감지 되었습니다. (본 콘텐츠는 저작권법의 보호를 받고 있습니다)</string>
+    <string name="license_invalid_license">알수 없는 라이센스 형태입니다.</string>
+    <string name="license_fail_to_get_license">라이센스 획득에 실패 하였습니다.</string>
+    <string name="license_not_ncg_file">NCG 파일이 아닙니다.</string>
+    <string name="license_fail_to_update_license_info">라이센스 정보 업데이트에 실패했습니다.</string>
+    <string name="license_invalid_license_info">라이센스 정보가 올바르지 않습니다.</string>
+    <string name="license_exception_network_error">네트워크 연결에 문제가 있습니다. 연결 상태를 확인 하신 후 다시 시도해 주십시요.</string>
+    <string name="license_exception_no_authority">콘텐츠 사용 권한이 만료 되었습니다.</string>
+    <string name="license_exception_server_error">라이선스 발급에 실패했거나 콘텐츠 사용 권한이 만료 되었습니다. \n에러코드 : %s</string>
+    <string name="license_exception_ncg_error">내부 오류로 인해 라이센스 발급에 실패하였습니다.</string>
+    <string name="license_exception_other_error">라이센스 발급에 실패하였습니다.</string>
+    <string name="license_check_exception_network_error">네트워크 연결에 문제가 있어 라이센스 체크에 실패하였습니다. 연결 확인 후 다시 시도해 주십시요.</string>
+    <string name="license_check_exception_ncg_error">내부 오류로 인해 라이센스 체크에 실패하였습니다.</string>
+    <string name="license_check_exception_other_error">라이센스 체크에 실패하였습니다.</string>
+</resources>

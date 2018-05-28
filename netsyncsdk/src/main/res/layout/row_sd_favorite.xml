@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.inka.netsync.view.CheckableLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/layout_root"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/list_item_row_height"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:background="@drawable/selector_list_item">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingTop="@dimen/padding_tiny"
+		android:paddingBottom="@dimen/padding_tiny"
+		android:gravity="center">
+		<!-- 아이콘 이미지 -->
+		<ImageView
+			android:id="@+id/iv_fileitem_image"
+			android:layout_width="@dimen/list_item_row_img_icon_width"
+			android:layout_height="@dimen/list_item_row_img_icon_height"
+			android:layout_marginLeft="@dimen/margin_normal"
+			android:scaleType="fitXY"
+			android:src="@drawable/img_video"/>
+
+		<!-- 컨텐츠 정보 -->
+		<LinearLayout
+			android:id="@+id/linear_fileitem"
+			android:layout_width="0px"
+			android:layout_height="match_parent"
+			android:layout_marginRight="10dp"
+			android:layout_weight="13"
+			android:layout_marginLeft="@dimen/margin_normal"
+			android:orientation="vertical">
+			<!-- Item name -->
+			<TextView
+				android:id="@+id/tv_fileitem_name"
+				style="@style/explorer_eternal_directory_title"
+				android:layout_width="match_parent"
+				android:layout_height="0px"
+				android:layout_weight="1"
+				android:gravity="center_vertical" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0px"
+				android:layout_weight="1"
+				android:orientation="horizontal">
+				<!-- Item data -->
+				<TextView
+					android:id="@+id/tv_fileitem_data"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:typeface="sans"
+					android:textSize="12.0dp"
+					android:textColor="#838383"
+					android:singleLine="true"
+					android:ellipsize="start"
+					android:maxLines="1"
+					android:gravity="center_vertical"
+					tools:ignore="EllipsizeMaxLines" />
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<!-- 즐겨찾기 -->
+		<LinearLayout
+			android:id="@+id/favorite_area"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginRight="@dimen/margin_normal"
+			android:gravity="center"  >
+			<ToggleButton
+				android:id="@+id/is_favorite"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:textOn=""
+				android:textOff=""
+				android:background="@drawable/check_favorite_on_off" />
+		</LinearLayout>
+	</LinearLayout>
+</com.inka.netsync.view.CheckableLinearLayout>

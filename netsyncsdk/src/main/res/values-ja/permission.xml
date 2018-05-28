@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string name="permission_check_title_for_account">User Information permission</string>
+    <string name="permission_check_description_for_account">To Use a part of function in device, the func permission is required. If you dont accept the permission, this service wont be available.</string>
+
+    <string name="permission_check_title_for_device_state">Device State infomation permission</string>
+    <string name="permission_check_description_for_device_state">To Use base infomation in device, If you dont accept the permission, this service wont be available.</string>
+
+    <string name="permission_check_title_for_storage">external memory access permission.</string>
+    <string name="permission_check_description_for_storage">To call media from external memory card, users permission is required. if you dont accept the permission, videos from external memory card wont be shown.</string>
+
+    <string name="permission_check_start_auth">Start</string>
+    <string name="permission_check_title_for_sdcard">Did you insert the SD card? \ nIf so, please <b><i> set up your SD card usage </i></b>.</string>
+    <string name="permission_check_title_description_for_sdcard">Allows the app to access the SD card.</string>
+    <string name="permission_check_subtitle_for_sdcard">Please allow the app to access the SD card first by following instructions below.</string>
+    <string name="permission_check_description_for_sdcard">1. Tap the SD card in the side menu. /n2. Tap the select button at the bottom.</string>
+</resources>

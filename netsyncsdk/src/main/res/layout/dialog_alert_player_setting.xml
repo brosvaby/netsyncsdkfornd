@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading"
+    android:layout_width="@dimen/alert_width"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_with_border">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:gravity="center"
+        android:text="@string/setting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_level_5"
+        android:textStyle="normal"
+        android:maxLines="1" />
+
+    <!-- 플레이어 스킵 시간  -->
+    <RelativeLayout
+        android:id="@+id/skip_time_player_container"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:layout_marginLeft="20.0dp"
+        android:layout_marginRight="20.0dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/speedctl_title"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_player_title_skip_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_level_3"
+            android:textStyle="normal"/>
+        <RelativeLayout
+            android:id="@+id/container_speedctl"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal">
+            <TextView
+                android:id="@+id/text_play_skip"
+                android:layout_toLeftOf="@+id/btn_play_skip_plus"
+                android:layout_width="35.0dp"
+                android:layout_height="35.0dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="10초"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_level_3"
+                android:textStyle="normal"
+                android:maxLines="1" />
+            <ImageView
+                android:id="@+id/btn_play_skip_minus"
+                android:layout_toLeftOf="@+id/text_play_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_normal"
+                android:src="@drawable/selector_btn_speedctl_minus"/>
+            <ImageView
+                android:id="@+id/btn_play_skip_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_normal"
+                android:src="@drawable/selector_btn_speedctl_plus" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 화면 비율 -->
+    <RelativeLayout
+        android:id="@+id/screen_rate_player_container"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:layout_marginLeft="20.0dp"
+        android:layout_marginRight="20.0dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/screen_rate_title"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_player_title_screen_rate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_level_3"
+            android:textStyle="normal"/>
+        <LinearLayout
+            android:id="@+id/container_screen_rate"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin_normal">
+            <ToggleButton
+                android:layout_toLeftOf="@+id/toggle_play_screen_rate_base"
+                android:id="@+id/toggle_play_screen_rate_full"
+                android:layout_width="70.0dp"
+                android:layout_height="30.0dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="꽉찬 화면"
+                android:textOff="꽉찬 화면"
+                android:textOn="꽉찬 화면"
+                android:textColor="@color/btn_font_toggle"
+                android:textSize="@dimen/font_level_3"
+                android:textStyle="normal"
+                android:maxLines="1"
+                android:checked="false"
+                android:background="@drawable/selector_btn_screen_rate" />
+            <ToggleButton
+                android:id="@+id/toggle_play_screen_rate_base"
+                android:layout_width="70.0dp"
+                android:layout_height="30.0dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="기본 화면"
+                android:textOff="기본 화면"
+                android:textOn="기본 화면"
+                android:textColor="@color/btn_font_toggle"
+                android:textSize="@dimen/font_level_3"
+                android:textStyle="normal"
+                android:maxLines="1"
+                android:checked="true"
+                android:background="@drawable/selector_btn_screen_rate"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--&lt;!&ndash; 화면 회전 고정 &ndash;&gt;-->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rotation_player_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50.0dp"-->
+        <!--android:layout_marginLeft="20.0dp"-->
+        <!--android:layout_marginRight="20.0dp" >-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:text="@string/dialog_player_title_screen_lock_title"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/font_level_3"-->
+            <!--android:textStyle="normal"-->
+            <!--android:maxLines="1" />-->
+        <!--<android.support.v7.widget.SwitchCompat-->
+            <!--android:id="@+id/switch_toogle"-->
+            <!--android:layout_width="54dp"-->
+            <!--android:layout_height="54dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:gravity="right|center_vertical"-->
+            <!--android:background="@null"-->
+            <!--android:theme="@style/SwitchStyleBlue"/>-->
+    <!--</RelativeLayout>-->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_large_m"
+        android:layout_height="1.0dp"
+        android:background="@color/divider_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:text="@string/dialog_ok"
+            android:textSize="14sp"
+            android:textColor="@color/dialog_button_text_color" />
+    </LinearLayout>
+
+</LinearLayout>

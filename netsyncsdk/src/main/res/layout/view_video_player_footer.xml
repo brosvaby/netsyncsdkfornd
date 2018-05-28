@@ -1,0 +1,35 @@
+<!-- 플레이어 풋터 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/player_footer_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:clickable="false">
+    <com.inka.netsync.view.widget.CheckableImageView
+        android:id="@+id/img_touch_lockscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginLeft="30.0dp"
+        android:src="@drawable/btn_media_lockscreen"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginRight="25.0dp"
+        android:layout_alignParentRight="true">
+        <com.inka.netsync.view.widget.MultiCheckableImageView
+            android:id="@+id/img_repeat_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_repeatmode_off"/>
+        <com.inka.netsync.view.widget.MultiCheckableImageView
+            android:id="@+id/img_repeat_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30.0dp"
+            android:src="@drawable/img_me_repeat_off"/>
+    </LinearLayout>
+</RelativeLayout>

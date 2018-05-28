@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragment_narmal_file_not_exist">File not exist. Insert the memory card with previously downloaded contents or re-download after deleting the lecture.</string>
+    <string name="setting_section_networkandplayer">플레이어 설정</string>
+    <string name="log_result_fail_to_get_proprietary_info">시원스쿨 일본어탭(전용 학습기)에서만 이용 가능한 서비스입니다.</string>
+
+    <!-- DrawerMenu Title -->
+    <string name="drawermenu_title_menu">MENU</string>
+    <string name="drawermenu_title_home">HOME</string>
+    <string name="drawermenu_title_storage">LECTURE</string>
+    <string name="drawermenu_title_favorite">FAVORITE</string>
+    <string name="drawermenu_title_playedlist">PLAYLIST</string>
+    <string name="drawermenu_title_setting">SETTING</string>
+    <string name="drawermenu_title_help">INFO</string>
+    <string name="drawermenu_title_guide">GUIDE</string>
+
+    <!-- Fragment Title -->
+    <string name="title_webview_fragment_tag">ホーム</string>
+    <string name="title_storage_fragment_tag">ストア</string>
+    <string name="title_explorer_internal_fragment_tag">내장 메모리</string>
+    <string name="title_explorer_external_fragment_tag">외장 메모리</string>
+    <string name="title_explorer_other_fragment_tag">USB</string>
+    <string name="title_mytitle_fragment_tag">タイトル</string>
+    <string name="title_mycontent_fragment_tag">レクチャー</string>
+    <string name="title_mybookmark_fragment_tag">ブックマーク</string>
+    <string name="title_myfavorite_fragment_tag">お気に入り</string>
+    <string name="title_playedlist_fragment_tag">最近再生したもの</string>
+    <string name="title_setting_fragment_tag">設定</string>
+    <string name="title_explorer_fragment_tag">PallyCon SD</string>
+    <string name="title_media_fragment_tag">미디어 목록</string>
+    <string name="title_info_fragment_tag">이용 안내</string>
+
+</resources>

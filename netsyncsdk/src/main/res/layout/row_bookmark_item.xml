@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_row_height"
+	android:paddingLeft="@dimen/padding_normal"
+	android:orientation="horizontal"
+	android:background="@drawable/selector_list_row_dark_and_transparents">
+
+    <!--북마크 시간 -->
+	<TextView
+		android:id="@+id/bookmark_location"
+		android:layout_width="80.0dp"
+		android:layout_height="match_parent"
+		android:gravity="left|center_vertical"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:padding="@dimen/padding_normal"
+		android:typeface="normal"
+		android:text="00:32:14"
+		android:textSize="13.0sp"
+		android:textColor="#ffa1a1a1" />
+		
+	<!-- 북마크 메모 -->
+	<TextView
+		android:id="@+id/bookmark_memo"
+		android:layout_toRightOf="@+id/bookmark_location"
+		android:layout_toLeftOf="@+id/edit_area"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="left|center_vertical"
+		android:layout_centerVertical="true"
+		android:padding="@dimen/padding_normal"
+		android:typeface="normal"
+		android:text="16번째 문제 풀이"
+		android:textSize="15.0sp"
+		android:textColor="#ffffff"/>
+
+	<RelativeLayout
+	    android:id="@+id/edit_area"
+	    android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+		android:gravity="center_vertical"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true">
+		<CheckBox
+			android:id="@+id/bookmark_item_delete"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:gravity="center"
+			android:button="@drawable/checkbox_selector"
+			android:padding="@dimen/padding_normal"
+			android:textStyle="bold" />
+	</RelativeLayout>
+	
+</RelativeLayout>
