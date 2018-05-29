@@ -17,6 +17,7 @@ import com.inka.netsync.sd.ui.fragment.SDExplorerFragment;
 import com.inka.netsync.view.dialog.CustomAlertDialog;
 
 /**
+ * 미디어 목록 화면 입니다.
  * Created by birdgang on 2017. 4. 24..
  */
 public class ExplorerFragmentEx extends SDExplorerFragment {
@@ -44,6 +45,10 @@ public class ExplorerFragmentEx extends SDExplorerFragment {
     }
 
 
+    /**
+     * 디렉토리 탐색기 컬러를 재정의 합니다.
+     * @return
+     */
     @Override
     protected int provideNavigationBackgroundColor () {
         return R.color.provider_color_actionbar_main_bg;
@@ -59,23 +64,37 @@ public class ExplorerFragmentEx extends SDExplorerFragment {
     }
 
 
+    /**
+     * 강의 진도율 프로그래스 바 컬러를 재정의 합니다.
+     * @return
+     */
     @Override
     protected int provideProgressBarForLmsDrawable () {
         return R.drawable.mango_progress_lms;
     }
 
+
+    /**
+     * 강의 진도율 활성화 컬러를 재정의 합니다.
+     * @return
+     */
     @Override
     protected int provideTextRateDimColorForLms () {
         return R.color.provider_color_text_rate_for_lms_dim;
     }
 
+
+    /**
+     * 강의 진도율 비활성화 컬러를 재정의 합니다.
+     * @return
+     */
     @Override
     protected int provideTextRateColorForLms () {
         return R.color.provider_color_text_rate_for_lms;
     }
 
     /**
-     *
+     * 검색 Activity를 지정 합니다.
      * @return
      */
     @Override
@@ -83,8 +102,9 @@ public class ExplorerFragmentEx extends SDExplorerFragment {
         return SearchActivityEx.class;
     }
 
+
     /**
-     *
+     * 재생 시도 후처리 Callback method 입니다.
      * @param playerEntry
      */
     @Override

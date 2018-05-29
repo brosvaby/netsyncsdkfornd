@@ -18,6 +18,10 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * 설정 화면 입니다.
+ */
 public class SettingFragmentEx extends SDSettingFragment {
 
 	private final String TAG = SettingFragmentEx.class.toString();
@@ -31,6 +35,11 @@ public class SettingFragmentEx extends SDSettingFragment {
 		return newFragment;
 	}
 
+
+	/**
+	 * 설정화면 섹션 목록을 지정합니다.
+	 * @return
+	 */
 	@Override
 	public List<SectionedRecyclerViewAdapter.Section> provideSettingSectionMenus() {
 		List<SectionedRecyclerViewAdapter.Section> sections = new ArrayList<>();
@@ -40,6 +49,11 @@ public class SettingFragmentEx extends SDSettingFragment {
 		return sections;
 	}
 
+
+	/**
+	 * 설정화면 메뉴 목록을 지정합니다.
+	 * @return
+	 */
 	@Override
 	protected List<SettingMenuViewEntry> provideSettingMenus () {
 		List<SettingMenuViewEntry> settingMenuEntries = new ArrayList<>();
@@ -113,17 +127,29 @@ public class SettingFragmentEx extends SDSettingFragment {
 		return settingMenuEntries;
 	}
 
-
+	/**
+	 *
+	 * @return
+	 */
 	@Override
 	protected String provideApplicationName () {
 		return getString(R.string.mango_app_name);
 	}
 
+	/**
+	 *
+	 * @return
+	 */
 	@Override
 	protected String provideApplicationCompany () {
 		return getString(R.string.mango_app_company);
 	}
 
+
+	/**
+	 *
+	 * @return
+	 */
 	@Override
 	protected String provideContact () {
 		return getString(R.string.mango_contact);

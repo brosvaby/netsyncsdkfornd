@@ -4,18 +4,29 @@ import android.content.DialogInterface;
 import android.os.Build;
 import android.support.v7.app.AlertDialog;
 
-import com.inka.netsync.logs.LogUtil;
 import com.inka.netsync.sd.ui.SDCertificationActivity;
 
 import java.util.List;
 
+/**
+ * SD 카드를 통한 인증화면 입니다.
+ */
 public class CertificationActivityEx extends SDCertificationActivity {
 
+    /**
+     * 인증 성공시 다음에 보여질 화면을 지정합니다.
+     * @return
+     */
     @Override
     protected Class<?> provideNextContentView () {
         return DrawerActivityEx.class;
     }
 
+
+    /**
+     * 디바이스 제한에 실패 했을 경우에 대한 Callback 메소드 입니다.
+     * @return
+     */
     @Override
     protected boolean onResultEnableDeviceModels() {
         boolean result = false;

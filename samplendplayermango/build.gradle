@@ -14,15 +14,6 @@ android {
         versionName "1.0.0.0"
     }
 
-    signingConfigs {
-        release {
-            storeFile file(keystore)
-            storePassword keystore_pass
-            keyAlias key_alias
-            keyPassword key_pass
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled true

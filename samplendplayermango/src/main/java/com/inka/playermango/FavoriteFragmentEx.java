@@ -14,6 +14,7 @@ import com.inka.netsync.sd.ui.fragment.SDFavoriteFragment;
 import com.inka.netsync.view.dialog.CustomAlertDialog;
 
 /**
+ * 즐겨 찾기 목록 화면 입니다.
  * Created by birdgang on 2017. 4. 24..
  */
 public class FavoriteFragmentEx extends SDFavoriteFragment {
@@ -29,6 +30,10 @@ public class FavoriteFragmentEx extends SDFavoriteFragment {
         return newFragment;
     }
 
+    /**
+     * 재생 시도 후처리 Callback method 입니다.
+     * @param playerEntry
+     */
     @Override
     public void onLoadPlaybackActivity(PlayerEntry playerEntry) {
         boolean isSuccess = playerEntry.isSuccess();

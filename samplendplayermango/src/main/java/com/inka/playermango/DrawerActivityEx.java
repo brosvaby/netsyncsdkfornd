@@ -13,6 +13,10 @@ import com.inka.netsync.ui.fragment.BaseFragment;
 
 import java.util.List;
 
+
+/**
+ * 어플리케이션 메인 화면 이고, 기능 별 각 화면을 정의 합니다.
+ */
 public class DrawerActivityEx extends SDDrawerPlayerActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +25,21 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         onResultEnableDeviceModels();
     }
 
+    /**
+     *
+     * @param tabTag
+     * @return
+     */
     @Override
     protected Fragment getFragment(String tabTag) {
         return super.getFragment(tabTag);
     }
 
+
+    /**
+     *
+     * @return
+     */
     @Override
     protected BaseFragment provideWebViewFragment() {
         String keyTagFragment = this.getString(R.string.key_tag_fragment);
@@ -33,6 +47,12 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         return WebViewFragmentEx.newInstance(keyTagFragment, this.getString(R.string.tag_webview_fragment), keyNameFragment, this.getString(R.string.title_webview_fragment_tag));
     }
 
+
+    /**
+     *
+     * @param storageType
+     * @return
+     */
     @Override
     protected BaseFragment provideExplorerFragment(String storageType) {
         String keyTagFragment = this.getString(R.string.key_tag_fragment);
@@ -40,6 +60,10 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         return ExplorerFragmentEx.newInstance(keyTagFragment, this.getString(R.string.tag_storage_external_fragment), keyNameFragment, this.getString(R.string.title_explorer_external_fragment_tag), storageType);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     protected BaseFragment provideFavoriteFragment() {
         String keyTagFragment = this.getString(R.string.key_tag_fragment);
@@ -47,6 +71,10 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         return FavoriteFragmentEx.newInstance(keyTagFragment, this.getString(R.string.tag_menu_favorite_fragment), keyNameFragment, this.getString(R.string.title_myfavorite_fragment_tag));
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     protected BaseFragment providePlayedListFragment() {
         String keyTagFragment = this.getString(R.string.key_tag_fragment);
@@ -54,6 +82,10 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         return RecentlyFragmentEx.newInstance(keyTagFragment, this.getString(R.string.tag_playedlist_fragment), keyNameFragment, this.getString(R.string.title_playedlist_fragment_tag));
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     protected BaseFragment provideSettingFragment() {
         String keyTagFragment = this.getString(R.string.key_tag_fragment);
@@ -61,6 +93,10 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         return SettingFragmentEx.newInstance(keyTagFragment, this.getString(R.string.tag_setting_fragment), keyNameFragment, this.getString(R.string.title_setting_fragment_tag));
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     protected BaseFragment provideInfoWebViewFragment() {
         String keyTagFragment = this.getString(R.string.key_tag_fragment);
@@ -68,6 +104,10 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         return InfoWebViewFragmentEx.newInstance(keyTagFragment, this.getString(R.string.tag_info_fragment), keyNameFragment, this.getString(R.string.title_info_fragment_tag));
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     protected BaseFragment provideInfoFragment() {
         String keyTagFragment = this.getString(R.string.key_tag_fragment);
@@ -76,7 +116,7 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
     }
 
     /**
-     * 상태바 컬러
+     * 상태바의 컬러를 재정의 합니다.
      * @return
      */
     @Override
@@ -86,7 +126,7 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
 
 
     /**
-     * 상태바 컬러
+     * 액션바의 컬러를 재정의 합니다.
      * @return
      */
     @Override
@@ -94,8 +134,9 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         return R.color.provider_color_actionbar_main_bg;
     }
 
+
     /**
-     *
+     * 미디어 스캔시 프로그래시브 바 컬러를 재정의 합니다. 최초 한번 실행이 되며 재 스킨시 다시 보여집니다.
      * @return
      */
     @Override
@@ -103,8 +144,9 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
         return R.drawable.mango_progress_media_scan;
     }
 
+
     /**
-     *
+     * 미디어 스캔시 데이터 싱크 프로그래시브 바 컬러를 재정의 합니다. 최초 한번 실행이 되며 재 스킨시 다시 보여집니다.
      * @return
      */
     @Override
@@ -114,7 +156,7 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
 
 
     /**
-     *
+     * 디바이스 제한에 실패 했을 경우에 대한 Callback 메소드 입니다.
      * @return
      */
     protected boolean onResultEnableDeviceModels () {

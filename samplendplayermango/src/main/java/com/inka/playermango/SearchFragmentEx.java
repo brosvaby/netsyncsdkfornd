@@ -27,6 +27,11 @@ public class SearchFragmentEx extends SDSearchFragment {
         return newFragment;
     }
 
+
+    /**
+     * 재생 시도 후처리 Callback method 입니다.
+     * @param playerEntry
+     */
     @Override
     public void onLoadPlaybackActivity(PlayerEntry playerEntry) {
         boolean isSuccess = playerEntry.isSuccess();

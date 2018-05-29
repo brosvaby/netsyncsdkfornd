@@ -2,10 +2,13 @@ package com.inka.playermango;
 
 import com.inka.netsync.ui.SplashActivity;
 
+/**
+ * 어플리케이션 구동 시 초기 화면 입니다.
+ */
 public class SplashActivityEx extends SplashActivity {
 
 	/***
-	 * 인증이 끝난후에 돌아갈 페이지 Activity
+	 * 인증 성공시 다음에 보여질 화면을 지정합니다.
 	 * @return
 	 */
 	@Override
@@ -14,7 +17,7 @@ public class SplashActivityEx extends SplashActivity {
 	}
 
 	/***
-	 * 스플래쉬 로딩 딜레이 시간
+	 * 화면 유지 시간을 지정 합니다.
 	 * @return
 	 */
 	@Override
