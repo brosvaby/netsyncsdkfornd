@@ -31,7 +31,7 @@ import com.inka.netsync.di.component.ActivityComponent;
 import com.inka.netsync.di.component.DaggerActivityComponent;
 import com.inka.netsync.di.module.ActivityModule;
 import com.inka.netsync.logs.LogUtil;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 import com.inka.netsync.ui.fragment.BaseFragment;
 import com.inka.netsync.ui.fragment.ExplorerFragment;
 import com.inka.netsync.ui.fragment.ExplorerSearchFragment;
@@ -152,7 +152,7 @@ public abstract class BaseActivity extends AppCompatActivity implements MvpView 
                             sDialog.cancel();
                             finish();
 
-                            Ncg2SdkHelper.getDefault().release();
+                            NetSyncSdkHelper.getDefault().release();
                         } catch (Exception e) {
                             e.getMessage();
                         }
@@ -340,7 +340,7 @@ public abstract class BaseActivity extends AppCompatActivity implements MvpView 
      * SD 시나리오에서 앱 실행시 모든 라이센스를 삭제하여 매번 content 재생시 라이센스 획득하도록 한다.
      */
     protected void setOneTimeLicense() {
-//        Ncg2SdkHelper.getDefault().removeLicenseAllCID();
+//        NetSyncSdkHelper.getDefault().removeLicenseAllCID();
         LogUtil.INSTANCE.info("birdgangncg2sdk", " remove all license..");
     }
 

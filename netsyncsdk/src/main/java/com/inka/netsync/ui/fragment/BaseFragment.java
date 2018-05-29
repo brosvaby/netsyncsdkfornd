@@ -22,7 +22,7 @@ import com.inka.netsync.common.AppConstants;
 import com.inka.netsync.data.cache.pref.PreferencesCacheHelper;
 import com.inka.netsync.di.component.ActivityComponent;
 import com.inka.netsync.logs.LogUtil;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 import com.inka.netsync.ncg.model.PlayerEntry;
 import com.inka.netsync.ui.BaseActivity;
 import com.inka.netsync.ui.mvpview.MvpView;
@@ -281,7 +281,7 @@ public abstract class BaseFragment extends Fragment implements MvpView {
     }
 
     private boolean checkNcgContent (String path) throws Ncg2Exception {
-        return Ncg2SdkHelper.getDefault().isNcgContent(path);
+        return NetSyncSdkHelper.getDefault().isNcgContent(path);
     }
 
     public abstract boolean onBackPressed();

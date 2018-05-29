@@ -27,7 +27,7 @@ import com.inka.netsync.data.cache.db.MetaData;
 import com.inka.netsync.data.cache.pref.PreferencesCacheHelper;
 import com.inka.netsync.data.network.model.MarketVersionCheckEntry;
 import com.inka.netsync.logs.LogUtil;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 import com.inka.netsync.ui.DrawerActivity;
 import com.inka.netsync.ui.mvppresenter.SettingMvpPresenter;
 import com.inka.netsync.ui.mvpview.SettingMvpView;
@@ -223,7 +223,7 @@ public class SettingFragment extends BaseFragment implements SettingMvpView {
     };
 
     protected void deleteAllLicenseAndFile() {
-        Ncg2SdkHelper.getDefault().removeLicenseAllCID();   // License 전체 삭제(2중장치)
+        NetSyncSdkHelper.getDefault().removeLicenseAllCID();   // License 전체 삭제(2중장치)
     }
 
     public EventBus.onDialogEventListener mDialogEventListener = new EventBus.onDialogEventListener() {

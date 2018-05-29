@@ -3,16 +3,12 @@ package com.inka.netsync.ncg;
 import android.content.Context;
 import android.widget.Toast;
 
+import com.inka.ncg.nduniversal.Ncg2SdkHelper;
 import com.inka.ncg.nduniversal.NcgValidationCheck;
-import com.inka.ncg2.Base64Encoder;
 import com.inka.ncg2.Ncg2Agent;
 import com.inka.ncg2.Ncg2Exception;
 import com.inka.ncg2.Ncg2FatalException;
 import com.inka.ncg2.Ncg2HttpException;
-import com.inka.ncg2.Ncg2LocalWebServer;
-import com.inka.ncg2.Ncg2ModifiedDBFileInoException;
-import com.inka.ncg2.Ncg2ReadPhoneStateException;
-import com.inka.ncg2.Ncg2SdkFactory;
 import com.inka.ncg2.Ncg2ServerResponseErrorException;
 import com.inka.netsync.R;
 import com.inka.netsync.common.utils.DateTimeUtil;
@@ -21,21 +17,21 @@ import com.inka.netsync.logs.LogUtil;
 /**
  * Created by birdgang on 2018. 5. 4..
  */
-public class Ncg2SdkHelper {
+public class NetSyncSdkHelper {
 
-    private final String TAG = "Ncg2SdkHelper";
+    private final String TAG = "NetSyncSdkHelper";
 
     private static Context context;
 
-    static volatile Ncg2SdkHelper defaultInstance;
+    static volatile NetSyncSdkHelper defaultInstance;
 
-    protected Ncg2Agent mNcg2Agent = null;
+    protected Ncg2SdkHelper mNcg2SdkHelper = null;
 
-    public static Ncg2SdkHelper getDefault() {
+    public static NetSyncSdkHelper getDefault() {
         if (defaultInstance == null) {
-            synchronized (Ncg2SdkHelper.class) {
+            synchronized (NetSyncSdkHelper.class) {
                 if (defaultInstance == null) {
-                    defaultInstance = new Ncg2SdkHelper();
+                    defaultInstance = new NetSyncSdkHelper();
                 }
             }
         }
@@ -47,22 +43,32 @@ public class Ncg2SdkHelper {
     }
 
 
-    private Ncg2SdkHelper() {
-        mNcg2Agent = Ncg2SdkFactory.getNcgAgentInstance();
+    private NetSyncSdkHelper() {
+        mNcg2SdkHelper = Ncg2SdkHelper.getDefault();
     }
 
-
+    /**
+     *
+     * @return
+     */
     public boolean isInitialized () {
-        return mNcg2Agent.isInitialized();
+        return mNcg2SdkHelper.isInitialized();
     }
 
+
+    /**
+     *
+     * @param context
+     * @param deviceId
+     * @param offlineCount
+     * @throws Ncg2FatalException
+     */
     public void initNcgSdk(Context context, String deviceId, String offlineCount) throws Ncg2FatalException {
         try {
             Ncg2Agent.OfflineSupportPolicy policy = Ncg2Agent.OfflineSupportPolicy.OfflineSupport;
             policy.setCountOfExecutionLimit(Integer.parseInt(offlineCount));
-            init(context, policy, deviceId);
-
-            enableLog();
+            mNcg2SdkHelper.init(context, policy, deviceId);
+            mNcg2SdkHelper.enableLog();
         } catch (Ncg2FatalException e) {
             Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
             throw e;
@@ -76,65 +82,39 @@ public class Ncg2SdkHelper {
     }
 
 
-    public void init(Context context, Ncg2Agent.OfflineSupportPolicy policy, String deviceId) throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2Exception {
-        mNcg2Agent.init(context, policy, deviceId);
-    }
-
+    /**
+     *
+     * @throws Ncg2Exception
+     */
     public void updateSecureTime() throws Ncg2Exception {
-        mNcg2Agent.updateSecureTime();
+        mNcg2SdkHelper.updateSecureTime();
     }
 
+
+    /**
+     *
+     * @param filePath
+     * @return
+     * @throws Ncg2Exception
+     */
     public boolean isNcgContent (String filePath) throws Ncg2Exception {
-        return mNcg2Agent.isNcgContent(filePath);
+        return mNcg2SdkHelper.isNcgContent(filePath);
     }
 
-    private Ncg2Agent.LicenseValidation getLicenseValidation (String filePath) throws Ncg2Exception {
-        return mNcg2Agent.checkLicenseValid(filePath);
-    }
 
-    private Ncg2Agent.LicenseValidation getLicenseValidationByCId (String contentId) throws Ncg2Exception {
-        return mNcg2Agent.checkLicenseValidByCID(contentId);
-    }
-
-    private int checkLicenseValid (Ncg2Agent.LicenseValidation licenseValidation) {
-        int result = -1;
-        if (licenseValidation == Ncg2Agent.LicenseValidation.ValidLicense) {
-            result = NcgValidationCheck.ValidLicense;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.NotExistLicense) {
-            result = NcgValidationCheck.NotExistLicense;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.ExpiredLicense) {
-            result = NcgValidationCheck.ExpiredLicense;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.BeforeStartDate) {
-            result = NcgValidationCheck.BeforeStartDate;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.ExceededPlayCount) {
-            result = NcgValidationCheck.ExceededPlayCount;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.ExternalDeviceDisallowed) {
-            result = NcgValidationCheck.ExternalDeviceDisallowed;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.RootedDeviceDisallowed) {
-            result = NcgValidationCheck.RootedDeviceDisallowed;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.DeviceTimeModified) {
-            result = NcgValidationCheck.DeviceTimeModified;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.OfflineNotSupported) {
-            result = NcgValidationCheck.OfflineNotSupported;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.OfflineStatusTooLong) {
-            result = NcgValidationCheck.OfflineStatusTooLong;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.NotAuthorizedAppID) {
-            result = NcgValidationCheck.NotAuthorizedAppID;
-        } else if (licenseValidation == Ncg2Agent.LicenseValidation.ScreenRecorderDetected) {
-            result = NcgValidationCheck.ScreenRecorderDetected;
-        }
-
-        return result;
-    }
-
+    /**
+     *
+     * @param contentFilePath
+     * @return
+     */
     public String getLicenseInfo(String contentFilePath) {
         String endDate 	= "";
 
         try {
             // 라이센스 체크
-            Ncg2Agent.LicenseValidation lv = getLicenseValidation(contentFilePath);
+            Ncg2Agent.LicenseValidation lv = mNcg2SdkHelper.getLicenseValidation(contentFilePath);
             if (lv == Ncg2Agent.LicenseValidation.ValidLicense) {
-                endDate = getLicenseDate(getPlayEndDate(contentFilePath));
+                endDate = getLicenseDate(mNcg2SdkHelper.getPlayEndDate(contentFilePath));
                 if (endDate.isEmpty()) {
                     endDate = context.getString(R.string.license_unlimited_content);
                 }
@@ -169,6 +149,12 @@ public class Ncg2SdkHelper {
     }
 
 
+    /**
+     *
+     * @param filePath
+     * @param licenseValid
+     * @return
+     */
     public String checkForPlaybackLicenseMessage (String filePath, int licenseValid) {
         String message = "";
 
@@ -214,7 +200,7 @@ public class Ncg2SdkHelper {
                     break;
 
                 case NcgValidationCheck.ScreenRecorderDetected :
-                    String packageName = getLicenseExtraDataPackageName(filePath);
+                    String packageName = mNcg2SdkHelper.getLicenseExtraDataPackageName(filePath);
                     message = context.getString(R.string.license_screen_recorder_detected, packageName);
                     break;
 
@@ -228,7 +214,11 @@ public class Ncg2SdkHelper {
         return message;
     }
 
-
+    /**
+     *
+     * @param playEndDate
+     * @return
+     */
     private String getLicenseDate(String playEndDate) {
         return DateTimeUtil.gmtToLocalTime(playEndDate, DateTimeUtil.NCG_TIME_FORMAT, DateTimeUtil.SIMPLE_DATE_FORMAT);
     }
@@ -240,7 +230,6 @@ public class Ncg2SdkHelper {
      * @return
      */
     public boolean isValidLicense(String contentFilePath) {
-        // NCG 파일 체크
         try {
             boolean isNcgContent = isNcgContent(contentFilePath);
             if (isNcgContent) {
@@ -251,8 +240,6 @@ public class Ncg2SdkHelper {
                     return false;
                 }
             }
-            return true;
-
         } catch (Ncg2HttpException e) {
             Toast.makeText(context, context.getString(R.string.license_check_exception_network_error), Toast.LENGTH_LONG).show();
             return false;
@@ -265,50 +252,64 @@ public class Ncg2SdkHelper {
             Toast.makeText(context, context.getString(R.string.license_check_exception_other_error), Toast.LENGTH_LONG).show();
             return false;
         }
+        return true;
     }
 
+
+    /**
+     *
+     * @param filePath
+     * @return
+     * @throws Ncg2Exception
+     */
     public int checkLicenseValid (String filePath) throws Ncg2Exception {
-        Ncg2Agent.LicenseValidation licenseValidation = getLicenseValidation(filePath);
-        return checkLicenseValid(licenseValidation);
+        return mNcg2SdkHelper.checkLicenseValid(filePath);
     }
 
-    public String getLicenseExtraDataPackageName (String filePath) throws Ncg2Exception {
-        Ncg2Agent.LicenseValidation licenseValidation = getLicenseValidation(filePath);
-        String packageName = licenseValidation.getExtraData().get("AppPackageName");
-        return packageName;
-    }
 
+    /**
+     *
+     * @param contentId
+     * @return
+     * @throws Ncg2Exception
+     */
     public int checkLicenseValidByCID (String contentId) throws Ncg2Exception {
-        Ncg2Agent.LicenseValidation licenseValidation = getLicenseValidationByCId(contentId);
-        return checkLicenseValid(licenseValidation);
+        return mNcg2SdkHelper.checkLicenseValidByCID(contentId);
     }
 
 
+    /**
+     *
+     * @param filePath
+     * @return
+     * @throws Ncg2Exception
+     */
     public String getScreenRecorderDetectedPackageName (String filePath) throws Ncg2Exception {
-        Ncg2Agent.LicenseValidation licenseValidation = getLicenseValidation(filePath);
+        Ncg2Agent.LicenseValidation licenseValidation = mNcg2SdkHelper.getLicenseValidation(filePath);
         return licenseValidation.getExtraData().get("AppPackageName");
     }
 
+
+    /**
+     *
+     * @param filePath
+     * @param key
+     * @return
+     * @throws Ncg2Exception
+     */
     public String getLicenseValidationExtraData (String filePath, String key) throws Ncg2Exception {
-        Ncg2Agent.LicenseValidation licenseValidation = getLicenseValidation(filePath);
+        Ncg2Agent.LicenseValidation licenseValidation = mNcg2SdkHelper.getLicenseValidation(filePath);
         return licenseValidation.getExtraData().get(key);
     }
 
-    public String getContentIdInHeaderInformation (String filePath) throws Ncg2Exception {
-        Ncg2Agent.HeaderInformation information = mNcg2Agent.getHeaderInfo(filePath);
-        return information.contentID;
-    }
-
-    public String getPlayEndDate (String contentFilePath) {
-        String result = null;
-        try {
-            Ncg2Agent ncgAgent = Ncg2SdkFactory.getNcgAgentInstance();
-            Ncg2Agent.LicenseInformation licInfos = ncgAgent.getLicenseInfo(contentFilePath);
-            result = licInfos.playEndDate;
-        } catch (Ncg2Exception e) {
-            e.printStackTrace();
-        }
-        return result;
+    /**
+     *
+     * @param filePath
+     * @return
+     * @throws Ncg2Exception
+     */
+    public String getContentId (String filePath) throws Ncg2Exception {
+        return mNcg2SdkHelper.getContentIdInHeaderInformation(filePath);
     }
 
 
@@ -322,43 +323,82 @@ public class Ncg2SdkHelper {
      * @throws Ncg2Exception
      */
     public void acquireLicenseByPath(String var1, String var2, String var3) throws Ncg2Exception {
-        mNcg2Agent.acquireLicenseByPath(var1, var2, var3);
+        mNcg2SdkHelper.acquireLicenseByPath(var1, var2, var3);
     }
 
+
+    /***
+     *
+     * @param var1
+     * @param var2
+     * @param var3
+     * @param var4
+     * @throws Ncg2Exception
+     */
     public void acquireLicenseByPath(String var1, String var2, String var3, boolean var4) throws Ncg2Exception {
-        mNcg2Agent.acquireLicenseByPath(var1, var2, var3, var4);
+        mNcg2SdkHelper.acquireLicenseByPath(var1, var2, var3, var4);
     }
 
+
+    /**
+     *
+     */
     public void removeLicenseAllCID() {
-        mNcg2Agent.removeLicenseAllCID();
+        mNcg2SdkHelper.removeLicenseAllCID();
     }
 
+
+    /**
+     *
+     * @param path
+     * @throws Ncg2Exception
+     */
     public void removeLicenseByPath (String path) throws Ncg2Exception {
-        mNcg2Agent.removeLicenseByPath(path);
+        mNcg2SdkHelper.removeLicenseByPath(path);
     }
 
-    public String encodeBase64 (byte[] utf8Value) {
-        return Base64Encoder.encode(utf8Value);
-    }
 
-    public byte[] decodeBase64 (String utf8Value) throws Exception {
-        return Base64Encoder.decode(utf8Value);
-    }
-
+    /**
+     *
+     * @param acquisitionUrl
+     * @param base64Str
+     * @return
+     * @throws Ncg2Exception
+     * @throws Ncg2HttpException
+     */
     public String sendCustomChannelRequest(String acquisitionUrl, String base64Str) throws Ncg2Exception, Ncg2HttpException {
-        return mNcg2Agent.sendCustomChannelRequest(acquisitionUrl, base64Str);
+        return mNcg2SdkHelper.sendCustomChannelRequest(acquisitionUrl, base64Str);
     }
 
+
+    /**
+     *
+     * @return
+     * @throws Ncg2Exception
+     */
     public String readPallyconInternalInfoTypeA() throws Ncg2Exception {
-        return mNcg2Agent.readPallyconInternalInfoTypeA();
+        return mNcg2SdkHelper.readPallyconInternalInfoTypeA();
     }
 
+
+    /**
+     *
+     * @return
+     * @throws Ncg2Exception
+     */
     public String readPallyconInfoTypeA() throws Ncg2Exception {
-        return mNcg2Agent.readPallyconInfoTypeA();
+        return mNcg2SdkHelper.readPallyconInfoTypeA();
     }
 
+
+    /**
+     *
+     * @param path
+     * @return
+     * @throws Ncg2Exception
+     */
     public boolean isPallyconFile(String path) throws Ncg2Exception {
-        return mNcg2Agent.isPallyconFile(path);
+        return mNcg2SdkHelper.isPallyconFile(path);
     }
 
 
@@ -369,20 +409,15 @@ public class Ncg2SdkHelper {
      * @throws Ncg2Exception
      */
     public void addLicense(String var1, String var2, String var3, String var4, int var5, int var6, int var7, boolean externalDisplay) throws Ncg2Exception {
-        mNcg2Agent.addLicense(var1, var2, var3, var4, var5, var6, var7, externalDisplay);
-    }
-
-    public Ncg2LocalWebServer getLocalWebServer () {
-        return mNcg2Agent.getLocalWebServer();
+        mNcg2SdkHelper.addLicense(var1, var2, var3, var4, var5, var6, var7, externalDisplay);
     }
 
 
-    public void enableLog() {
-        mNcg2Agent.enableLog();
-    }
-
+    /**
+     *
+     */
     public void release () {
-        mNcg2Agent.release();
+        mNcg2SdkHelper.release();
     }
 
 }

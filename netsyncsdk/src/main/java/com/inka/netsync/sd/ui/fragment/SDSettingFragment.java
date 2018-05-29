@@ -30,7 +30,7 @@ import com.inka.netsync.data.cache.db.MetaData;
 import com.inka.netsync.data.cache.pref.PreferencesCacheHelper;
 import com.inka.netsync.data.network.model.MarketVersionCheckEntry;
 import com.inka.netsync.logs.LogUtil;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 import com.inka.netsync.sd.ui.mvppresenter.SDSettingMvpPresenter;
 import com.inka.netsync.sd.ui.mvpview.SDSettingMvpView;
 import com.inka.netsync.ui.DrawerActivity;
@@ -243,7 +243,7 @@ public class SDSettingFragment extends BaseFragment implements SDSettingMvpView 
     };
 
     protected void deleteAllLicenseAndFile() {
-        Ncg2SdkHelper.getDefault().removeLicenseAllCID();   // License 전체 삭제(2중장치)
+        NetSyncSdkHelper.getDefault().removeLicenseAllCID();   // License 전체 삭제(2중장치)
     }
 
     public EventBus.onDialogEventListener mDialogEventListener = new EventBus.onDialogEventListener() {

@@ -27,7 +27,6 @@ public class ActivityCalls {
         activity.startActivityForResult(intent, IntentParams.REQUEST_CODE_GET_PERMISSION_WRITE_SDCARD);
     }
 
-
     public static void callOpenChooser (Activity activity, String filepath) {
         boolean isNougatOrLater = AndroidUtil.isNougatOrLater();
         if (isNougatOrLater) {
@@ -50,7 +49,6 @@ public class ActivityCalls {
             Toast.makeText(activity, "PDF  파일을 보기 위한 뷰어 앱이 없습니다." , Toast.LENGTH_SHORT).show();
         }
     }
-
 
     public static void callOpenChooserForN (Activity activity, String filepath) {
         File file = new File(filepath);
@@ -90,26 +88,8 @@ public class ActivityCalls {
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
             i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } else {
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME
-                    | Intent.FLAG_ACTIVITY_RETAIN_IN_RECENTS);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME | Intent.FLAG_ACTIVITY_RETAIN_IN_RECENTS);
         }
-    }
-
-
-    public static void broadcastPlayContent(Context context, int contentId, int bookmarkId) {
-        Intent broadcastIntent = new Intent();
-        broadcastIntent.putExtra(IntentParams.INTENT_PARAMS_KEY_CONTENT_ID ,contentId);
-        broadcastIntent.putExtra(IntentParams.INTENT_PARAMS_KEY_BOOKMART_ID ,bookmarkId);
-        broadcastIntent.setAction(IntentAction.INTENT_ACTION_OPEN_PLAYER);
-        context.sendBroadcast(broadcastIntent);
-    }
-
-    public static void broadcastPlayContent(Context context, String path, int playType) {
-        Intent broadcastIntent = new Intent();
-        broadcastIntent.putExtra(IntentParams.INTENT_PARAMS_KEY_CONTENT_PATH, path);
-        broadcastIntent.putExtra(IntentParams.INTENT_PARAMS_KEY_PLAY_TYPE, playType);
-        broadcastIntent.setAction(IntentAction.INTENT_ACTION_OPEN_PLAYER);
-        context.sendBroadcast(broadcastIntent);
     }
 
 }

@@ -16,7 +16,7 @@ import com.inka.netsync.data.DataManager;
 import com.inka.netsync.logs.LogUtil;
 import com.inka.netsync.model.AddLicenseEntry;
 import com.inka.netsync.model.ContentEntry;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 import com.inka.netsync.ncg.model.PlayerEntry;
 import com.inka.netsync.sd.ui.mvppresenter.SDExplorerFavoriteMvpPresenter;
 import com.inka.netsync.sd.ui.mvpview.SDExplorerFavoriteMvpView;
@@ -58,21 +58,21 @@ public class SDExplorerFavoritePresenter<V extends SDExplorerFavoriteMvpView> ex
         int contentId = contentEntry.getContentId();
         String path = contentEntry.getContentFilePath();
 
-        boolean isNcgContent = Ncg2SdkHelper.getDefault().isNcgContent(path);
+        boolean isNcgContent = NetSyncSdkHelper.getDefault().isNcgContent(path);
         LogUtil.INSTANCE.info("birdgangacquirelicense", "mContentItemClickListener > isNcgContent : " + isNcgContent);
 
         if (isNcgContent) {
-            int checkLicenseValid = Ncg2SdkHelper.getDefault().checkLicenseValid(path);
+            int checkLicenseValid = NetSyncSdkHelper.getDefault().checkLicenseValid(path);
             LogUtil.INSTANCE.info("birdgangacquirelicense", "mContentItemClickListener > checkLicenseValid : " + checkLicenseValid);
             if (NcgValidationCheck.NotExistLicense == checkLicenseValid) {
                 getMvpView().onResponseCheckLicenseValid(contentId, new File(path));
             }
             else if (NcgValidationCheck.ScreenRecorderDetected == checkLicenseValid) {
-                String packageName = Ncg2SdkHelper.getDefault().getScreenRecorderDetectedPackageName(path);
+                String packageName = NetSyncSdkHelper.getDefault().getScreenRecorderDetectedPackageName(path);
                 getMvpView().onLoadToastMessage(context.getString(R.string.license_screen_recorder_detected, packageName));
             }
             else {
-                String contentIdInHeaderInformation = Ncg2SdkHelper.getDefault().getContentIdInHeaderInformation(path);
+                String contentIdInHeaderInformation = NetSyncSdkHelper.getDefault().getContentId(path);
                 LogUtil.INSTANCE.info("birdgangacquirelicense", "mContentItemClickListener > contentIdInHeaderInformation : " + contentIdInHeaderInformation);
                 if (StringUtils.isBlank(contentIdInHeaderInformation)) {
                     getMvpView().onLoadToastMessage(context.getString(R.string.business_logic_invalid_ncg_file));
@@ -190,19 +190,19 @@ public class SDExplorerFavoritePresenter<V extends SDExplorerFavoriteMvpView> ex
 
                     LogUtil.INSTANCE.info("birdgangchecklicense", "localFilePath : " + localFilePath);
 
-                    boolean isNcgContent = Ncg2SdkHelper.getDefault().isNcgContent(localFilePath);
+                    boolean isNcgContent = NetSyncSdkHelper.getDefault().isNcgContent(localFilePath);
 
                     if (isNcgContent) {
-                        String cId = Ncg2SdkHelper.getDefault().getContentIdInHeaderInformation(localFilePath);
+                        String cId = NetSyncSdkHelper.getDefault().getContentId(localFilePath);
                         LogUtil.INSTANCE.info("birdgangchecklicense", "contentId : " + contentId);
 
                         //라이센스 체크
-                        if (NcgValidationCheck.ValidLicense != Ncg2SdkHelper.getDefault().checkLicenseValidByCID(cId)) {
-                            String seedString = Ncg2SdkHelper.getDefault().readPallyconInfoTypeA();
+                        if (NcgValidationCheck.ValidLicense != NetSyncSdkHelper.getDefault().checkLicenseValidByCID(cId)) {
+                            String seedString = NetSyncSdkHelper.getDefault().readPallyconInfoTypeA();
                             LogUtil.INSTANCE.info("birdgangchecklicense", "seedString : " + seedString);
 
                             if (StringUtils.isNotBlank(seedString)) {
-                                Ncg2SdkHelper.getDefault().addLicense(cId, seedString, "", "", 0, -1, -1, ModuleConfig.ENABLE_NO_ANTI_MIRRORING_MODE);
+                                NetSyncSdkHelper.getDefault().addLicense(cId, seedString, "", "", 0, -1, -1, ModuleConfig.ENABLE_NO_ANTI_MIRRORING_MODE);
                                 addLicenseEntry.setResponseCode(NcgResponseCode.SUCCESS);
                             } else {
                                 addLicenseEntry.setResponseCode(NcgResponseCode.FAIL);
@@ -239,10 +239,10 @@ public class SDExplorerFavoritePresenter<V extends SDExplorerFavoriteMvpView> ex
             @Override
             public Object call() throws Exception {
                 try {
-                    boolean isNcgContent = Ncg2SdkHelper.getDefault().isNcgContent(filePath);
+                    boolean isNcgContent = NetSyncSdkHelper.getDefault().isNcgContent(filePath);
                     LogUtil.INSTANCE.info("birdgangplay",  "isNcgContent : " + isNcgContent + " , filePath : " + filePath);
                     if (isNcgContent) {
-                        int licenseValid = Ncg2SdkHelper.getDefault().checkLicenseValid(filePath);
+                        int licenseValid = NetSyncSdkHelper.getDefault().checkLicenseValid(filePath);
                         LogUtil.INSTANCE.info("birdgangplay",  "licenseValid : " + licenseValid);
 
                         if (licenseValid == NcgValidationCheck.ValidLicense) {
@@ -256,12 +256,12 @@ public class SDExplorerFavoritePresenter<V extends SDExplorerFavoriteMvpView> ex
                                     playerEntry.setErrorMessage(context.getString(R.string.license_offline_status_too_long));
                                 }
                             } else {
-                                Ncg2SdkHelper.getDefault().updateSecureTime();
+                                NetSyncSdkHelper.getDefault().updateSecureTime();
                             }
                             playerEntry.setSuccess(false);
                         }
                         else if (licenseValid == NcgValidationCheck.ScreenRecorderDetected) {
-                            String packageName = Ncg2SdkHelper.getDefault().getLicenseValidationExtraData(filePath, "AppPackageName");
+                            String packageName = NetSyncSdkHelper.getDefault().getLicenseValidationExtraData(filePath, "AppPackageName");
                             playerEntry.setErrorMessage(context.getString(R.string.license_screen_recorder_detected, packageName));
                             playerEntry.setSuccess(false);
                         }
@@ -278,11 +278,11 @@ public class SDExplorerFavoritePresenter<V extends SDExplorerFavoriteMvpView> ex
                                 // OneTime 라이센스 정책
                                 boolean isTemporary = false;
                                 LogUtil.INSTANCE.info("birdgangplay", " processNcgLicense > UserID : " + userId + " , orderID : " + infoOrderId + ", isTemporary : " + isTemporary);
-                                Ncg2SdkHelper.getDefault().acquireLicenseByPath(filePath, userId, infoOrderId, isTemporary);
+                                NetSyncSdkHelper.getDefault().acquireLicenseByPath(filePath, userId, infoOrderId, isTemporary);
                                 playerEntry.setSuccess(true);
                             }
                         }
-                        playerEntry.setErrorMessage(Ncg2SdkHelper.getDefault().checkForPlaybackLicenseMessage(filePath, licenseValid));
+                        playerEntry.setErrorMessage(NetSyncSdkHelper.getDefault().checkForPlaybackLicenseMessage(filePath, licenseValid));
                     }
                 } catch (Exception e) {
                     LogUtil.INSTANCE.error("error", e);

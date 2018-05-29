@@ -18,7 +18,7 @@ import com.inka.netsync.di.component.ApplicationComponent;
 import com.inka.netsync.di.component.DaggerApplicationComponent;
 import com.inka.netsync.di.module.ApplicationModule;
 import com.inka.netsync.logs.LogUtil;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 import com.inka.netsync.observer.DataChangedObserver;
 
 import org.apache.commons.lang3.StringUtils;
@@ -113,7 +113,7 @@ public class BaseApplication extends MultiDexApplication {
     }
 
     public void initData () {
-        Ncg2SdkHelper.getDefault().initContext(getAppContext());
+        NetSyncSdkHelper.getDefault().initContext(getAppContext());
         PreferencesCacheHelper.initContext(getAppContext());
 
         mEnterpriseCode = BaseConfigurationPerSite.getInstance().getEnterpriseCode();
@@ -140,7 +140,7 @@ public class BaseApplication extends MultiDexApplication {
 
     public static boolean initNcgSdk(Context context) {
         try {
-            boolean init = Ncg2SdkHelper.getDefault().isInitialized();
+            boolean init = NetSyncSdkHelper.getDefault().isInitialized();
             LogUtil.INSTANCE.info("birdgangncg2sdk", " initNcgSdk > init : " + init);
             if (init) {
                 initialized = true;
@@ -151,7 +151,7 @@ public class BaseApplication extends MultiDexApplication {
             String deviceId = getCachedDeviceId();
 
             LogUtil.INSTANCE.info("birdgangncg2sdk", " initNcgSdk > offLineCount : " + offLineCount + " , deviceId : " + deviceId);
-            Ncg2SdkHelper.getDefault().initNcgSdk(context, deviceId, offLineCount);
+            NetSyncSdkHelper.getDefault().initNcgSdk(context, deviceId, offLineCount);
             
             initialized = true;
         }

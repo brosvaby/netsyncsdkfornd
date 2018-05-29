@@ -13,7 +13,7 @@ import com.inka.netsync.logs.LogUtil;
 import com.inka.netsync.model.ContentCategoryEntry;
 import com.inka.netsync.model.ContentEntry;
 import com.inka.netsync.model.StorageEntry;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 import com.inka.netsync.view.model.ContentViewEntry;
 import com.inka.netsync.view.model.RecentlyViewEntry;
 
@@ -28,7 +28,6 @@ import java.util.Map;
 /**
  * Created by birdgang on 2017. 5. 2..
  */
-
 public class ContentControler {
 
     private final String TAG = "ContentControler";
@@ -474,7 +473,7 @@ public class ContentControler {
         try {
             // 라이센스 Info 업데이트
             int contentId = contentEntry.getContentId();
-            String licenseInfo = Ncg2SdkHelper.getDefault().getLicenseInfo(filepath);
+            String licenseInfo = NetSyncSdkHelper.getDefault().getLicenseInfo(filepath);
             LogUtil.INSTANCE.info(TAG, "processNcgLicenseInfo > licenseInfo > " + licenseInfo + " , filepath : " + filepath + " , contentId : " + contentId);
             contentEntry.setLicenseInfo(licenseInfo);
 
@@ -494,7 +493,7 @@ public class ContentControler {
     public boolean updateContentLicenseInfo(int contentId, String filepath) {
         try {
             // 라이센스 Info 업데이트
-            String licenseInfo = Ncg2SdkHelper.getDefault().getLicenseInfo(filepath);
+            String licenseInfo = NetSyncSdkHelper.getDefault().getLicenseInfo(filepath);
             LogUtil.INSTANCE.info(TAG, "processNcgLicenseInfo > licenseInfo > " + licenseInfo + " , filepath : " + filepath + " , contentId : " + contentId);
 
             long result = updateContent(contentId, MetaData.ContentColumns.LICENSE_INFO, licenseInfo);

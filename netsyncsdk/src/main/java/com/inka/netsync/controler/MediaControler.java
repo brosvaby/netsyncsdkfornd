@@ -22,7 +22,7 @@ import com.inka.netsync.model.ContentCategoryEntry;
 import com.inka.netsync.model.ContentEntry;
 import com.inka.netsync.model.ListContentCategoryEntry;
 import com.inka.netsync.model.StorageEntry;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -377,7 +377,7 @@ public class MediaControler {
 
             try {
                 String applicationContentId = BaseConfiguration.getInstance().getApplicationContentId();
-                String contentId = Ncg2SdkHelper.getDefault().getContentIdInHeaderInformation(filePath);
+                String contentId = NetSyncSdkHelper.getDefault().getContentId(filePath);
 
                 LogUtil.INSTANCE.info(TAG , "onUpdateMedia > totalSize : " + totalSize + " , applicationContentId : " + applicationContentId + " , contentId : " + contentId + " , scanEntry : " + scanEntry.toString());
 
@@ -678,7 +678,7 @@ public class MediaControler {
     public boolean addConditionByCotentId (String filePath) {
         try {
             String applicationContentId = BaseConfiguration.getInstance().getApplicationContentId();
-            String contentId = Ncg2SdkHelper.getDefault().getContentIdInHeaderInformation(filePath);
+            String contentId = NetSyncSdkHelper.getDefault().getContentId(filePath);
 
             if (!StringUtils.equals(applicationContentId, contentId) && !ModuleConfig.ENABLE_NO_LIMIT_BY_CID && !ModuleConfig.ENABLE_MODE_PREVIEW_APP) {
                 LogUtil.INSTANCE.info(TAG, " is not equal contentId : " + contentId + " , filePath : " + filePath);

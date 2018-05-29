@@ -79,7 +79,7 @@ import com.inka.netsync.model.BookmarkEntry;
 import com.inka.netsync.model.ContentEntry;
 import com.inka.netsync.model.FavoriteEntry;
 import com.inka.netsync.model.RecentlyEntry;
-import com.inka.netsync.ncg.Ncg2SdkHelper;
+import com.inka.netsync.ncg.NetSyncSdkHelper;
 import com.inka.netsync.receiver.EarPhoneChangeReceiver;
 import com.inka.netsync.ui.mvppresenter.PlayerMvpPresenter;
 import com.inka.netsync.ui.mvpview.PlayerMvpView;
@@ -1373,7 +1373,7 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
         try {
             if (!ModuleConfig.ENABLE_NO_LICENSE) {
                 // 라이센스 Info 체크
-                boolean isValidLicense = Ncg2SdkHelper.getDefault().isValidLicense(filePath);
+                boolean isValidLicense = NetSyncSdkHelper.getDefault().isValidLicense(filePath);
                 LogUtil.INSTANCE.info("birdganglifecycl", "initAdvanceData > isValidLicense : " + isValidLicense);
 
                 if (!isValidLicense) {
@@ -1405,7 +1405,7 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
         try {
             if (!ModuleConfig.ENABLE_NO_LICENSE) {
                 // 라이센스 Info 체크
-                boolean isValidLicense = Ncg2SdkHelper.getDefault().isValidLicense(mContentEntry.getContentFilePath());
+                boolean isValidLicense = NetSyncSdkHelper.getDefault().isValidLicense(mContentEntry.getContentFilePath());
                 if (!isValidLicense) {
                     throw new Ncg2CoreException(getString(R.string.exception_license_to_play_previous_file));
                 }
@@ -3852,13 +3852,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
                         mTextDurationView.setText(strTimeInfo);
                     }
 
-                    // 자막 재생
-//                    long millisecond = (long) mNcg2Player.getCurrentPosition();
-//                    String subTitle = SubTitleControler.getDefault().getStringForTime(millisecond);
-//
-//                    if (mTvSubTitle != null) {
-//                        mTvSubTitle.setText(Html.fromHtml(subTitle));
-//                    }
                     countingDownHideCount();
                 } catch (Exception e) {
                     LogUtil.INSTANCE.error(TAG, e);
@@ -3872,13 +3865,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
                 } catch (Exception e) {
                     LogUtil.INSTANCE.error(TAG, e);
                 }
-
-                // QC전용 테스트코드
-//				int duration = mPlayDuration / 1000;
-//				if (mPlayDuration % 1000 != 0) {
-//					duration = duration + 1;
-//				}
-//				LogUtil.INSTANCE.info("birdganglms", " PlayDuration : " + mPlayDuration + " , currentMSec : " + currentMSec);
             }
         });
     }
