@@ -25,12 +25,10 @@ public interface ExplorerMvpPresenter<V extends ExplorerMvpView> extends MvpPres
 
     void requestApiSerialAuthRx (String filePath, String serialNumber) throws Exception;      // RxAndroidNetworking
 
-
     /***
      *
      * @param context
      * @param playerEntry
      */
     void requestPrepareLicenseAndExecutePlayer(Context context, PlayerEntry playerEntry);
-
 }

@@ -12,8 +12,8 @@ public class BaseConfiguration {
     private String mRequestType = AppConstants.APPLICATION_REQUESTTYPE_DEFAULTMODULE;
     private String mServiceManagerServerSpec = AppConstants.APPLICATION_VERSION_OLDVERSION;
 
-    private String APPLICATION_CONTENT_CID = "W7WMZUZ236AA2B76@pallycon.sd";
-    private String APPLICATION_ORDER_ID = "SDCardOrderINKA";
+    private String APPLICATION_CONTENT_CID = "";
+
     private int APPLICATION_DIALOG_BTN_COLOR = -1;
 
     private boolean						mIsNetsyncDisk				= false;

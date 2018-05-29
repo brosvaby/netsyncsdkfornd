@@ -108,11 +108,9 @@ public class MediaControler {
         }
     }
 
-
     public ArrayList<ContentEntry> getItemList() {
         return mItemList;
     }
-
 
     public void addDeviceDiscoveryCb(DevicesDiscoveryCb cb) {
         mDvicesDiscoveryCbList.add(cb);
@@ -195,7 +193,6 @@ public class MediaControler {
         }
         return mediaCategoryEntries;
     }
-
 
     /***
      *

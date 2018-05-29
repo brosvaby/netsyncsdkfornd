@@ -34,8 +34,6 @@ import com.inka.netsync.ui.mvpview.SplashMvpView;
 import com.inka.netsync.view.dialog.CommonAlertDialog;
 import com.inka.netsync.view.dialog.CustomAlertDialog;
 
-import java.util.Arrays;
-
 import javax.inject.Inject;
 
 import butterknife.BindView;
@@ -112,7 +110,6 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
             if (Build.VERSION.SDK_INT >= 17) {
                 if (AndroidUtil.isAdminUser(this) == false) {
                     Toast.makeText(this, getString(R.string.message_for_toast_status_guest_user), Toast.LENGTH_LONG).show();
-                    LogUtil.INSTANCE.info(TAG, "onCreate : " +  getString(R.string.message_for_toast_status_guest_user));
                     finish();
                     return;
                 }
@@ -124,17 +121,12 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
         // 중복실행 방지
         BaseApplication application = (BaseApplication) getApplication();
 
-        LogUtil.INSTANCE.info("birdganglifecycl" , "SplashActivity > onCreate > application.mAppState : " + application.mAppState);
-
         if (application.mAppState == AppConstants.APPLICATION_STATE_DOWNLOAD) {
             Toast.makeText(this, getString(R.string.message_for_toast_status_downloading), Toast.LENGTH_LONG).show();
-            LogUtil.INSTANCE.info(TAG, " onCreate : " + getString(R.string.message_for_toast_status_downloading));
-
             finish();
             return;
         } else if (application.mAppState == AppConstants.APPLICATION_STATE_PLAY) {
             Toast.makeText(this, getString(R.string.message_for_toast_status_playing), Toast.LENGTH_LONG).show();
-            LogUtil.INSTANCE.info(TAG, " onCreate : " + getString(R.string.message_for_toast_status_playing));
             finish();
             return;
         }
@@ -168,22 +160,17 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        LogUtil.INSTANCE.info("birdgangpermission", "onActivityResult > requestCode " + requestCode + " , resultCode : " + resultCode);
         permissiontHelper.onActivityForResult(requestCode);
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        LogUtil.INSTANCE.info("birdgangpermission", "onRequestPermissionsResult > requestCode " + requestCode + " , permissions : " + permissions.toString());
         permissiontHelper.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     @Override
     public void onPermissionGranted(@NonNull String[] permissionName) {
-        LogUtil.INSTANCE.info("birdgangpermission", "onPermissionGranted > Permission(s) " + Arrays.toString(permissionName) + " Granted > isSingle : " + isSingle);
-        // 업체별 전용 경고
         boolean initNcg2Sdk = BaseApplication.initNcgSdk(SplashActivity.this);
-        LogUtil.INSTANCE.info("birdgangpermission", "onPermissionGranted > initNcg2Sdk : " + initNcg2Sdk);
 
         try {
             if (initNcg2Sdk) {
@@ -197,14 +184,12 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
 
     @Override
     public void onPermissionDeclined(@NonNull String[] permissionName) {
-        LogUtil.INSTANCE.info("birdgangpermission", "onPermissionDeclined > Permission(s) " + Arrays.toString(permissionName) + " Declined");
         PreferencesCacheHelper.setPreferenceValueForBol(PreferencesCacheHelper.AUTO_RESCAN, true);
         finish();
     }
 
     @Override
     public void onPermissionPreGranted(@NonNull String permissionsName) {
-        LogUtil.INSTANCE.info("birdgangpermission", "onPermissionPreGranted > Permission( " + permissionsName + " ) preGranted");
         boolean initNcg2Sdk = BaseApplication.initNcgSdk(SplashActivity.this);
         try {
             if (initNcg2Sdk) {
@@ -218,7 +203,6 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
 
     @Override
     public void onPermissionNeedExplanation(@NonNull final String permissionName) {
-        LogUtil.INSTANCE.info("birdgangpermission", "onPermissionNeedExplanation > Permission( " + permissionName + " ) needs Explanation");
         if (!isSingle) {
             neededPermission = PermissionHelper.declinedPermissions(this, MULTI_PERMISSIONS);
             StringBuilder builder = new StringBuilder(neededPermission.length);
@@ -251,7 +235,6 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
 
     @Override
     public void onPermissionReallyDeclined(@NonNull String permissionName) {
-        LogUtil.INSTANCE.info("birdgangpermission", "onPermissionReallyDeclined > Permission " + permissionName + " can only be granted from settingsScreen");
         boolean initNcg2Sdk = BaseApplication.initNcgSdk(SplashActivity.this);
         try {
             if (initNcg2Sdk) {
@@ -265,7 +248,6 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
 
     @Override
     public void onNoPermissionNeeded() {
-        LogUtil.INSTANCE.info("birdgangpermission", "onNoPermissionNeeded > Permission(s) not needed");
         boolean initNcg2Sdk = BaseApplication.initNcgSdk(SplashActivity.this);
 
         try {
@@ -286,8 +268,6 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
 
     @Override
     protected Dialog onCreateDialog(int id, Bundle args) {
-        LogUtil.INSTANCE.info("birdgangpermission", "onCreateDialog > id : " + id);
-
         switch (id) {
             case DIALOG_WARNNING:
                 return new CustomAlertDialog(this, CustomAlertDialog.CONFIRM_TYPE)
@@ -333,7 +313,6 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
             boolean isHasNotuse = responseNcgEntry.isHasNotuse();
             boolean isHasPallyconsd = responseNcgEntry.isHasPallyconsd();
 
-            LogUtil.INSTANCE.info("birdgangauth", "setNextContentView > isHasNotuse : " + isHasNotuse + " , isHasPallyconsd : " + isHasPallyconsd);
             if (isHasNotuse || !isHasPallyconsd) {
                 mNextClz = provideNextContentView(false);
             }

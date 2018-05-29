@@ -129,9 +129,8 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
     private String SWXPLAY_TYPE = AppConstants.TYPE_SWXPLAY_NO_ALLOW;
     private String PLAY_STATE = AppConstants.STATE_PLAYT_ONSTOP;
 
-
+    
     // View 설정정보
-
     protected int mRepeatMode = -1;
     protected int mRepeatAreaState = -1;
 
@@ -175,7 +174,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
     private static final int TOUCH_BRIGHTNESS = 2;
     private static final int TOUCH_SEEK = 3;
     private int mTouchAction = TOUCH_NONE;
-    //    private int mScreenOrientation;
     private int mCurrentPlayIndex = -1;
     private int mSurfaceYDisplayRange;
     private float mInitTouchY, mTouchY = -1f, mTouchX = -1f;
@@ -358,7 +356,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        LogUtil.INSTANCE.info("birdganglifecycl" , "PlayerActivity > onCreate");
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
         super.onCreate(savedInstanceState);
@@ -473,8 +470,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
     @Override
     protected void onResume() {
         super.onResume();
-        LogUtil.INSTANCE.info("birdganglifecycl" , "PlayerActivity > onResume");
-
         registerEarPhoneChangeReceiver();
         setVisibleOverlay(View.VISIBLE);
 
@@ -489,8 +484,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
     @Override
     protected void onStart() {
         super.onStart();
-        LogUtil.INSTANCE.info("birdganglifecycl" , "PlayerActivity > onStart");
-
         BaseApplication application = (BaseApplication) getApplication();
         application.setAppState(AppConstants.APPLICATION_STATE_PLAY);
 
@@ -512,8 +505,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
     @Override
     protected void onPause() {
         super.onPause();
-        LogUtil.INSTANCE.info("birdganglifecycl" , "PlayerActivity > onPause > mIsPrepared : " + mIsPrepared);
-
         if (mAudioManager != null) {
             mAudioManager.abandonAudioFocus(mAudioFocusChangeListener);
             mAudioManager.unregisterMediaButtonEventReceiver(mRemoteComponent);
@@ -530,20 +521,7 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
 
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        try {
-            boolean isPlaying = mNcg2Player.isPlaying();
-            LogUtil.INSTANCE.info("birdganglifecycl", "onStop > isPlaying : " + isPlaying);
-        } catch (Exception e) {
-            LogUtil.INSTANCE.error(TAG, e);
-        }
-    }
-
-
-    @Override
     protected void onDestroy() {
-        LogUtil.INSTANCE.info("birdganglifecycl", "onDestroy > mIsPrepared : " + mIsPrepared + " , mIsRealPlaying : " + mIsRealPlaying);
         try {
             mAudioManager = null;
             restoreBrightness();
@@ -564,19 +542,16 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
 
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        LogUtil.INSTANCE.info("birdganglifecycl", "onSaveInstanceState ");
         super.onSaveInstanceState(outState, outPersistentState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        LogUtil.INSTANCE.info("birdganglifecycl", "onRestoreInstanceState ");
         super.onRestoreInstanceState(savedInstanceState);
     }
 
     @Override
     public void finish() {
-        LogUtil.INSTANCE.info("birdganglifecycl" , "PlayerActivity > finish");
         super.finish();
     }
 
@@ -596,14 +571,10 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        LogUtil.INSTANCE.info("birdgangscreenrate" , "onConfigurationChanged > newConfig.orientation : " + newConfig.orientation + " , mCurrentDisplayMode : " + mCurrentDisplayMode);
-
         try {
             if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-//                mNcg2Player.setDisplayMode(mCurrentDisplayMode);
                 fillContentVerticalLayout();
             } else if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-//                mNcg2Player.setDisplayMode(mCurrentDisplayMode);
                 fillContentHorizontalalLayout();
             }
         } catch (Exception e) {
@@ -618,7 +589,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                LogUtil.INSTANCE.info("birdgangplayerconfiguration",  "mIsForeground : " + mIsForeground);
                 if (mIsForeground) {
                     convertRepeatA();
                     convertRepeatB();
@@ -684,8 +654,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
         float coef = 0.0f;
         float xgesturesize = 0.0f;
         float delta_y = 0.0f;
-
-        LogUtil.INSTANCE.info("birdganglifecycl" , "PlayerActivity > onTouchEvent");
 
         DisplayMetrics screen = new DisplayMetrics();
 
@@ -779,7 +747,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
                 try {
                     if (mTouchAction == TOUCH_SEEK) {
                         float velocity2 = mVelocityTracker.getXVelocity();
-                        LogUtil.INSTANCE.info("birdgangseek", "MotionEvent.ACTION_MOVE > velocity2 : " + velocity2);
                         if (Math.abs(velocity2) < 5) {
                             doSeekTouch(Math.round(delta_y), xgesturesize, true);
                         } else {
@@ -834,14 +801,10 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
 
 
     private void initBrightnessTouch() {
-        LogUtil.INSTANCE.info("birdganglifecycl" , "PlayerActivity > initBrightnessTouch");
-
         WindowManager.LayoutParams lp = getWindow().getAttributes();
         float brightnesstemp = lp.screenBrightness != -1f ? lp.screenBrightness : 0.6f;
         try {
             int screenBrightnessMode = Settings.System.getInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE);
-            LogUtil.INSTANCE.info("birdgangbrightness", "doBrightnessTouch > screenBrightnessMode : " + screenBrightnessMode + " , brightnesstemp : " + brightnesstemp);
-
             if (screenBrightnessMode == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC) {
                 Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
                 mRestoreAutoBrightness = Settings.System.getInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS) / 255.0f;
@@ -932,8 +895,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
 
 
     private void doSeekTouch(int coef, float gesturesize, boolean seek) {
-        LogUtil.INSTANCE.info("birdgangseek", "doSeekTouch > coef : " + coef + " , seek : " + seek + " , gesturesize : " + gesturesize + " , mTouchAction : " + mTouchAction);
-
         if (coef == 0) {
             coef = 1;
         }
@@ -951,8 +912,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
             long length = mNcg2Player.getDuration();
             long time = mNcg2Player.getCurrentPosition();
 
-            LogUtil.INSTANCE.info("birdgangseek", "doSeekTouch > length : " + length + " , time : " + time);
-
             // Size of the jump, 10 minutes max (600000), with a bi-cubic progression, for a 8cm gesture
             int jump = (int) ((Math.signum(gesturesize) * ((600000 * Math.pow((gesturesize / 8), 4)) + 3000)) / coef);
 
@@ -964,7 +923,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
                 jump = (int) -time;
             }
 
-            //LogUtil.INSTANCE.info("birdgangseek" , "doSeekTouch > jump : " + jump);
             //Jump !
             LogUtil.INSTANCE.info("birdgangseek", "doSeekTouch > seek : " + seek + " , jump : " + jump + " , length : " + length);
             if (seek && length > 0) {
