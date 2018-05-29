@@ -1,10 +1,8 @@
 package com.inka.netsync.ui.mvppresenter;
 
 import android.content.Context;
-import android.content.pm.PackageManager;
 
 import com.inka.ncg2.Ncg2Exception;
-import com.inka.netsync.data.network.model.SerialAuthEntry;
 import com.inka.netsync.model.ContentEntry;
 import com.inka.netsync.ncg.model.LicenseEntry;
 import com.inka.netsync.ncg.model.PlayerEntry;
@@ -25,7 +23,6 @@ public interface ExplorerMvpPresenter<V extends ExplorerMvpView> extends MvpPres
     void checkSerialNumberValid (Context context, String filePath, String serialNumber) throws Exception;
     void requesetClientAcquireLicense (LicenseEntry licenseEntry) throws Ncg2Exception;
 
-    void requestApiSerialAuth (SerialAuthEntry serialAuthEntry) throws Exception;
     void requestApiSerialAuthRx (String filePath, String serialNumber) throws Exception;      // RxAndroidNetworking
 
 

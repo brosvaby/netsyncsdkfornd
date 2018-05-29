@@ -35,7 +35,7 @@ public class BaseConfiguration {
     private static final String 		VERSION_DETAIL_COMMON		= "00";
     private static final String 		VERSION_DETAIL_INTEGRATION	= "00";
 
-    public static String APPLICATION_ID = "com.inka.stunitas";
+    public static String APPLICATION_ID = "com.inka.netsync";
 
     // **
 //    public static final int CAHCE_CATEGORY_SIZE = 300;

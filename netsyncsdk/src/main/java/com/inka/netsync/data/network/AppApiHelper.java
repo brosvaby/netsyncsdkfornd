@@ -20,8 +20,6 @@ import io.reactivex.Observable;
 @Singleton
 public class AppApiHelper implements ApiHelper {
 
-    private final int CACHE_TIME = 5;
-
     private StringEncrypter mEncrypter;
 
     @Inject
@@ -53,30 +51,13 @@ public class AppApiHelper implements ApiHelper {
         map.put(ApiGenerateParams.KEY_PARAMS_APP_VERSION, appVersion);
         map.put(ApiGenerateParams.KEY_PARAMS_SERIAL, serial);
 
-
         String jsonParams = ApiGenerateParams.generateParamMapToString(map);
-        LogUtil.INSTANCE.info("AppApiHelper" , "getSerialAuthApiCall > jsonParams :" + jsonParams);
-
         String encryptedParam = "data=" + mEncrypter.encrypt(jsonParams);
-//        String encryptedParam = mEncrypter.encrypt(jsonParams);
-
-        LogUtil.INSTANCE.info("AppApiHelper" , "getSerialAuthApiCall > encryptedParam :" + encryptedParam);
-
-//        Rx2ANRequest.PostRequestBuilder build = Rx2AndroidNetworking.post(url);
-//        if (StringUtils.isNotBlank(encryptedParam)) {
-//            build.addPathParameter(ApiGenerateParams.KEY_PARAMS_DATA, encryptedParam);
-//        }
-//
-//        return build.setMaxStaleCacheControl(CACHE_TIME, TimeUnit.SECONDS).build().getObjectObservable(SerialAuthResponse.class);
-//        return build.getResponseOnlyFromNetwork().build().getObjectObservable(SerialAuthResponse.class);
-
 
         String url = ApiEndPoint.ENDPOINT_SERIAL_AUTH + "?" + encryptedParam;
-
         LogUtil.INSTANCE.info("AppApiHelper" , "getSerialAuthApiCall > url : " + url);
 
         Rx2ANRequest.GetRequestBuilder build = Rx2AndroidNetworking.get(url);
-//        return build.setMaxStaleCacheControl(CACHE_TIME, TimeUnit.SECONDS).build().getObjectObservable(SerialAuthResponse.class);
 
         build.getResponseOnlyFromNetwork().build().getStringObservable();
         return build.getResponseOnlyFromNetwork().build().getObjectObservable(SerialAuthResponse.class);

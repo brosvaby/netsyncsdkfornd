@@ -10,8 +10,6 @@ public final class AppConstants {
         // This utility class is not publicly instantiable
     }
 
-    public static final String APPLICATION_ID = "com.inka.smartnetsync";
-
     // application type
     public static final String APPLICATION_TYPE_PROPRIETARY = "Proprietary";
     public static final String APPLICATION_TYPE_COMMON = "Common";
@@ -25,7 +23,6 @@ public final class AppConstants {
     // application type
     public static final String APPLICATION_TYPE_MANGO = "MANGO";
     public static final String APPLICATION_TYPE_APPLE = "APPLE";
-
 
     //
     public static final String APPLICATION_VERSION_OLDVERSION = "OldVersion";

@@ -13,18 +13,12 @@ import com.inka.netsync.common.utils.AndroidUtil;
 import com.inka.netsync.common.utils.FileUtil;
 import com.inka.netsync.common.utils.NetworkUtils;
 import com.inka.netsync.data.DataManager;
-import com.inka.netsync.data.cache.db.model.ContentCacheEntry;
 import com.inka.netsync.data.cache.pref.PreferencesCacheHelper;
-import com.inka.netsync.data.network.ApiServiceClientManager;
 import com.inka.netsync.data.network.converter.SerialAuthenticationConverter;
 import com.inka.netsync.data.network.model.ResponseSerialAuthEntry;
-import com.inka.netsync.data.network.model.SerialAuthEntry;
 import com.inka.netsync.data.network.request.SerialAuthRequest;
 import com.inka.netsync.logs.LogUtil;
-import com.inka.netsync.media.MediaStorage;
 import com.inka.netsync.model.ContentEntry;
-import com.inka.netsync.model.ExplorerStackEntry;
-import com.inka.netsync.model.ExplorerStackGenerate;
 import com.inka.netsync.ncg.Ncg2SdkHelper;
 import com.inka.netsync.ncg.model.LicenseEntry;
 import com.inka.netsync.ncg.model.PlayerEntry;
@@ -38,7 +32,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.Callable;
 
 import javax.inject.Inject;
@@ -53,7 +46,6 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * Created by birdgang on 2017. 4. 18..
  */
-
 public class ExplorerPresenter<V extends ExplorerMvpView> extends BasePresenter<V> implements ExplorerMvpPresenter<V> {
 
     private final String TAG = "ExplorerPresenter";
@@ -155,22 +147,8 @@ public class ExplorerPresenter<V extends ExplorerMvpView> extends BasePresenter<
             getMvpView().onLoadMessageDialog(context.getString(R.string.message_for_dialog_download_no_serial));
         }
         else {
-//            SerialAuthEntry requestSerialAuthEntry = new SerialAuthEntry();
-//            requestSerialAuthEntry.setKey(BaseConfigurationPerSite.getInstance().getKey());
-//            requestSerialAuthEntry.setIv(BaseConfigurationPerSite.getInstance().getIv());
-//            requestSerialAuthEntry.setEnterpriseCode(BaseConfigurationPerSite.getInstance().getEnterpriseCode());
-//            requestSerialAuthEntry.setSerialNumber(serialNumber);
-//            requestSerialAuthEntry.setRequestContentId(StringUtils.substring(Ncg2SdkHelper.getDefault().getContentIdInHeaderInformation(filePath), 4));
-//            requestSerialAuthEntry.setFilePath(filePath);
-//            requestSerialAuthEntry.setDeviceID(BaseApplication.getCachedDeviceId());
-//            requestSerialAuthEntry.setDeviceModel(AndroidUtil.getDeviceModel());
-//            requestSerialAuthEntry.setAppVersion(context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName);
-//            requestSerialAuthEntry.setRequestUrl(BaseConfigurationPerSite.getInstance().getSerialAuthenticationUrl());
-//            getMvpView().onRequesetSerialAuth(requestSerialAuthEntry);
-
             requestApiSerialAuthRx(filePath, serialNumber);
         }
-
     }
 
 
@@ -211,15 +189,6 @@ public class ExplorerPresenter<V extends ExplorerMvpView> extends BasePresenter<
                 });
     }
 
-
-    @Override
-    public void requestApiSerialAuth(SerialAuthEntry serialAuthEntry) throws Exception {
-        Context context = getDataManager().getContext();
-        ApiServiceClientManager apiServiceClientManager = new ApiServiceClientManager(context, serialAuthEntry);
-        ResponseSerialAuthEntry responseSerialAuthEntry = apiServiceClientManager.requestSerialAuthentication(serialAuthEntry);
-        LogUtil.INSTANCE.info("AppApiHelper", "RequestSerialAuthTask > result : " + serialAuthEntry.toString());
-
-    }
 
     @Override
     public void requestApiSerialAuthRx(String filePath, String serialNumber) throws Exception {
@@ -342,66 +311,6 @@ public class ExplorerPresenter<V extends ExplorerMvpView> extends BasePresenter<
                     licenseEntry.setFilePath(localFilePath);
                 }
                 return licenseEntry;
-            }
-        });
-    }
-
-
-    private Observable<List<ExplorerStackEntry>> getExplorerStackObservable(final Map<String, List<ContentCacheEntry>> contentCacheMemorAwareHashMap, final Map<String, ContentCacheEntry> contentCacheDiskAwareMaps, final String rootType) {
-        return Observable.fromCallable(new Callable() {
-            @Override
-            public Object call() throws Exception {
-                List<ContentCacheEntry> contentCacheMemorAwareEntries = new ArrayList<>();
-                List<ContentCacheEntry> resultEntries = new ArrayList<>();
-                contentCacheMemorAwareEntries.addAll(contentCacheMemorAwareHashMap.get(rootType));
-
-                List<String> innerStoragePaths = MediaStorage.INSTANCE.getInnerStoragePaths();
-                List<String> externalStoragePaths = MediaStorage.INSTANCE.getExternalStoragePaths();
-                List<String> usbStoragePaths = MediaStorage.INSTANCE.getUsbStoragePaths();
-
-                LogUtil.INSTANCE.info(TAG, " innerStoragePaths : " + innerStoragePaths.toString());
-                LogUtil.INSTANCE.info(TAG, " externalStoragePaths : " + externalStoragePaths.toString());
-                LogUtil.INSTANCE.info(TAG, " usbStoragePaths : " + usbStoragePaths.toString());
-
-                for (ContentCacheEntry contentEntryMemorAwares : contentCacheMemorAwareEntries) {
-                    String contentFilePath = contentEntryMemorAwares.getContentFilePath();
-
-                    if (StringUtils.equals(MediaStorage.ROOT_INTERNAL, rootType)) {
-                        for (String root : innerStoragePaths) {
-                            if (StringUtils.contains(contentFilePath, root)) {
-                                resultEntries.add(contentEntryMemorAwares);
-                                //LogUtil.INSTANCE.debug(TAG, "MediaStorage.INTERNAL > contentEntry.toString() : " + contentEntryMemorAwares.toString());
-                            }
-                        }
-                    }
-                    else if (StringUtils.equals(MediaStorage.ROOT_EXTERNAL, rootType)) {
-                        for (String root : externalStoragePaths) {
-                            if (StringUtils.contains(contentFilePath, root)) {
-                                resultEntries.add(contentEntryMemorAwares);
-                                //LogUtil.INSTANCE.debug(TAG, "MediaStorage.EXTERNAL > contentEntry.toString() : " + contentEntryMemorAwares.toString());
-                            }
-                        }
-                    }
-                    else if (StringUtils.equals(MediaStorage.ROOT_USB, rootType)) {
-                        for (String root : usbStoragePaths) {
-                            if (StringUtils.contains(contentFilePath, root)) {
-                                resultEntries.add(contentEntryMemorAwares);
-                                //LogUtil.INSTANCE.debug(TAG, "MediaStorage.USB > contentEntry.toString() : " + contentEntryMemorAwares.toString());
-                            }
-                        }
-                    }
-                }
-
-                LogUtil.INSTANCE.debug(TAG, " contentCacheMemorAwareEntries : " + resultEntries.size());
-
-                List<ExplorerStackEntry> explorerStackEntries = new ArrayList<>();
-                ExplorerStackGenerate explorerStackGenerate = new ExplorerStackGenerate(contentCacheDiskAwareMaps);
-
-                for (ContentCacheEntry contentEntryMemoryAwres : resultEntries) {
-                    ExplorerStackEntry explorerStackEntry = explorerStackGenerate.generateStack(contentEntryMemoryAwres);
-                    explorerStackEntries.add(explorerStackEntry);
-                }
-                return explorerStackEntries;
             }
         });
     }

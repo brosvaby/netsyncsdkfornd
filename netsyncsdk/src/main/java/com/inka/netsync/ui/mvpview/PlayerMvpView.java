@@ -5,6 +5,4 @@ package com.inka.netsync.ui.mvpview;
  */
 
 public interface PlayerMvpView extends MvpView {
-//    void onResultDaoForUpdateLastPlayTime (int lastPlayTime, boolean result);
-//    void onResultDaoUpdateLMSInfo (boolean result);
 }
