@@ -79,13 +79,12 @@ api project(':netsyncsdk');
 api project(':visualonplayer');
 ```
 
-</br>
-
 
 ## 배속 플레이
 어플리케이션 배속 사용시 플레이어 라이센스 파일이 필요합니다. <br>
 라이센스는 어플리케이션 패키지 명을 기준으로 동작되기 때문에, 앱 제작 하기전 미리 패키지 명을 INKA 에 알려주시면 배속 라이센스를 포함한 voVidDec.dat 파일을 제공해 드립니다.<br>
-해당 voVidDec.dat 파일은 Assets 디렉토리로 관리 되어 집니다. 
+해당 voVidDec.dat 파일은 Assets 디렉토리로 관리 되어 집니다. <br>
+
 
 
 ## 화면별 사용자 정의 API 
@@ -102,10 +101,9 @@ api project(':visualonplayer');
 public static List<String> provideEnableDeviceModels() {
     return new ArrayList<String>(Arrays.asList("LG-V498S2", "LG-V498", "LG-V498S1", "LG-V400S1", "LG-V525S1", "LG-V525S3"));
 }
-```
+    
+    
 
-
-``` java
 /**
 * 템플릿 Application 영역에 하기 메소드를 오버라이드 하여 제한될 컨텐츠의 고유 번호를 지정 하십시오. 
 * 해당 항목이 비어있을 경우에는 컨텐츠 목록이 보여지지 않거나 원할한 진행이 되지 않을 수 있기 때문에 반듯이 입력을 해야 하는 값입니다.
@@ -115,10 +113,8 @@ public static List<String> provideEnableDeviceModels() {
 protected String provideApplicationContentId() {
     return "xxxx@pallycon.sd";
 }
-```
-
-
-``` java
+    
+    
 /**
 * 템플릿 Application 영역에 하기 메소드를 오버라이드 하여 온라인 상태일 경우 홈 영역에 보여질 URL 을 지정 하십시오. 
 * 해당 항목이 비어있을 경우에는 홍 영역을 제대로 표시 할 수 없습니다.
@@ -127,9 +123,8 @@ protected String provideApplicationContentId() {
 protected String provideHomeWebViewUrl() {
     return "http://ndpro.co.kr/";
 }
-```
-
-``` java
+    
+    
 /**
 * 템플릿 Application 영역에 하기 메소드를 오버라이드 하여 오프라인 상태일 경우 홈 영역에 보여질 Path 를 지정 하십시오. 
 * 해당 항목이 비어있을 경우에는 홍 영역을 제대로 표시 할 수 없습니다.
@@ -138,10 +133,8 @@ protected String provideHomeWebViewUrl() {
 protected String provideSubHomeWebViewUrl() {
     return "file:///android_asset/mainscreen/index.html";
 }
-```
-
-
-``` java
+    
+    
 /**
 * 템플릿 Application 영역에 하기 메소드를 오버라이드 하여 개인정보 취급 방침에 대한 URL 을 지정 하십시오.
 * 해당 항목이 비어있을 경우에는 정상적으로 표시 되어 지지 않습니다.
