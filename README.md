@@ -79,12 +79,12 @@ api project(':netsyncsdk');
 api project(':visualonplayer');
 ```
 
+<br>
 
 ## 배속 플레이
 어플리케이션 배속 사용시 플레이어 라이센스 파일이 필요합니다. <br>
 라이센스는 어플리케이션 패키지 명을 기준으로 동작되기 때문에, 앱 제작 하기전 미리 패키지 명을 INKA 에 알려주시면 배속 라이센스를 포함한 voVidDec.dat 파일을 제공해 드립니다.<br>
-해당 voVidDec.dat 파일은 Assets 디렉토리로 관리 되어 집니다. <br>
-
+해당 voVidDec.dat 파일은 Assets 디렉토리로 관리 되어 집니다. <br><br>
 
 
 ## 화면별 사용자 정의 API 
@@ -146,8 +146,9 @@ protected String providePrivacyPolicyUrl() {
 ```
 
     
+<br><br>
 
-템플릿 망고
+플레이어 망고
 -------
 <div>
     <img width="200" src="https://user-images.githubusercontent.com/39693463/40693044-3a14d160-63f0-11e8-9c5b-701a65de4c5e.jpg"></img>
