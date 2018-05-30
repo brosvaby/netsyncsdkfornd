@@ -336,12 +336,6 @@ public class BaseConfigurationPerSite {
         return mFontType;
     }
 
-//	public void setEnable(boolean bEnable) {
-//		mEnable = bEnable;
-//		mKey 	= "";
-//		mIv		= "";
-//	}
-
     public void setEnable() {
         mEnable = true;
     }

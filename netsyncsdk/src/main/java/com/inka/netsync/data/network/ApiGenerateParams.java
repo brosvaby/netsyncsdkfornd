@@ -62,7 +62,7 @@ public final class ApiGenerateParams {
         map.put(DEVICE_MODEL, requestSerialAuthEntry.getDeviceModel());
         map.put(APP_VERSION, requestSerialAuthEntry.getAppVersion());
         String result = generateParamMapToString(map);
-        LogUtil.INSTANCE.info("AppApiHelper" , "map : " + map.toString());
+        LogUtil.INSTANCE.info("AppApiHelper", "map : " + map.toString());
         return result;
     }
 
@@ -70,14 +70,14 @@ public final class ApiGenerateParams {
         return new JSONObject(map).toString(2);
     }
 
-    public static final String getUserId (String userId) {
+    public static final String getUserId(String userId) {
         if (StringUtils.isBlank(userId)) {
             userId = "testId";
         }
         return userId;
     }
 
-    public static final String getAppVersion (String appVersion) {
+    public static final String getAppVersion(String appVersion) {
         if (StringUtils.isBlank(appVersion)) {
             appVersion = "0.0.0";
         }
@@ -85,21 +85,21 @@ public final class ApiGenerateParams {
     }
 
 
-    public static final String getGcmToken (String gcmToken) {
+    public static final String getGcmToken(String gcmToken) {
         if (StringUtils.isBlank(gcmToken)) {
             gcmToken = "testGcmToken";
         }
         return gcmToken;
     }
 
-    public static final String getDeviceId (String deviceId) {
+    public static final String getDeviceId(String deviceId) {
         if (StringUtils.isBlank(deviceId)) {
             deviceId = "testDeviceId";
         }
         return deviceId;
     }
 
-    public static final String getAccessToken (String accessToken) {
+    public static final String getAccessToken(String accessToken) {
         if (StringUtils.isBlank(accessToken)) {
             accessToken = "testAccessToken";
         }
@@ -107,13 +107,12 @@ public final class ApiGenerateParams {
     }
 
 
-    public static final String getAccountType (String accountType) {
+    public static final String getAccountType(String accountType) {
         if (StringUtils.isBlank(accountType)) {
             accountType = "testAccountType";
         }
         return accountType;
     }
-
 
 
 }

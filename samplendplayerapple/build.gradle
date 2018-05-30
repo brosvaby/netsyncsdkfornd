@@ -31,11 +31,6 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-//            applicationVariants.all { variant ->
-//                variant.outputs.each { output ->
-//                    //output.outputFile = new File("${rootDir}/a_out_apk_files", output.outputFile.name.replace("debug.apk", "debug_nd_" + ndBuildVersionName + "_app_" + versionName + "_" + versionCode + ".apk"))
-//                }
-//            }
         }
     }
     lintOptions {

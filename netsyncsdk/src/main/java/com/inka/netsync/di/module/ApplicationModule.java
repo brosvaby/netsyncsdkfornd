@@ -3,7 +3,6 @@ package com.inka.netsync.di.module;
 import android.app.Application;
 import android.content.Context;
 
-import com.inka.netsync.R;
 import com.inka.netsync.common.AppConstants;
 import com.inka.netsync.data.AppDataManager;
 import com.inka.netsync.data.DataManager;
@@ -22,7 +21,6 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 @Module
 public class ApplicationModule {
@@ -87,14 +85,14 @@ public class ApplicationModule {
     }
 
 
-    @Provides
-    @Singleton
-    CalligraphyConfig provideCalligraphyDefaultConfig() {
-        return new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/source-sans-pro/SourceSansPro-Regular.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build();
-    }
+//    @Provides
+//    @Singleton
+//    CalligraphyConfig provideCalligraphyDefaultConfig() {
+//        return new CalligraphyConfig.Builder()
+//                .setDefaultFontPath("fonts/source-sans-pro/SourceSansPro-Regular.ttf")
+//                .setFontAttrId(R.attr.fontPath)
+//                .build();
+//    }
 
 
 }

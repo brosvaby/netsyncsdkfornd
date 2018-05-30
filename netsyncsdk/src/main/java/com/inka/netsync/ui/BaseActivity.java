@@ -44,8 +44,6 @@ import com.inka.netsync.view.model.DrawerMenuViewEntry;
 import org.apache.commons.lang3.StringUtils;
 
 import butterknife.Unbinder;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-
 
 public abstract class BaseActivity extends AppCompatActivity implements MvpView {
 
@@ -164,11 +162,6 @@ public abstract class BaseActivity extends AppCompatActivity implements MvpView 
 
     public ActivityComponent getActivityComponent() {
         return mActivityComponent;
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override

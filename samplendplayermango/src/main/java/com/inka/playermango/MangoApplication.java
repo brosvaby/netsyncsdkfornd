@@ -21,7 +21,6 @@ public class MangoApplication extends BaseApplication {
      * @return
      */
     public static List<String> provideEnableDeviceModels() {
-//        return new ArrayList<String>(Arrays.asList("LG-V498S2", "LG-V498", "LG-V498S1", "LG-V400S1", "LG-V525S1", "LG-V525S3"));
         return new ArrayList<>();
     }
 
@@ -31,7 +30,7 @@ public class MangoApplication extends BaseApplication {
      */
     @Override
     protected String provideApplicationContentId() {
-        return "W7WMZUZ236AA2B76@pallycon.sd";
+        return "";
     }
 
     /**
@@ -49,11 +48,11 @@ public class MangoApplication extends BaseApplication {
      */
     @Override
     protected String provideCardManufacturer() {
-        return "284245";
+        return "";
     }
 
     /**
-     *
+     * 온라인 상태일 경우 홈영역에 보여질 url 을 일렵합니다.
      * @return
      */
     @Override

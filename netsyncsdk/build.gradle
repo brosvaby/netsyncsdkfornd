@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'com.jakewharton.butterknife'
 
 android {
@@ -51,12 +50,8 @@ android {
             javaMaxHeapSize "4g"
         }
     }
-
 }
 
-greendao {
-    schemaVersion 1
-}
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
@@ -70,9 +65,6 @@ dependencies {
     api 'com.android.support.constraint:constraint-layout:1.0.2'
 
     implementation "com.android.support:multidex:$rootProject.ext.supportLibraryMultidexVersion"
-
-    // font
-    api "uk.co.chrisjenx:calligraphy:$rootProject.ext.calligraphyVersion"
 
     // network
     api "com.amitshekhar.android:rx2-android-networking:$rootProject.rx2AndroidNetworking"
