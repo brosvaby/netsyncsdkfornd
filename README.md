@@ -97,8 +97,12 @@ api project(':visualonplayer');
 수정 할 요소는 각 뷰(Activity or Fragment) 단위로 메소드 정의가 되어 있습니다.
 
 
-스크린샷
+템플릿 망고
 -------
-<img width="200" src="https://user-images.githubusercontent.com/39693463/40693044-3a14d160-63f0-11e8-9c5b-701a65de4c5e.jpg"></img>
 
-<img width="200" src="https://user-images.githubusercontent.com/39693463/40693049-4498c038-63f0-11e8-81b1-be35258fd975.jpg"></img>
+<div>
+    <img width="200" src="https://user-images.githubusercontent.com/39693463/40693044-3a14d160-63f0-11e8-9c5b-701a65de4c5e.jpg"></img>
+    <img width="200" src="https://user-images.githubusercontent.com/39693463/40693049-4498c038-63f0-11e8-81b1-be35258fd975.jpg"></img>
+    <img width="200" src="https://user-images.githubusercontent.com/39693463/40693727-fe695a6a-63f3-11e8-87db-026583d8ac7a.jpg"></img>
+    <img width="200" src="https://user-images.githubusercontent.com/39693463/40693728-feac4078-63f3-11e8-9ebd-dcab154159fc.jpg"></img>
+</div>
