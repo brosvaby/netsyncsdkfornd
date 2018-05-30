@@ -32,7 +32,8 @@
 
 ### 환경
 
-You need to make sure you have the JCenter and Google repositories included in the build.gradle file in the root of your project:
+
+프로젝트의 루트에있는 build.gradle 파일에 JCenter 및 Google 리포지토리가 포함되어 있는지 확인해야합니다.
 
 ``` java
 repositories {
@@ -82,7 +83,7 @@ ext {
 ```
 
 
-Next add a dependency in the build.gradle file of your module. The following will add a dependency to the full library:
+그런 다음 모듈의 build.gradle 파일에 종속성을 추가하십시오. 다음은 전체 라이브러리에 종속성을 추가합니다.
 ``` java
 api project(':netsyncsdk');
 api project(':visualonplayer');
@@ -96,3 +97,8 @@ api project(':visualonplayer');
 수정 할 요소는 각 뷰(Activity or Fragment) 단위로 메소드 정의가 되어 있습니다.
 
 
+스크린샷
+-------
+<img src="https://user-images.githubusercontent.com/39693463/40693044-3a14d160-63f0-11e8-9c5b-701a65de4c5e.jpg"></img>
+
+<img src="https://user-images.githubusercontent.com/39693463/40693049-4498c038-63f0-11e8-81b1-be35258fd975.jpg"></img>
