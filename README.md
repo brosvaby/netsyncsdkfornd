@@ -6,7 +6,7 @@
 ### 상품 프로세스
 
 1. 업체에서 어플리케이션 제작 요청
-2. 어플리케이션 Package 지정 및 전달  <font color="green"> ex) com.inka.playermango </font>
+2. 플레이어 배속재생을 위한 어플리케이션 Package 지정 및 전달  ex) com.inka.playermango
 3. 해당 어플리케이션 CID (SD 카드에 고유값을 도출하기 위해 , Content ID 와는 다른용도) 생성.
 4. 컨텐츠 패키징 및 전용 소스 & 템플릿 Repository 주소 & 배속관련 설정 파일 전달
 5. 각 업체에서 앱제작 및 APK 파일 받음.
@@ -80,6 +80,12 @@ api project(':visualonplayer');
 ```
 
 </br>
+
+
+## 배속 플레이
+어플리케이션 배속 사용시 플레이어 라이센스 파일이 필요합니다. <br>
+라이센스는 어플리케이션 패키지 명을 기준으로 동작되기 때문에, 앱 제작 하기전 미리 패키지 명을 INKA 에 알려주시면 배속 라이센스를 포함한 voVidDec.dat 파일을 제공해 드립니다.<br>
+해당 voVidDec.dat 파일은 Assets 디렉토리로 관리 되어 집니다. 
 
 
 ## 화면별 사용자 정의 API 
