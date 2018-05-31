@@ -33,7 +33,7 @@ public class MangoApplication extends BaseApplication {
      **/
     @Override
     protected String provideApplicationContentId() {
-        return "";
+        return getString(R.string.mango_content_id);
     }
 
 

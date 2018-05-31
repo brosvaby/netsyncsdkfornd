@@ -16,4 +16,7 @@
     <!-- -->
 	<string name="mango_external_path">@string/external_path</string>
 
+    <!-- -->
+    <string name="mango_content_id">FWM2PCKB856A0723@pallycon.sd</string>
+
 </resources>
