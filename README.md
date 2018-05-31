@@ -55,7 +55,7 @@ ext {
 
 그런 다음 모듈의 build.gradle 파일에 종속성을 추가하십시오. 다음은 전체 라이브러리에 종속성을 추가합니다.
 ``` java
-api project(':netsyncsdk');
+api project(':ndappsdk');
 api project(':visualonplayer');
 ```
 
