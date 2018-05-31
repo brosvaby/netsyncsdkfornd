@@ -29,7 +29,7 @@ public class NavigationDrawerFragmentEx extends NavigationDrawerFragment {
 
         ArrayList<DrawerMenuEntry> arrSection = new ArrayList<DrawerMenuEntry>();
 
-        arrSection.add(new DrawerMenuEntry(DrawerMenuEntry.DrawerMenuType.ITEM.ordinal(), DrawerMenuEntryEx.TAG_WEBVIEW, getString(R.string.drawermenu_title_home), R.drawable.img_drawer_home, DrawerMenuEntry.STATE_ENABLE));
+        arrSection.add(new DrawerMenuEntry(DrawerMenuEntry.DrawerMenuType.ITEM.ordinal(), DrawerMenuEntry.TAG_WEBVIEW, getString(R.string.drawermenu_title_home), R.drawable.img_drawer_home, DrawerMenuEntry.STATE_ENABLE));
 
         arrSection.addAll(getStorageMenusForSD());
 

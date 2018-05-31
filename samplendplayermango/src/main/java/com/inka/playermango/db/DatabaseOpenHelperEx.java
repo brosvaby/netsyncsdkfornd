@@ -22,14 +22,11 @@ public class DatabaseOpenHelperEx extends DatabaseCacheOpenHelper {
     }
 
     public void init () {
-        LogUtil.INSTANCE.info("DatabaseOpenHelperEx", "getDatabaseName() : " + getDatabaseName());
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         super.onCreate(db);
-        LogUtil.INSTANCE.info("birdgangdatabase", "DatabaseOpenHelperEx > onCreate");
-
         createBookmarkTableQuery(db, MetaData.BOOKMARK_TABLE);
         createCategoryTableQuery(db, MetaData.CATEGORY_TABLE);
         createContentTableQuery(db, MetaData.CONTENT_TABLE);
@@ -40,7 +37,6 @@ public class DatabaseOpenHelperEx extends DatabaseCacheOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        LogUtil.INSTANCE.info("birdgangdatabase", "onUpgrade > oldVersion : " + oldVersion + " , newVersion : " + newVersion + " , MetaData.DB_VERSION : " + MetaData.DB_VERSION);
     }
 
 }

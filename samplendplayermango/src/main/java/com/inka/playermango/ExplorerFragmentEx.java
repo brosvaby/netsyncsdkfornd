@@ -54,15 +54,6 @@ public class ExplorerFragmentEx extends SDExplorerFragment {
         return R.color.provider_color_actionbar_main_bg;
     }
 
-    /**
-     *
-     * @return
-     */
-    @Override
-    protected int provideSubStringCountFileName() {
-        return 4;
-    }
-
 
     /**
      * 강의 진도율 프로그래스 바 컬러를 재정의 합니다.

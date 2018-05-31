@@ -128,7 +128,7 @@ public class SettingFragmentEx extends SDSettingFragment {
 	}
 
 	/**
-	 *
+	 * 어플리케이션 이름을 정의 합니다.
 	 * @return
 	 */
 	@Override

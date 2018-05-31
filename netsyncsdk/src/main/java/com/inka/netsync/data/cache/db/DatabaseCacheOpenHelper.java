@@ -316,9 +316,6 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
                 + "UNIQUE(" + MetaData.RecentlyColumns.RECENTLY_ID + ", " + MetaData.RecentlyColumns.CONTENT_ID + ")"
                 + ");";
         db.execSQL(query);
-
-//        CREATE UNIQUE INDEX pk_index ON "table1"("field1","field2");
-//        db.execSQL("CREATE INDEX IF NOT EXISTS " + tableName + "_index_content_id ON " + tableName + "(" + MetaData.ContentColumns.CONTENT_ID + ")");
     }
 
 

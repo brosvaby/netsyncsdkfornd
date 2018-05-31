@@ -13,5 +13,4 @@
     <!-- lms -->
     <color name="provider_color_text_rate_for_lms">#ffF4501E</color>
     <color name="provider_color_text_rate_for_lms_dim">#aaF4501E</color>
-
 </resources>

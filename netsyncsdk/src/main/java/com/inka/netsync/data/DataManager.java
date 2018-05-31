@@ -1,6 +1,5 @@
 package com.inka.netsync.data;
 
-
 import com.inka.netsync.data.network.ApiHelper;
 import com.inka.netsync.data.prefs.PreferencesHelper;
 import com.inka.netsync.data.resource.ResourcesHelper;

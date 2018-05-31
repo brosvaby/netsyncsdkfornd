@@ -35,7 +35,6 @@ import butterknife.ButterKnife;
 /**
  * Created by birdgang on 2017. 4. 18..
  */
-
 public class InfoWebViewFragment extends BaseFragment implements BaseWebViewMvpView {
 
     @Inject
@@ -46,8 +45,6 @@ public class InfoWebViewFragment extends BaseFragment implements BaseWebViewMvpV
 
     protected InfoOnLineWebViewClient mInfoOnLineWebViewClient = null;
     protected WebChromeClient mWebChromeClient = null;
-
-    protected boolean mIsWideViewPort = false;
 
     protected MenuItem mMenuItemReflesh;
     protected MenuItem mMenuItemSearch;
@@ -108,7 +105,7 @@ public class InfoWebViewFragment extends BaseFragment implements BaseWebViewMvpV
             set.setTextZoom(100);
         }
 
-        if (mIsWideViewPort == true) {
+        if (provideWideViewPort()) {
             set.setUseWideViewPort(true);
             set.setLoadWithOverviewMode(true);
         }
@@ -201,7 +198,6 @@ public class InfoWebViewFragment extends BaseFragment implements BaseWebViewMvpV
         }
     }
 
-
     protected InfoWebViewClientCallback mInfoWebViewClientCallback = new InfoWebViewClientCallback() {
         @Override
         public void onUpdateScreen() {
@@ -214,5 +210,9 @@ public class InfoWebViewFragment extends BaseFragment implements BaseWebViewMvpV
         public void onSetHtmlTitleMessage(String title) {
         }
     };
+
+    protected boolean provideWideViewPort () {
+        return false;
+    }
 
 }

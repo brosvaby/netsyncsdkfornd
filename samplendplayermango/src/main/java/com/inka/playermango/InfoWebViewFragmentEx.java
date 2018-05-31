@@ -1,6 +1,5 @@
 package com.inka.playermango;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.inka.netsync.ui.fragment.InfoWebViewFragment;
@@ -15,12 +14,14 @@ public class InfoWebViewFragmentEx extends InfoWebViewFragment {
 		newFragment.setArguments(args);
 		return newFragment;
 	}
-	
-	@SuppressLint("MissingSuperCall")
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		mIsWideViewPort = true;
-		super.onCreate(savedInstanceState);
-	}
 
+
+	/**
+	 *
+	 * @return
+	 */
+	@Override
+	protected boolean provideWideViewPort() {
+		return true;
+	}
 }
