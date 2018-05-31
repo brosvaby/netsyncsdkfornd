@@ -3,8 +3,8 @@
 전용 어플리케이션 제작을 위해 SDK 와 템플릿 소스를 제공 합니다.
 
 ### 모듈
-- **netsyncsdk** : ND 어플리케이션 SDK
-- **samplendplayermango** : SD카드 인증 방식 어플리케이션 샘플
+- **ndappsdk** : ND 어플리케이션 SDK
+- **playermango** : SD카드 인증 방식 어플리케이션 샘플
 
 ### 환경
 

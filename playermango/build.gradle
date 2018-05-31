@@ -38,6 +38,6 @@ android {
 }
 
 dependencies {
-    api project(':netsyncsdk');
+    api project(':ndappsdk');
     api project(':visualonplayer');
 }
