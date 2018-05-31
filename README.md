@@ -14,7 +14,8 @@
 
 <br>
 
-프로젝트의 루트에있는 build.gradle 파일에 JCenter 및 Google 리포지토리가 포함되어 있는지 확인해야합니다.
+프로젝트의 루트에있는 build.gradle 파일에 JCenter 및 Google 리포지토리가 포함되어 있는지 확인해야합니다. <br>
+ext 이하는 ndappsdk 에서 사용하고 있는 라이브러리 버전 입니다.
 
 ``` java
 repositories {
@@ -79,7 +80,7 @@ api project(':visualonplayer');
 * 해당 항목이 비어있을 경우에는 디바이스 제한을 하지 않습니다.
 **/
 public static List<String> provideEnableDeviceModels() {
-    return new ArrayList<String>(Arrays.asList());
+    return new ArrayList<>();
 }
     
     
