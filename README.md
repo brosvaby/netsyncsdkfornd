@@ -6,7 +6,7 @@
 ### 상품 프로세스
 
 1. 업체에서 어플리케이션 제작 요청
-2. 플레이어 배속재생을 위한 어플리케이션 Package 지정 및 전달  ex) com.inka.playermango
+2. 플레이어 배속재생을 위한 어플리케이션 패키지 지정 및 전달  ex) com.inka.playermango
 3. 해당 어플리케이션 CID (SD 카드에 고유값을 도출하기 위해 , Content ID 와는 다른용도) 생성.
 4. 컨텐츠 패키징 및 전용 소스 & 템플릿 Repository 주소 & 배속관련 설정 파일 전달
 5. 각 업체에서 앱제작 및 APK 파일 받음.
@@ -148,7 +148,48 @@ protected String providePrivacyPolicyUrl() {
     
 <br><br>
 
-플레이어 망고
+
+## playermango.xml
+``` java
+<!-- 홈 메뉴에 WebView url 지정 -->
+<string name="mango_home_url">@string/link_home_url</string>
+    
+<!-- 오프라인 상태일 경우 홈 메뉴에 리소스 Path 지정-->
+<string name="mango_subhome_url">@string/link_sub_home_url</string>
+    
+<!-- 개인정보 취급 방침 url 지정 -->
+<string name="mango_privacy_policy_url">@string/link_privacy_policy_url</string>
+    
+<!-- 어플리케이션 이름 지정 -->
+<string name="mango_app_name">@string/app_name</string>
+    
+<!-- 제작사 지정 -->
+<string name="mango_app_company">@string/app_company</string>
+```
+
+<br>
+
+## color.xml
+``` java
+<!-- 액션바 컬러 지정 -->
+<color name="provider_color_actionbar_main_bg">#ffF4501E</color>
+
+<!-- 상태바 컬러 지정 -->
+<color name="provider_color_statusbar_main_bg">#aaF4501E</color>
+
+<!-- 스플래쉬 배경 컬러 지정 -->
+<color name="provider_color_splash_background">#ffF4501E</color>
+
+<!-- 팝업 창 버튼 컬러 지정 -->
+<color name="provider_dialog_button_bg_color">#ffF4501E</color>
+
+<!-- 강의 진도 텍스트 컬러 지정 -->
+<color name="provider_color_text_rate_for_lms">#ffF4501E</color>
+```
+
+<br>
+    
+스크린 샷
 -------
 <div>
     <img width="200" src="https://user-images.githubusercontent.com/39693463/40693044-3a14d160-63f0-11e8-9c5b-701a65de4c5e.jpg"></img>
