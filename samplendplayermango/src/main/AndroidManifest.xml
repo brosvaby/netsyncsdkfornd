@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.inka.playermango">
 
-    <application
-        android:name="com.inka.playermango.MangoApplication"
+    <application android:name="com.inka.playermango.MangoApplication"
         android:allowBackup="true"
         android:largeHeap="true"
         android:hardwareAccelerated="true"
