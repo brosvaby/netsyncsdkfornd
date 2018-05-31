@@ -1,25 +1,6 @@
-## INKA NetSync
+## ND APP SDK
 
 전용 어플리케이션 제작을 위해 SDK 와 템플릿 소스를 제공 합니다.
-
-
-### 상품 프로세스
-
-1. 업체에서 어플리케이션 제작 요청
-2. 플레이어 배속재생을 위한 어플리케이션 패키지 지정 및 전달  ex) com.inka.playermango
-3. 해당 어플리케이션 CID (SD 카드에 고유값을 도출하기 위해 , Content ID 와는 다른용도) 생성.
-4. 컨텐츠 패키징 및 전용 소스 & 템플릿 Repository 주소 & 배속관련 설정 파일 전달
-5. 각 업체에서 앱제작 및 APK 파일 받음.
-6. 잉카에서 전달 받은 APK 파일과 패키징 된 컨텐츠와 함께 마스터 카드 생성 및 전달
-
-
-</br>
-
-### NCG 가이드
-
-- <a href="https://docs.pallycon.com/ko/license-gateway.html">PallyCon NCG Android SDK 개발 가이드</a>
-- <a href="https://docs.pallycon.com/ko/license-gateway.html">PallyCon 멀티 DRM 라이선스 콜백 게이트웨이 API
-</a>
 
 
 </br>

@@ -10,7 +10,7 @@ public class ModuleConfig {
     public static boolean ENABLE_SAVE_LOG_FILE = false;            // 로컬 로그 사용 유무
     public static boolean ENABLE_NOT_NEED_TO_SIRIAL_NUMBER = false;  // 시리얼 번호를 입력할 필요가 없다
     public static boolean ENABLE_EXTRACT_DATABASE = true;            // 데이타베이스 축출
-    public static boolean ENABLE_NO_LIMIT_BY_CID = false;            // content id로 app에서 컨텐츠 제한 유무
+    public static boolean ENABLE_NO_LIMIT_BY_CID = true;            // content id로 app에서 컨텐츠 제한 유무
     public static boolean ENABLE_NO_CERTIFICATION = false;            // 인증 유무
     public static boolean ENABLE_NO_DEVICE_CHECK = false;            // 디바이스 제한 체크 유무
     public static boolean ENABLE_NO_SDCARD_MANUFACTIRER_CHECK = false;      // SD카드 제조 업체 체크 - 현재 두이 업체만 확인하고 있음.
