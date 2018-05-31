@@ -117,7 +117,7 @@ public class SerialEditTextDialog extends Dialog implements View.OnClickListener
 
         mEditTextViewSerialNumberWidget = (EditTextViewSerialNumberWidget) findViewById(R.id.container_edittext_serial_number_widget);
         mEditTextViewSerialNumberWidget.setPrivateImeOptions("defaultInputmode=english;");
-        mEditTextViewSerialNumberWidget.setPrimaryColor(BaseConfiguration.getInstance().getAppDialogBtnColor());
+        mEditTextViewSerialNumberWidget.setPrimaryColor(BaseConfiguration.getDefault().getAppDialogBtnColor());
         mEditTextViewSerialNumberWidget.setEditTextInputFinishListener(new EditTextViewSerialNumberWidget.EditTextInputFinishListener() {
             @Override
             public void onUpdate(String values) {

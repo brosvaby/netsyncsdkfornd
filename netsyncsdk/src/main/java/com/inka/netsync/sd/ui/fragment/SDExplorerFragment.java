@@ -502,7 +502,7 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
                 new CustomAlertDialog(getActivity())
                         .setConfirmText(getString(R.string.dialog_ok))
                         .setTitleText(getString(R.string.dialog_title_path))
-                        .setConfirmBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
+                        .setConfirmBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
                         .setContentText(previousContentEntry.getParentsFilePath())
                         .showCancelButton(false)
                         .show();

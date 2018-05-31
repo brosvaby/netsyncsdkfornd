@@ -44,7 +44,7 @@ public class RecentlyFragmentEx extends SDRecentlyFragment {
                         .setConfirmText(getString(R.string.dialog_ok))
                         .setTitleText(getActivity().getString(R.string.dialog_title_error))
                         .setContentText(errorMessage)
-                        .setConfirmBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
+                        .setConfirmBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
                         .setConfirmClickListener(new CustomAlertDialog.OnSweetClickListener() {
                             @Override
                             public void onClick(CustomAlertDialog sweetAlertDialog) {

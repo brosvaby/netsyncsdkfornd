@@ -3,7 +3,6 @@ package com.inka.netsync.common;
 /**
  * Created by birdgang on 2017. 6. 13..
  */
-
 public class IntentParams {
 
     public static final int REQUEST_CODE_GET_PERMISSION_WRITE_SDCARD = 42;

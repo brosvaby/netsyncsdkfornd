@@ -14,7 +14,6 @@ import java.util.ArrayList;
 /**
  * Created by birdgang on 2018. 3. 2..
  */
-
 public class MigrationContentTable extends MigrationData {
 
     private final String TAG = "MigrationContentTable";

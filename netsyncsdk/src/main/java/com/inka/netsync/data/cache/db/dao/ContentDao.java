@@ -20,7 +20,6 @@ import java.util.List;
 /**
  * Created by birdgang on 2018. 1. 12..
  */
-
 public class ContentDao {
 
     private final String TAG = "ContentDao";

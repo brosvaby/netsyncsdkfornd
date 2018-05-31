@@ -1,5 +1,6 @@
 package com.inka.netsync.common.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -10,24 +11,19 @@ import android.net.NetworkInfo;
 
 public final class NetworkUtils {
 
-    public static final int NETWORK_NONE = -1;
-    public static final int NETWORK_WIFI = 0;
-    public static final int NETWORK_DATA = 1;
-    public static final int NETWORK_WIMAX = 2;
-
     private NetworkUtils() {
     }
 
     public static boolean isNetworkConnected(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        @SuppressLint("MissingPermission") NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
     }
 
 
     public static int getNetworkConnectionType(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        @SuppressLint("MissingPermission") NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         if (null == activeNetwork) {
             return -1;
         }
@@ -37,11 +33,11 @@ public final class NetworkUtils {
 
     public boolean check3GAvailable(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkWifi = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        @SuppressLint("MissingPermission") NetworkInfo networkWifi = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         boolean isWifiAvail = networkWifi.isAvailable();
         boolean isWifiConn = networkWifi.isConnected();
 
-        NetworkInfo networkMobile = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        @SuppressLint("MissingPermission") NetworkInfo networkMobile = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         boolean isMobileAvail = false ;
         boolean isMobileConn = false;
 
@@ -61,7 +57,7 @@ public final class NetworkUtils {
 
     public boolean is3GConnection(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkMobile = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        @SuppressLint("MissingPermission") NetworkInfo networkMobile = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         boolean isMobileAvail = false;
         boolean isMobileConn = false;
 
@@ -84,7 +80,7 @@ public final class NetworkUtils {
      */
     public boolean isWifiConnection(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkWifi = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        @SuppressLint("MissingPermission") NetworkInfo networkWifi = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         boolean isWifiAvail = networkWifi.isAvailable();
         boolean isWifiConn = networkWifi.isConnected();
 
@@ -99,6 +95,7 @@ public final class NetworkUtils {
      * // 와이브로 지원 기기 일 경우 처리
      * @return
      */
+    @SuppressLint("MissingPermission")
     public boolean isNetworkWimaxAvailable(Context context) {
         ConnectivityManager manager = (ConnectivityManager) context.getSystemService (Context.CONNECTIVITY_SERVICE);
         boolean isWimax = false;

@@ -2,8 +2,6 @@ package com.inka.netsync.common.utils;
 
 import com.inka.netsync.logs.LogUtil;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.io.File;
 
 /**
@@ -80,27 +78,6 @@ public class FileUtil {
             LogUtil.INSTANCE.error(TAG, e);
         }
         return fileSize;
-    }
-
-
-    /**
-     * 파일의 전체 경로에서 파일명만을 추려 낸다.
-     * @param filePath 전체 경로
-     * @return 성공 시:파일 명, 실패 시:null
-     */
-    public synchronized static String getFilenameFromFilePath( String filePath ) throws Exception {
-        filePath = StringUtils.replace(filePath, "\\", "/");
-        String[] token = StringUtils.split(filePath, "/");
-        if (token == null) {
-            return null;
-        }
-
-        if (token.length < 1)	{
-            return filePath;
-        }
-
-        String ret = token[token.length - 1];
-        return ret;
     }
 
 }

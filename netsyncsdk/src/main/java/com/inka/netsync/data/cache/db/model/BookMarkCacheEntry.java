@@ -12,7 +12,6 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * Created by birdgang on 2018. 1. 15..
  */
-
 public class BookMarkCacheEntry implements BaseCacheEntry, Parcelable {
 
     private int bookmarkId;

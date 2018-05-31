@@ -433,8 +433,8 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
                 .setTitleText(getString(R.string.dialog_title_close))
                 .setCancelText(getString(R.string.dialog_cancel))
                 .setConfirmText(getString(R.string.dialog_serial))
-                .setConfirmBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
-                .setCancelBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
+                .setConfirmBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
+                .setCancelBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
                 .showCancelButton(true)
                 .setResourceLayout(R.layout.dialog_alert_serial_auth)
                 .setDialogTypeLarge()
@@ -479,7 +479,7 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
                 .setConfirmText(getString(R.string.dialog_ok))
                 .setTitleText(getActivity().getString(R.string.dialog_title_download))
                 .setContentText(message)
-                .setConfirmBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
+                .setConfirmBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
                 .show();
     }
 

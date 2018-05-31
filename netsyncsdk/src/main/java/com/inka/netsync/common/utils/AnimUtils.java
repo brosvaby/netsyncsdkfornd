@@ -256,8 +256,6 @@ public class AnimUtils {
 
     public static void fade(View view, float fromAlpha, float toAlpha, long duration) {
         final Animation anim = new AlphaAnimation(fromAlpha, toAlpha);
-		/*anim.setInterpolator(AnimationUtils.loadInterpolator(view.getContext(),
-				android.R.anim.decelerate_interpolator));*/
         anim.setDuration(duration);
 
         view.startAnimation(anim);
@@ -276,17 +274,6 @@ public class AnimUtils {
         animation.setDuration(1000);
         animation.setFillAfter(true);
         animation.setInterpolator(new AnticipateInterpolator());
-//        animation.setAnimationListener(new SimpleAnimationListener() {
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                animation = new Rotate3DAnimation(0, 0, 270, 360, 0, 0, pivotX, pivotY, 250.0f, false);
-//                animation.setDuration(1000);
-//                animation.setFillAfter(true);
-//                animation.setInterpolator(new OvershootInterpolator());
-//                view.startAnimation(animation);
-//            }
-//        });
-
         view.startAnimation(animation);
     }
 

@@ -1552,7 +1552,7 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
                                 .setCancelAbleDialog(true)
                                 .setConfirmText(getString(R.string.dialog_ok))
                                 .setTitleText("WebServer Error")
-                                .setConfirmBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
+                                .setConfirmBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
                                 .setContentText(msg)
                                 .setConfirmClickListener(new CustomAlertDialog.OnSweetClickListener() {
                                     @Override
@@ -3982,7 +3982,7 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
                         new CustomAlertDialog(PlayerActivity.this)
                                 .setConfirmText(getString(R.string.dialog_ok))
                                 .setTitleText(bundle.getString("title"))
-                                .setConfirmBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
+                                .setConfirmBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
                                 .setContentText(bundle.getString("desc"))
                                 .show();
                     }

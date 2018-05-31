@@ -106,8 +106,7 @@ public class AppApiHelper implements ApiHelper {
 
     @Override
     public Observable<String> getStringMarketVersionCheckApiCall(MarketCheckRequest.ServerMarketCheckRequest request) {
-//        String requestUrl = "https://play.google.com/store/apps/details?id=" + request.getRequestMarketCheck().packageName;
-        String requestUrl = "https://play.google.com/store/apps/details?id=com.inka.pallycon.pallyconnd";
+        String requestUrl = "https://play.google.com/store/apps/details?id=" + request.getRequestMarketCheck().packageName;
         LogUtil.INSTANCE.info("AppApiHelper" , "getStringMarketVersionCheckApiCall > requestUrl : " + requestUrl);
 
         Rx2ANRequest.GetRequestBuilder build = Rx2AndroidNetworking.get(requestUrl);

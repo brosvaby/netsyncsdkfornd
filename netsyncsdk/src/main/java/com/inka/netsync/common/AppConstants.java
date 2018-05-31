@@ -6,36 +6,7 @@ package com.inka.netsync.common;
 
 public final class AppConstants {
 
-    private AppConstants() {
-        // This utility class is not publicly instantiable
-    }
-
-    // application type
-    public static final String APPLICATION_TYPE_PROPRIETARY = "Proprietary";
-    public static final String APPLICATION_TYPE_COMMON = "Common";
-    public static final String APPLICATION_TYPE_INTEGRATION = "Integration";
-
-    // a
-    public static final String APPLICATION_STRUCTURE_APPLAYER = "AppPlayer";
-    public static final String APPLICATION_STRUCTURE_HYBRIDPLAYER = "HybridPlayer";
-
-
-    // application type
-    public static final String APPLICATION_TYPE_MANGO = "MANGO";
-    public static final String APPLICATION_TYPE_APPLE = "APPLE";
-
-    //
-    public static final String APPLICATION_VERSION_OLDVERSION = "OldVersion";
-    public static final String APPLICATION_VERSION_NEWVERSION = "NewVersion";
-
-
-    //
-    public static final String APPLICATION_STYLE_BASIC = "BasicApp";
-    public static final String APPLICATION_STYLE_PREMIUM = "PremiumApp";
-
-
-    public static final String APPLICATION_REQUESTTYPE_DEFAULTMODULE = "DefaultModule";
-    public static final String APPLICATION_REQUESTTYPE_APACHEMODULE = "ApacheModule";
+    public static String APPLICATION_ID = "com.inka.netsync";
 
     // player type
     public static final String TYPE_PLAYER_NATIVE = "PLAYERTYPE_NATIVE";
@@ -96,22 +67,8 @@ public final class AppConstants {
     public static final int MESSAGE_EARPHONECHANGE_HANDLER_REMOTE_CLICKED = 0;
 
 
-    public static final String STATUS_CODE_SUCCESS = "success";
-    public static final String STATUS_CODE_FAILED = "failed";
-
-    public static final int API_STATUS_CODE_LOCAL_ERROR = 0;
-
     public static final String DB_NAME = "smartnetsync_db.db";
     public static final String PREF_NAME = "smartnetsync_pref";
-
-    public static final long NULL_INDEX = -1L;
-
-    public static final String SEED_DATABASE_OPTIONS = "seed/options.json";
-    public static final String SEED_DATABASE_QUESTIONS = "seed/questions.json";
-
-    public static final String TIMESTAMP_FORMAT = "yyyyMMdd_HHmmss";
-
-
 
     public final static int ACT_PLAYER = 1000;
     public final static int ACT_CAPTURE_SERIAL = 1001;

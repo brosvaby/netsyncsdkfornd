@@ -37,7 +37,6 @@ import java.util.UUID;
 /**
  * Created by birdgang on 2017. 4. 20..
  */
-
 public class AndroidUtil {
 
     private static final String TAG = "AndroidUtil";
@@ -55,7 +54,6 @@ public class AndroidUtil {
         return Build.MODEL.replace(" ", "_");
     }
 
-//    // for EXTERNAL SD
     private static List<String> readMountsFile() {
         List<String> mMounts = new ArrayList<String>();
         try {
@@ -75,7 +73,6 @@ public class AndroidUtil {
         }
         return mMounts;
     }
-
 
     // for EXTERNAL SD
     private static List<String> readVoldFile() {

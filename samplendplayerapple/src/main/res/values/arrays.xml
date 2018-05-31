@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string-array name="menu_sort_folder">
-	    <item>@string/sort_name_asc</item>
-	    <item>@string/sort_name_des</item>
-	</string-array>
-</resources>

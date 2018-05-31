@@ -72,7 +72,6 @@ public class BaseApplication extends MultiDexApplication {
         @Override
         public void onChange(boolean selfChange) {
             super.onChange(selfChange);
-            LogUtil.INSTANCE.info("Boookmarks", "onChanged : " + selfChange);
         }
     };
 
@@ -119,20 +118,17 @@ public class BaseApplication extends MultiDexApplication {
         mEnterpriseCode = BaseConfigurationPerSite.getInstance().getEnterpriseCode();
         mEnterpriseName = BaseConfigurationPerSite.getInstance().getEnterpriseName();
 
-        BaseConfiguration.getInstance().setApplicationContentId(provideApplicationContentId());
-        BaseConfiguration.getInstance().setAppDialogBtnColor(provideDialogBtnColor());
+        BaseConfiguration.getDefault().setApplicationContentId(provideApplicationContentId());
+        BaseConfiguration.getDefault().setAppDialogBtnColor(provideDialogBtnColor());
 
-        //
         BaseConfigurationPerSite.getInstance().setCardManufacturer(provideCardManufacturer());
         BaseConfigurationPerSite.getInstance().setExternalSdPath(provideExternalSdPath());
         BaseConfigurationPerSite.getInstance().setHomeUrl(provideHomeWebViewUrl());
         BaseConfigurationPerSite.getInstance().setSubHomeUrl(provideSubHomeWebViewUrl());
 
-        //
         BaseConfigurationPerSite.getInstance().setAcquisitionUrl(provideAcquisitionUrl());
         BaseConfigurationPerSite.getInstance().setSerialAuthenticationUrl(provideSerialAuthenticationUrl());
 
-        //
         BaseConfigurationPerSite.getInstance().setPrivacyPolicyUrl(providePrivacyPolicyUrl());
         BaseConfigurationPerSite.getInstance().setHelpUrl(provideHelpUrl());
     }
@@ -141,7 +137,6 @@ public class BaseApplication extends MultiDexApplication {
     public static boolean initNcgSdk(Context context) {
         try {
             boolean init = NetSyncSdkHelper.getDefault().isInitialized();
-            LogUtil.INSTANCE.info("birdgangncg2sdk", " initNcgSdk > init : " + init);
             if (init) {
                 initialized = true;
                 return initialized;
@@ -149,10 +144,7 @@ public class BaseApplication extends MultiDexApplication {
 
             String offLineCount = BaseConfigurationPerSite.getInstance().getOffLineCount();
             String deviceId = getCachedDeviceId();
-
-            LogUtil.INSTANCE.info("birdgangncg2sdk", " initNcgSdk > offLineCount : " + offLineCount + " , deviceId : " + deviceId);
             NetSyncSdkHelper.getDefault().initNcgSdk(context, deviceId, offLineCount);
-            
             initialized = true;
         }
         catch (Ncg2Exception ne) {
@@ -166,15 +158,10 @@ public class BaseApplication extends MultiDexApplication {
         return initialized;
     }
 
-
-    public void loadData () {
-    }
-
     public ApplicationComponent getComponent() {
         return mApplicationComponent;
     }
 
-    // Needed to replace the component with a test specific one
     public void setComponent(ApplicationComponent applicationComponent) {
         mApplicationComponent = applicationComponent;
     }
@@ -186,10 +173,6 @@ public class BaseApplication extends MultiDexApplication {
     public static Context getAppContext() {
         return application;
     }
-
-    public void releaseNcgSdk() {
-    }
-
 
     public static String getCachedDeviceId () {
         String deviceId = "";

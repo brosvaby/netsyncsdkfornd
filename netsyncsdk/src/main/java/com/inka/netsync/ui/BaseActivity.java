@@ -133,8 +133,8 @@ public abstract class BaseActivity extends AppCompatActivity implements MvpView 
                 .setContentText(getString(R.string.dialog_message_close_application))
                 .setCancelText(getString(R.string.dialog_cancel))
                 .setConfirmText(getString(R.string.dialog_ok))
-                .setConfirmBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
-                .setCancelBtnColoer(BaseConfiguration.getInstance().getAppDialogBtnColor())
+                .setConfirmBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
+                .setCancelBtnColoer(BaseConfiguration.getDefault().getAppDialogBtnColor())
                 .showCancelButton(true)
                 .setDialogTypeLarge()
                 .setCancelClickListener(new CustomAlertDialog.OnSweetClickListener() {

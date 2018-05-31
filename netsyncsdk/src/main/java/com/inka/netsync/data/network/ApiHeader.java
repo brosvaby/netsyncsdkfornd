@@ -10,7 +10,6 @@ import javax.inject.Singleton;
 /**
  * Created by birdgang on 2018. 4. 12..
  */
-
 @Singleton
 public class ApiHeader {
 

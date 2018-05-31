@@ -373,7 +373,7 @@ public class MediaControler {
             count++;
 
             try {
-                String applicationContentId = BaseConfiguration.getInstance().getApplicationContentId();
+                String applicationContentId = BaseConfiguration.getDefault().getApplicationContentId();
                 String contentId = NetSyncSdkHelper.getDefault().getContentId(filePath);
 
                 LogUtil.INSTANCE.info(TAG , "onUpdateMedia > totalSize : " + totalSize + " , applicationContentId : " + applicationContentId + " , contentId : " + contentId + " , scanEntry : " + scanEntry.toString());
@@ -674,7 +674,7 @@ public class MediaControler {
 
     public boolean addConditionByCotentId (String filePath) {
         try {
-            String applicationContentId = BaseConfiguration.getInstance().getApplicationContentId();
+            String applicationContentId = BaseConfiguration.getDefault().getApplicationContentId();
             String contentId = NetSyncSdkHelper.getDefault().getContentId(filePath);
 
             if (!StringUtils.equals(applicationContentId, contentId) && !ModuleConfig.ENABLE_NO_LIMIT_BY_CID && !ModuleConfig.ENABLE_MODE_PREVIEW_APP) {
