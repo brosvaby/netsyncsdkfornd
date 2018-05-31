@@ -1,15 +1,8 @@
 package com.inka.playermango;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.ActionBar;
-import android.view.Menu;
-import android.view.MenuInflater;
 
-import com.inka.netsync.data.network.model.MarketVersionCheckEntry;
-import com.inka.netsync.logs.LogUtil;
 import com.inka.netsync.sd.ui.fragment.SDSettingFragment;
-import com.inka.netsync.ui.DrawerActivity;
 import com.inka.netsync.view.adapter.SectionedRecyclerViewAdapter;
 import com.inka.netsync.view.model.SettingMenuViewEntry;
 
@@ -18,14 +11,10 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * 설정 화면 입니다.
  */
 public class SettingFragmentEx extends SDSettingFragment {
-
-	private final String TAG = SettingFragmentEx.class.toString();
-
 	public static SettingFragmentEx newInstance(String fragmentTag_key,String fragmentTag, String fragmentName_key, String fragmentName) {
 		SettingFragmentEx newFragment = new SettingFragmentEx();
 		Bundle args = new Bundle();
@@ -34,7 +23,6 @@ public class SettingFragmentEx extends SDSettingFragment {
 		newFragment.setArguments(args);
 		return newFragment;
 	}
-
 
 	/**
 	 * 설정화면 섹션 목록을 지정합니다.
@@ -137,7 +125,7 @@ public class SettingFragmentEx extends SDSettingFragment {
 	}
 
 	/**
-	 *
+	 * 제작사를 지정 합니다.
 	 * @return
 	 */
 	@Override
@@ -147,7 +135,7 @@ public class SettingFragmentEx extends SDSettingFragment {
 
 
 	/**
-	 *
+	 * 제작사 이메일 지정 합니다.
 	 * @return
 	 */
 	@Override

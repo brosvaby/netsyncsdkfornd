@@ -33,17 +33,9 @@ public class MangoApplication extends BaseApplication {
      **/
     @Override
     protected String provideApplicationContentId() {
-        return "W7WMZUZ236AA2B76@pallycon.sd";
+        return "";
     }
 
-    /**
-     *
-     * @return
-     */
-    @Override
-    protected String provideExternalSdPath() {
-        return getString(R.string.external_path);
-    }
 
     /**
      * 템플릿 Application 영역에 하기 메소드를 오버라이드 하여 온라인 상태일 경우 홈 영역에 보여질 URL 을 지정 하십시오.
@@ -73,7 +65,7 @@ public class MangoApplication extends BaseApplication {
     }
 
     /**
-     * 다이어 로그 컬러를 지정 합니다.
+     * 팝업 버튼 컬러를 지정 합니다.
      * @return
      */
     @Override

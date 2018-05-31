@@ -30,8 +30,6 @@ public class DatabaseOpenHelperEx extends DatabaseCacheOpenHelper {
         createBookmarkTableQuery(db, MetaData.BOOKMARK_TABLE);
         createFavoriteTableQuery(db, MetaData.FAVORITE_TABLE);
         createRecentlyTableQuery(db, MetaData.RECENTLY_TABLE);
-//        createCategoryTableQuery(db, MetaData.CATEGORY_TABLE);
-//        createSettingTableQuery(db, MetaData.SETTING_TABLE);
     }
 
     @Override

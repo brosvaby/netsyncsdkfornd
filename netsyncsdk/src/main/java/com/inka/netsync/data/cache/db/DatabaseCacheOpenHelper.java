@@ -273,7 +273,7 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
 
 
     /**
-     *
+     * 미디어 목록을 캐쉬 합니다.
      * @param db
      * @param tableName
      */
@@ -300,7 +300,7 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
 
 
     /**
-     *
+     * 즐겨 찾기 목록을 캐쉬 합니다.
      * @param db
      * @param tableName
      */
@@ -318,7 +318,7 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
 
 
     /**
-     *
+     * 최근 재생 목록을 캐쉬 합니다.
      * @param db
      * @param tableName
      */
@@ -336,6 +336,11 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
     }
 
 
+    /**
+     * 북마크 목록을 캐쉬 합니다.
+     * @param db
+     * @param tableName
+     */
     public void createBookmarkTableQuery(SQLiteDatabase db, String tableName) {
         String query = "CREATE TABLE IF NOT EXISTS "
                 + tableName + " ("

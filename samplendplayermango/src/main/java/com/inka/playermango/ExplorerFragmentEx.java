@@ -37,7 +37,6 @@ public class ExplorerFragmentEx extends SDExplorerFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mCertification = CertificationHelper.getDefault().initCertification(getActivity(), Build.VERSION.SDK_INT);
         Bundle args = getArguments();
         if (args != null && args.containsKey(MediaStorage.TYPE_STORAGE)) {
             mStrStorageType = args.getString(MediaStorage.TYPE_STORAGE);

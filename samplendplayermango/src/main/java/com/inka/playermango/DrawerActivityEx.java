@@ -3,7 +3,6 @@ package com.inka.playermango;
 import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 
 import com.inka.netsync.logs.LogUtil;
@@ -19,25 +18,20 @@ import java.util.List;
  */
 public class DrawerActivityEx extends SDDrawerPlayerActivity {
 
+    /**
+     * 메인 화면 실행시 처음에 보일 메뉴를 지정 하고, 제한되는 디바이스 목록을 체크 합니다.
+     * @param savedInstanceState
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setCurrentTabByTag(DrawerMenuEntry.TAG_WEBVIEW);
         onResultEnableDeviceModels();
     }
 
-    /**
-     *
-     * @param tabTag
-     * @return
-     */
-    @Override
-    protected Fragment getFragment(String tabTag) {
-        return super.getFragment(tabTag);
-    }
-
 
     /**
-     *
+     * 화면추가
+     * WebView 를 추가합니다.
      * @return
      */
     @Override
@@ -49,7 +43,8 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
 
 
     /**
-     *
+     * 화면추가
+     * 파일 탐색기 화면 를 추가합니다.
      * @param storageType
      * @return
      */
@@ -61,7 +56,8 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
     }
 
     /**
-     *
+     * 화면추가
+     * 즐겨찾기 화면 를 추가합니다.
      * @return
      */
     @Override
@@ -72,7 +68,8 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
     }
 
     /**
-     *
+     * 화면추가
+     * 최근 재생 목록 화면 를 추가합니다.
      * @return
      */
     @Override
@@ -83,7 +80,8 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
     }
 
     /**
-     *
+     * 화면추가
+     * 설정 화면 를 추가합니다.
      * @return
      */
     @Override
@@ -94,7 +92,8 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
     }
 
     /**
-     *
+     * 화면추가
+     * 온라인 이용 안내 화면 를 추가합니다.
      * @return
      */
     @Override
@@ -105,7 +104,8 @@ public class DrawerActivityEx extends SDDrawerPlayerActivity {
     }
 
     /**
-     *
+     * 화면추가
+     * 오프라인 이용 안내 화면 를 추가합니다.
      * @return
      */
     @Override

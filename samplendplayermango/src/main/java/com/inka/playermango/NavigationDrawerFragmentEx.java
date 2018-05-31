@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class NavigationDrawerFragmentEx extends NavigationDrawerFragment {
 
     /***
-     * 사이드 메뉴 구성
+     * Drawer 메뉴 목록 구성
      * @return
      */
     @Override

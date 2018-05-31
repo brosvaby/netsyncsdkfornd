@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.inka.ncg.nduniversal.hidden.Certification;
+import com.inka.ncg.nduniversal.hidden.CertificationHelper;
 import com.inka.ncg2.Ncg2Exception;
 import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
@@ -173,6 +174,8 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
     @SuppressLint("NewApi")
     @Override
     public void setUp(View view) {
+        mCertification = CertificationHelper.getDefault().initCertification(getActivity(), Build.VERSION.SDK_INT);
+
         Bundle args = getArguments();
         if (args != null && args.containsKey(MediaStorage.TYPE_STORAGE)) {
             mStrStorageType = args.getString(MediaStorage.TYPE_STORAGE);
