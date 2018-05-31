@@ -7,7 +7,6 @@
 
 ### 모듈
 - **netsyncsdk** : ND 어플리케이션 SDK
-- **samplendplayerapple** : 시리얼 인증 방식 어플리케이션 샘플
 - **samplendplayermango** : SD카드 인증 방식 어플리케이션 샘플
 
 </br>
@@ -68,7 +67,7 @@ api project(':visualonplayer');
 
 <br>
 
-## 배속 플레이
+## 배속 플레이어
 어플리케이션 배속 사용시 플레이어 라이센스 파일이 필요합니다. <br>
 라이센스는 어플리케이션 패키지 명을 기준으로 동작되기 때문에, 앱 제작 하기전 미리 패키지 명을 INKA 에 알려주시면 배속 라이센스를 포함한 **voVidDec.dat** 파일을 제공해 드립니다.<br>
 해당 voVidDec.dat 파일은 Assets 디렉토리로 관리 되어 집니다. <br><br>
@@ -86,7 +85,7 @@ api project(':visualonplayer');
 * 해당 항목이 비어있을 경우에는 디바이스 제한을 하지 않습니다.
 **/
 public static List<String> provideEnableDeviceModels() {
-    return new ArrayList<String>(Arrays.asList("LG-V498S2", "LG-V498", "LG-V498S1", "LG-V400S1", "LG-V525S1", "LG-V525S3"));
+    return new ArrayList<String>(Arrays.asList());
 }
     
     
