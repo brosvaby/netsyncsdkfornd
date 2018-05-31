@@ -83,7 +83,6 @@ public static List<String> provideEnableDeviceModels() {
 }
     
     
-
 /**
 * 템플릿 Application 영역에 하기 메소드를 오버라이드 하여 제한될 컨텐츠의 고유 번호를 지정 하십시오. 
 * 해당 항목이 비어있을 경우에는 컨텐츠 목록이 보여지지 않거나 원할한 진행이 되지 않을 수 있기 때문에 반듯이 입력을 해야 하는 값입니다.
@@ -124,10 +123,8 @@ protected String providePrivacyPolicyUrl() {
     return "http://ndpro.co.kr/privacypolicy/ndprivacypolicy.html";
 }
 ```
-
     
-<br><br>
-
+<br>
 
 ## 화면별 리소스 정의 
 
