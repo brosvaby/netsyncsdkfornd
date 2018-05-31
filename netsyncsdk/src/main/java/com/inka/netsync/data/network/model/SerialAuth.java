@@ -9,7 +9,6 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by birdgang on 2018. 4. 12..
  */
-
 public class SerialAuth implements Parcelable {
 
     @Expose

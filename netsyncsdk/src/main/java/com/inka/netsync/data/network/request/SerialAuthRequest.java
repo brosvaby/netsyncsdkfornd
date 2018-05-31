@@ -36,7 +36,6 @@ public class SerialAuthRequest {
                     "requestSerialAuth=" + requestSerialAuth +
                     '}';
         }
-
     }
 
 
@@ -50,6 +49,21 @@ public class SerialAuthRequest {
         public String appVersion;
         public String serial;
         public StringEncrypter encrypter;
+
+        @Override
+        public String toString() {
+            return "RequestSerialAuth{" +
+                    "key='" + key + '\'' +
+                    ", iv='" + iv + '\'' +
+                    ", enterpriseCode='" + enterpriseCode + '\'' +
+                    ", deviceId='" + deviceId + '\'' +
+                    ", deviceModel='" + deviceModel + '\'' +
+                    ", cid='" + cid + '\'' +
+                    ", appVersion='" + appVersion + '\'' +
+                    ", serial='" + serial + '\'' +
+                    ", encrypter=" + encrypter +
+                    '}';
+        }
     }
 
 }

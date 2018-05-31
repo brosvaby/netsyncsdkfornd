@@ -75,9 +75,7 @@ public class AppApiHelper implements ApiHelper {
         String appVersion = request.getRequestSerialAuth().appVersion;
         String serial = request.getRequestSerialAuth().serial;
 
-        LogUtil.INSTANCE.info("AppApiHelper" , "getSerialAuthApiCall > " +
-                "deviceId : " + deviceId + " , deviceModel : " + deviceModel + " , cId : " + cId + " , appVersion : " + appVersion + " , serial : " + serial);
-
+        LogUtil.INSTANCE.info("AppApiHelper" , "getSerialAuthApiCall > request : " + request.toString());
         if (StringUtils.isNotBlank(key) && StringUtils.isNotBlank(iv)) {
             mEncrypter = new StringEncrypter(key, iv);
         }
@@ -90,14 +88,8 @@ public class AppApiHelper implements ApiHelper {
         map.put(ApiGenerateParams.KEY_PARAMS_SERIAL, serial);
 
         String jsonParams = ApiGenerateParams.generateParamMapToString(map);
-        LogUtil.INSTANCE.info("AppApiHelper" , "getSerialAuthApiCall > jsonParams :" + jsonParams);
-
         String encryptedParam = "data=" + mEncrypter.encrypt(jsonParams);
-
-        LogUtil.INSTANCE.info("AppApiHelper" , "getSerialAuthApiCall > encryptedParam :" + encryptedParam);
-
         String url = ApiEndPoint.ENDPOINT_SERIAL_AUTH + "?" + encryptedParam;
-
         LogUtil.INSTANCE.info("AppApiHelper" , "getSerialAuthApiCall > url : " + url);
 
         Rx2ANRequest.GetRequestBuilder build = Rx2AndroidNetworking.get(url);
@@ -108,7 +100,6 @@ public class AppApiHelper implements ApiHelper {
     public Observable<String> getStringMarketVersionCheckApiCall(MarketCheckRequest.ServerMarketCheckRequest request) {
         String requestUrl = "https://play.google.com/store/apps/details?id=" + request.getRequestMarketCheck().packageName;
         LogUtil.INSTANCE.info("AppApiHelper" , "getStringMarketVersionCheckApiCall > requestUrl : " + requestUrl);
-
         Rx2ANRequest.GetRequestBuilder build = Rx2AndroidNetworking.get(requestUrl);
         return build.getResponseOnlyFromNetwork().build().getStringObservable();
     }

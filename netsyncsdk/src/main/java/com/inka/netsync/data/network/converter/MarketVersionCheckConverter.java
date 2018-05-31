@@ -14,7 +14,6 @@ public class MarketVersionCheckConverter {
     private final String TAG  = "MarketVersionCheckConverter";
 
     public MarketVersionCheckResponse converter(MarketVersionCheckEntry marketVersionCheckEntry, String resource) throws Exception {
-
         MarketVersionCheckResponse responseMarketVersionCheck = new MarketVersionCheckResponse();
 
         String result = "";
