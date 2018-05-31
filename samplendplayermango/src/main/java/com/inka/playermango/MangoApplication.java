@@ -33,7 +33,7 @@ public class MangoApplication extends BaseApplication {
      **/
     @Override
     protected String provideApplicationContentId() {
-        return "";
+        return "W7WMZUZ236AA2B76@pallycon.sd";
     }
 
     /**

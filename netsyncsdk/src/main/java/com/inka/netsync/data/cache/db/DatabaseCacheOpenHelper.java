@@ -183,6 +183,7 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
 
 
 
+
     public void createSettingTableQuery(SQLiteDatabase db, String tableName) {
         String query = "CREATE TABLE IF NOT EXISTS "
                 + tableName + " ("
@@ -253,6 +254,7 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
     }
 
 
+
     public void createCategoryTableQuery(SQLiteDatabase db, String tableName) {
         String query = "CREATE TABLE IF NOT EXISTS "
                 + tableName + " ("
@@ -270,6 +272,11 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
     }
 
 
+    /**
+     *
+     * @param db
+     * @param tableName
+     */
     public void createContentTableQuery(SQLiteDatabase db, String tableName) {
         String query = "CREATE TABLE IF NOT EXISTS "
                 + tableName + " ("
@@ -292,6 +299,11 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
     }
 
 
+    /**
+     *
+     * @param db
+     * @param tableName
+     */
     public void createFavoriteTableQuery(SQLiteDatabase db, String tableName) {
         String query = "CREATE TABLE IF NOT EXISTS "
                 + tableName + " ("
@@ -305,6 +317,11 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
     }
 
 
+    /**
+     *
+     * @param db
+     * @param tableName
+     */
     public void createRecentlyTableQuery(SQLiteDatabase db, String tableName) {
         String query = "CREATE TABLE IF NOT EXISTS "
                 + tableName + " ("
@@ -335,6 +352,11 @@ public class DatabaseCacheOpenHelper extends SQLiteOpenHelper {
     }
 
 
+    /**
+     *
+     * @param db
+     * @param tableName
+     */
     public void createLMSTableQuery(SQLiteDatabase db, String tableName) {
         String query = "CREATE TABLE IF NOT EXISTS "
                 + tableName + " ("

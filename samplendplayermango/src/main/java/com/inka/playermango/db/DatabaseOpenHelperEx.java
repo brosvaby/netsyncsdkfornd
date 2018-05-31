@@ -5,7 +5,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.inka.netsync.data.cache.db.DatabaseCacheOpenHelper;
 import com.inka.netsync.data.cache.db.MetaData;
-import com.inka.netsync.logs.LogUtil;
 
 /**
  * Created by birdgang on 2017. 8. 9..
@@ -27,12 +26,12 @@ public class DatabaseOpenHelperEx extends DatabaseCacheOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         super.onCreate(db);
-        createBookmarkTableQuery(db, MetaData.BOOKMARK_TABLE);
-        createCategoryTableQuery(db, MetaData.CATEGORY_TABLE);
         createContentTableQuery(db, MetaData.CONTENT_TABLE);
-        createSettingTableQuery(db, MetaData.SETTING_TABLE);
+        createBookmarkTableQuery(db, MetaData.BOOKMARK_TABLE);
         createFavoriteTableQuery(db, MetaData.FAVORITE_TABLE);
         createRecentlyTableQuery(db, MetaData.RECENTLY_TABLE);
+//        createCategoryTableQuery(db, MetaData.CATEGORY_TABLE);
+//        createSettingTableQuery(db, MetaData.SETTING_TABLE);
     }
 
     @Override

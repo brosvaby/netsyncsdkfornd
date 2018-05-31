@@ -25,14 +25,20 @@
 </br>
 
 ### 모듈
-- netsyncsdk : ND 어플리케이션 SDK
-- samplendplayerapple : 시리얼 인증 방식 어플리케이션 샘플
-- samplendplayermango : SD카드 인증 방식 어플리케이션 샘플
+- **netsyncsdk** : ND 어플리케이션 SDK
+- **samplendplayerapple** : 시리얼 인증 방식 어플리케이션 샘플
+- **samplendplayermango** : SD카드 인증 방식 어플리케이션 샘플
 
 </br>
 
+
 ### 환경
 
+- **Android Studio 3.1.2**
+- **Gradle 3.1.2**
+- **buildToolsVersion 27.0.3**
+
+<br>
 
 프로젝트의 루트에있는 build.gradle 파일에 JCenter 및 Google 리포지토리가 포함되어 있는지 확인해야합니다.
 
@@ -51,7 +57,7 @@ ext {
     minSdkVersion = 14
     targetSdkVersion = 24
     compileSdkVersion = 26
-    buildToolsVersion = '26.0.2'
+    buildToolsVersion = '27.0.3'
 
     supportLibraryVersion = '24.2.1'
     supportAppcompatVersion = '24.2.1'
@@ -83,7 +89,7 @@ api project(':visualonplayer');
 
 ## 배속 플레이
 어플리케이션 배속 사용시 플레이어 라이센스 파일이 필요합니다. <br>
-라이센스는 어플리케이션 패키지 명을 기준으로 동작되기 때문에, 앱 제작 하기전 미리 패키지 명을 INKA 에 알려주시면 배속 라이센스를 포함한 voVidDec.dat 파일을 제공해 드립니다.<br>
+라이센스는 어플리케이션 패키지 명을 기준으로 동작되기 때문에, 앱 제작 하기전 미리 패키지 명을 INKA 에 알려주시면 배속 라이센스를 포함한 **voVidDec.dat** 파일을 제공해 드립니다.<br>
 해당 voVidDec.dat 파일은 Assets 디렉토리로 관리 되어 집니다. <br><br>
 
 
@@ -170,6 +176,7 @@ protected String providePrivacyPolicyUrl() {
 <br>
 
 ## color.xml
+
 ``` java
 <!-- 액션바 컬러 지정 -->
 <color name="provider_color_actionbar_main_bg">#ffF4501E</color>
