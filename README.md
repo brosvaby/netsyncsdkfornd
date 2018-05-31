@@ -1,13 +1,13 @@
 ## ND APP SDK
+오프라인 어플리케이션 제작을 위해 SDK 와 템플릿 소스를 제공 합니다.
 
-전용 어플리케이션 제작을 위해 SDK 와 템플릿 소스를 제공 합니다.
 
 ### 모듈
 - **ndappsdk** : ND 어플리케이션 SDK
-- **playermango** : SD카드 인증 방식 어플리케이션 샘플
+- **playermango** : 오프라인 인증 방식 템플릿 앱
+
 
 ### 환경
-
 - **Android Studio 3.1.2**
 - **Gradle 3.1.2**
 - **buildToolsVersion 27.0.3**
@@ -129,8 +129,11 @@ protected String providePrivacyPolicyUrl() {
 <br><br>
 
 
-## playermango.xml
+## 화면별 리소스 정의 
+
 ``` java
+located playermango > src > main > res > values > playermango.xml
+    
 <!-- 홈 메뉴에 WebView url 지정 -->
 <string name="mango_home_url">@string/link_home_url</string>
     
@@ -149,9 +152,10 @@ protected String providePrivacyPolicyUrl() {
 
 <br>
 
-## color.xml
 
 ``` java
+located playermango > src > main > res > values > color.xml
+    
 <!-- 액션바 컬러 지정 -->
 <color name="provider_color_actionbar_main_bg">#ffF4501E</color>
 
