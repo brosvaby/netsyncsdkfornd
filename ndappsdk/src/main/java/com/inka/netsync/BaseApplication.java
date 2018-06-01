@@ -120,8 +120,8 @@ public class BaseApplication extends MultiDexApplication {
 
         BaseConfiguration.getDefault().setApplicationContentId(provideApplicationContentId());
         BaseConfiguration.getDefault().setAppDialogBtnColor(provideDialogBtnColor());
+        BaseConfiguration.getDefault().setStrCardManufacturer(provideCardManufacturer());
 
-        BaseConfigurationPerSite.getInstance().setCardManufacturer(provideCardManufacturer());
         BaseConfigurationPerSite.getInstance().setExternalSdPath(provideExternalSdPath());
         BaseConfigurationPerSite.getInstance().setHomeUrl(provideHomeWebViewUrl());
         BaseConfigurationPerSite.getInstance().setSubHomeUrl(provideSubHomeWebViewUrl());
@@ -145,6 +145,7 @@ public class BaseApplication extends MultiDexApplication {
             String offLineCount = BaseConfigurationPerSite.getInstance().getOffLineCount();
             String deviceId = getCachedDeviceId();
             NetSyncSdkHelper.getDefault().initNcgSdk(context, deviceId, offLineCount);
+            NetSyncSdkHelper.getDefault().setCardManufacturer(BaseConfiguration.getDefault().getStrCardManufacturer());
             initialized = true;
         }
         catch (Ncg2Exception ne) {

@@ -139,7 +139,6 @@ public abstract class BaseFragment extends Fragment implements MvpView {
         void onFragmentDetached(String tag);
     }
 
-
     public boolean checkStoragePermission() {
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             return true;
@@ -147,10 +146,6 @@ public abstract class BaseFragment extends Fragment implements MvpView {
         return false;
     }
 
-    /***
-     *
-     * @return
-     */
     protected ActionBar getActionBar() {
         AppCompatActivity activity = (AppCompatActivity)getActivity();
         if (null != activity) {
@@ -158,7 +153,6 @@ public abstract class BaseFragment extends Fragment implements MvpView {
         }
         return null;
     }
-
 
     protected void restoreActionBar() {
         try {
@@ -172,7 +166,6 @@ public abstract class BaseFragment extends Fragment implements MvpView {
                 actionBar.setDisplayShowHomeEnabled(true);
             } else if (activity.getAppUiType() == AppConstants.APPUITYPE_DRAWER) {
                 String title = getArguments().getString(this.getString(R.string.key_name_fragment));
-                LogUtil.INSTANCE.info("birdgangactionbar" , "restoreActionBar > title : " + title);
                 actionBar.setDisplayShowTitleEnabled(false);
                 actionBar.setDisplayShowCustomEnabled(true);
                 actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
@@ -228,10 +221,6 @@ public abstract class BaseFragment extends Fragment implements MvpView {
                     sortDocs.add(entry);
                 }
             }
-
-            LogUtil.INSTANCE.info("birdgangsort" , " sortDirectories size : " + sortDirectories.size() + " , sortVideos size : " + sortVideos.size()
-                    + " , sortAudios size : " + sortAudios.size() + " , sortDocs size : " + sortDocs.size());
-
 
             if (conditionSort == PreferencesCacheHelper.SORT_NAME_ASC) {
                 Collections.sort(sortDirectories, new ContentViewEntry.SortContentNameAscCompare());

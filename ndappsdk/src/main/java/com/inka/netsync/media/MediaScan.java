@@ -95,8 +95,6 @@ public class MediaScan {
         }
 
         boolean threadAlive = mLoadingThread.isAlive();
-        String threadState = mLoadingThread.getState().toString();
-        LogUtil.INSTANCE.info("birdgangthread" , "isWorking >> threadAlive : " + threadAlive + " , threadState : " + threadState);
         if (mLoadingThread != null && threadAlive && mLoadingThread.getState() != Thread.State.TERMINATED && mLoadingThread.getState() != Thread.State.NEW) {
             return true;
         }
@@ -224,7 +222,6 @@ public class MediaScan {
                     }
 
                     if (isStopping) {
-                        LogUtil.INSTANCE.debug("birdgangmediascan", "Stopping scan");
                         ScanEventBus.getDefault().notifyMediaScanStop();
                         return;
                     }

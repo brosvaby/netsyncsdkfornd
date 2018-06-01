@@ -82,6 +82,10 @@ public class NetSyncSdkHelper {
     }
 
 
+    public void setCardManufacturer (String cardManufacturer) {
+        mNcg2SdkHelper.setCardManufacturer(cardManufacturer);
+    }
+
     /**
      *
      * @throws Ncg2Exception

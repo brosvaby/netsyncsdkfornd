@@ -45,7 +45,6 @@ public class ListSettingAdapter extends HeaderFooterRecyclerViewAdapter implemen
         this.data = new ArrayList<>();
     }
 
-
     public void add(String s , int position) {
         position = position == -1 ? getItemCount()  : position;
         data.add(position,s);
@@ -60,7 +59,6 @@ public class ListSettingAdapter extends HeaderFooterRecyclerViewAdapter implemen
     public void updateSettingMenus (long id, SettingMenuViewEntry settingMenuEntry) {
         for (int i=0; i<settingMenuEntries.size(); i++) {
             int entryId = settingMenuEntries.get(i).getId();
-            LogUtil.INSTANCE.info(TAG, "update > entryId : " + entryId + " , id : " + id + " , settingMenuEntry : " + settingMenuEntry.toString());
             if (id == entryId) {
                 settingMenuEntries.set(i, settingMenuEntry);
             }
@@ -96,9 +94,6 @@ public class ListSettingAdapter extends HeaderFooterRecyclerViewAdapter implemen
         try {
             if (null != settingMenuEntries) {
                 SettingMenuViewEntry item = settingMenuEntries.get(position);
-
-                LogUtil.INSTANCE.info("birdgangadapterviewtype", "getContentItemViewType > item.getSettingType() : " + item.getSettingType());
-
                 if (StringUtils.equals(item.getSettingType(), SettingMenuViewEntry.SettingType.SWITCH.getType())) {
                     return SettingMenuViewEntry.SettingType.SWITCH.ordinal();
                 }
@@ -131,10 +126,7 @@ public class ListSettingAdapter extends HeaderFooterRecyclerViewAdapter implemen
 
     @Override
     protected RecyclerView.ViewHolder onCreateContentItemViewHolder(ViewGroup parent, int contentViewType) {
-        LogUtil.INSTANCE.info(TAG, "onCreateContentItemViewHolder > contentViewType : " + contentViewType);
-
         BaseViewHolder viewHolder = null;
-        LogUtil.INSTANCE.info("birdgangadapterviewtype", "onCreateContentItemViewHolder > contentViewType : " + contentViewType);
         if (contentViewType == SettingMenuViewEntry.SettingType.SWITCH.ordinal()) {
             viewHolder = new ListSettingSwitchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_setting_switch_item, parent, false), contentViewType);
         }
@@ -222,12 +214,7 @@ public class ListSettingAdapter extends HeaderFooterRecyclerViewAdapter implemen
         containerRoot.setEnabled(true);
 
         String title = settingMenuEntry.getTitle();
-        String value = settingMenuEntry.getValue();
-        String description = settingMenuEntry.getDescription();
         boolean enable = settingMenuEntry.isToggleOnOrFalse();
-        boolean hasMore = settingMenuEntry.isHasMore();
-
-        LogUtil.INSTANCE.info(TAG, "title : " + title + " , value : " + value + " , description : " + description + " , hasMore : " + hasMore + " , enable : " + enable);
 
         TextView textTitle = holder.getTextTitle();
         textTitle.setText(title);
@@ -252,11 +239,6 @@ public class ListSettingAdapter extends HeaderFooterRecyclerViewAdapter implemen
 
         String title = settingMenuEntry.getTitle();
         String value = settingMenuEntry.getValue();
-        String description = settingMenuEntry.getDescription();
-        boolean enable = settingMenuEntry.isToggleOnOrFalse();
-        boolean hasMore = settingMenuEntry.isHasMore();
-
-        LogUtil.INSTANCE.info(TAG, "title : " + title + " , value : " + value + " , description : " + description + " , hasMore : " + hasMore + " , enable : " + enable + " , mEnableMarketUpdate : " + mEnableMarketUpdate);
 
         TextView textTitle = holder.getTextTitle();
         textTitle.setText(title);
@@ -266,19 +248,16 @@ public class ListSettingAdapter extends HeaderFooterRecyclerViewAdapter implemen
         textVersion.setText(value);
 
         LinearLayout containerVersionUpdate = holder.getContainerVersionUpdate();
-//        containerVersionUpdate.setOnClickListener(this);
 
         TextView textVersionUpdate = holder.getTextVersionUpdate();
         settingMenuEntry.setEnableMarketUpdate(mEnableMarketUpdate);
 
         if (mEnableMarketUpdate) {
             containerVersionUpdate.setBackgroundResource(R.color.color_enable);
-//            containerVersionUpdate.setClickable(true);
             textVersionUpdate.setText(context.getResources().getString(R.string.setting_result_enable_market_version_update));
         }
         else {
             containerVersionUpdate.setBackgroundResource(R.color.color_disable);
-//            containerVersionUpdate.setClickable(false);
             textVersionUpdate.setText(context.getResources().getString(R.string.setting_result_disable_market_version_update));
         }
     }

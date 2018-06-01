@@ -67,7 +67,6 @@ public class ListBookMarkAdapter extends HeaderFooterRecyclerViewAdapter impleme
         return MODE;
     }
 
-
     public boolean addForDeleteEntry (BookMarkViewEntry entry) {
         boolean result = false;
         try {
@@ -84,7 +83,6 @@ public class ListBookMarkAdapter extends HeaderFooterRecyclerViewAdapter impleme
 
         return result;
     }
-
 
     public void clearForDeleteEntries () {
         selectedForDeleteEntries.clear();
@@ -217,10 +215,7 @@ public class ListBookMarkAdapter extends HeaderFooterRecyclerViewAdapter impleme
         else if (MODE == EDIT) {
             groupViewEditArea.setVisibility(View.VISIBLE);
         }
-
     }
-
-
 
     @Override
     public void onClick(View v) {
@@ -233,14 +228,12 @@ public class ListBookMarkAdapter extends HeaderFooterRecyclerViewAdapter impleme
         }
     }
 
-
     @Override
     public boolean onLongClick(View v) {
         try {
             if (mContentItemLongClickListener == null) {
                 return false;
             }
-
             mContentItemLongClickListener.onItemLongClick(v);
         } catch (Exception e) {
             LogUtil.INSTANCE.error("ListItemViewHolder", e);

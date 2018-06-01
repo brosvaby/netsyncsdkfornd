@@ -117,7 +117,6 @@ public class ListExplorerAdapter extends HeaderFooterRecyclerViewAdapter impleme
                 }
                 else {
                     String mediaType = item.getMediaType();
-                    LogUtil.INSTANCE.info(TAG, "getContentItemViewType > mediaType : " + mediaType);
                     if (StringUtils.equals(ContentViewEntry.ContentType.AUDIO.getType(), mediaType)) {
                         return ContentViewEntry.ContentType.AUDIO.ordinal();
                     } else if (StringUtils.equals(ContentViewEntry.ContentType.DOC.getType(), mediaType)) {
@@ -221,7 +220,6 @@ public class ListExplorerAdapter extends HeaderFooterRecyclerViewAdapter impleme
         containerRoot.setEnabled(true);
 
         int isFavoriteContent = contentViewEntry.getIsFavoriteContent();
-        LogUtil.INSTANCE.info(TAG, "fillContentFile > contentViewEntry : " + contentViewEntry.toString());
 
         final ToggleButton toggleButton = holder.getToggleFavorite();
         toggleButton.setTag(contentViewEntry);
@@ -248,7 +246,6 @@ public class ListExplorerAdapter extends HeaderFooterRecyclerViewAdapter impleme
         });
 
         String contentName = StringUtil.removeAllExtension(contentViewEntry.getContentName());
-        LogUtil.INSTANCE.info(TAG, "fillContentFile > contentName : " + contentName);
 
         TextView textDirectoryTitle = holder.getTvItemName();
         textDirectoryTitle.setText(String.valueOf(contentName));
@@ -292,9 +289,6 @@ public class ListExplorerAdapter extends HeaderFooterRecyclerViewAdapter impleme
         int textRateDimColorForLms = contentViewEntry.getTextRateDimColorForLms();
         int textRateColorForLms = contentViewEntry.getTextRateColorForLms();
 
-        LogUtil.INSTANCE.info("birdgangexplorerlmsinfo", " progressbarDrawable : " + progressbarDrawable + " , textRateDimColorForLms : " + textRateDimColorForLms + " , textRateColorForLms : " + textRateColorForLms);
-
-
         String rate = contentViewEntry.getLmsRate();
         if (StringUtils.isBlank(rate)) {
             progressLmsPercent.setProgress(0);
@@ -312,10 +306,8 @@ public class ListExplorerAdapter extends HeaderFooterRecyclerViewAdapter impleme
         }
 
         String contentFormatName = contentViewEntry.getContentName();
-        LogUtil.INSTANCE.info(TAG, "contentFormatName : " + contentFormatName);
 
         RelativeLayout containerLms = holder.getContainerLms();
-
         ImageView imageFileItemImage = holder.getIvFileItemImage();
         imageFileItemImage.setScaleType(ImageView.ScaleType.FIT_XY);
         if (StringUtils.contains(contentFormatName, "mp4")) {
@@ -351,9 +343,7 @@ public class ListExplorerAdapter extends HeaderFooterRecyclerViewAdapter impleme
         containerRoot.setTag(position);
         containerRoot.setEnabled(true);
 
-        LogUtil.INSTANCE.info(TAG, "fillContentFileNoLMS > contentViewEntry : " + contentViewEntry.toString());
         String contentName = StringUtil.removeExtensionForPdf(contentViewEntry.getContentName());
-        LogUtil.INSTANCE.info(TAG, "fillContentFileNoLMS > contentName : " + contentName);
 
         TextView textDirectoryTitle = holder.getTvItemName();
         textDirectoryTitle.setText(contentName);

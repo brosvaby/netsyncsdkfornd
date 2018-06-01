@@ -99,7 +99,6 @@ public class ListSearchExplorerAdapter extends HeaderFooterRecyclerViewAdapter i
 
     @Override
     protected RecyclerView.ViewHolder onCreateContentItemViewHolder(ViewGroup parent, int contentViewType) {
-        LogUtil.INSTANCE.info("birdgangfileexplorer", "onCreateContentItemViewHolder > contentViewType : " + contentViewType);
         BaseViewHolder viewHolder = new ListExplorerFileSearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_sd_file_explorer_search, parent, false), contentViewType);
         return viewHolder;
     }

@@ -14,7 +14,6 @@ public abstract class HeaderFooterRecyclerViewAdapter extends RecyclerView.Adapt
     private int contentItemCount;
     private int footerItemCount;
 
-
     @Override
     public final RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType >= HEADER_VIEW_TYPE_OFFSET && viewType < HEADER_VIEW_TYPE_OFFSET + VIEW_TYPE_MAX_COUNT) {

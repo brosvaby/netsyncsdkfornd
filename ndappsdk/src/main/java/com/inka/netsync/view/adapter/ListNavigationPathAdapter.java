@@ -98,7 +98,6 @@ public class ListNavigationPathAdapter extends HeaderFooterRecyclerViewAdapter i
 
     @Override
     protected RecyclerView.ViewHolder onCreateContentItemViewHolder(ViewGroup parent, int contentViewType) {
-        LogUtil.INSTANCE.info(TAG, "onCreateContentItemViewHolder > contentViewType : " + contentViewType);
         BaseViewHolder viewHolder = new ListNavigationPathViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_navigation_path_item, parent, false), contentViewType);
         return viewHolder;
     }
@@ -128,8 +127,6 @@ public class ListNavigationPathAdapter extends HeaderFooterRecyclerViewAdapter i
         containerRoot.setTag(position);
         containerRoot.setEnabled(true);
 
-        LogUtil.INSTANCE.info(TAG , "fillContentNavigationInfo > navigationPathEntry.getPath() : " + navigationPathEntry.getPath());
-        LogUtil.INSTANCE.info(TAG , "fillContentNavigationInfo > position : " + position + " , getContentItemCount() : " + getContentItemCount());
         TextView textDirectoryDivider = holder.getTextNavigationDivider();
         TextView textDirectoryTitle = holder.getTextNavigationPathName();
         textDirectoryTitle.setText(navigationPathEntry.getName());
@@ -150,8 +147,6 @@ public class ListNavigationPathAdapter extends HeaderFooterRecyclerViewAdapter i
 
     @Override
     public void onClick(View view) {
-        LogUtil.INSTANCE.info(TAG , "onClick(View v)");
-
         try {
             if (mClickListener == null) {
                 return;

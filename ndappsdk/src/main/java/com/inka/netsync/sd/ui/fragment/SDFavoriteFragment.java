@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.inka.ncg.nduniversal.hidden.Certification;
 import com.inka.ncg.nduniversal.hidden.CertificationHelper;
 import com.inka.ncg2.Ncg2Exception;
+import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
 import com.inka.netsync.common.AppConstants;
@@ -99,7 +100,7 @@ public class SDFavoriteFragment extends BaseFragment implements SDExplorerFavori
         super.onCreate(savedInstanceState);
         EventBus.getDefault().registerEventUpdateContentListener(this);
         mFavoriteEntries = new ArrayList<FavoriteViewEntry>();
-        mCertification = CertificationHelper.getDefault().initCertification(getActivity(), Build.VERSION.SDK_INT);
+        mCertification = CertificationHelper.getDefault().initCertification(getActivity(), Build.VERSION.SDK_INT, BaseConfiguration.getDefault().getStrCardManufacturer());
         setHasOptionsMenu(true);
     }
 

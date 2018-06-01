@@ -16,7 +16,6 @@ import java.util.List;
 /**
  * Created by birdgang on 2018. 2. 22..
  */
-
 public class ListExpandableAdapter extends ExpandableRecyclerViewAdapter<HelpInfoGroupViewHolder, HelpInfoChildViewHolder> {
 
     public ListExpandableAdapter(List<? extends ExpandableGroupEntry> groups) {
@@ -45,5 +44,4 @@ public class ListExpandableAdapter extends ExpandableRecyclerViewAdapter<HelpInf
     public void onBindGroupViewHolder(HelpInfoGroupViewHolder holder, int flatPosition, ExpandableGroupEntry group) {
         holder.setGenreTitle(group);
     }
-
 }

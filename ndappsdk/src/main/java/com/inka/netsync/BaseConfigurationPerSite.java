@@ -52,7 +52,6 @@ public class BaseConfigurationPerSite {
     private String 	mLogType				= "";
     private String 	mOffLineCount			= "0";
     private String	mSenderId				= "";
-    private String 	mCardManufacturer		= "";
     private String 	mExternalSdPath			= "";
     private String 	mFontType				= "";
 
@@ -310,14 +309,6 @@ public class BaseConfigurationPerSite {
 
     public String getSenderId() {
         return mSenderId;
-    }
-
-    public void setCardManufacturer(String moID) {
-        mCardManufacturer = moID;
-    }
-
-    public String getCardManufacturer() {
-        return mCardManufacturer;
     }
 
     public void setExternalSdPath(String path) {

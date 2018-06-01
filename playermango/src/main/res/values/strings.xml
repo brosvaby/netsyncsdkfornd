@@ -17,14 +17,20 @@
 
     <string name="log_result_fail_to_get_proprietary_info">전용 학습기 에서만 이용 가능한 서비스입니다.</string>
 
-
     <!-- DrawerMenu Title -->
+    <string name="drawermenu_title_menu">메뉴</string>
     <string name="drawermenu_title_home">홈</string>
+    <string name="drawermenu_title_storage">강의듣기</string>
     <string name="drawermenu_title_favorite">즐겨찾기</string>
     <string name="drawermenu_title_playedlist">최근재생</string>
+    <string name="drawermenu_title_webview1">시원스쿨</string>
+    <string name="drawermenu_title_webview2">강좌소개</string>
+    <string name="drawermenu_title_webview3">수강안내</string>
+    <string name="drawermenu_title_webview4">커뮤니티</string>
+    <string name="drawermenu_title_webview5">고객센터 02-6409-0878</string>
     <string name="drawermenu_title_setting">설정</string>
     <string name="drawermenu_title_help">이용 안내</string>
-
+    <string name="drawermenu_title_guide">가이드</string>
 
     <!-- Fragment Title -->
     <string name="title_webview_fragment_tag">홈</string>

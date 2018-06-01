@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import com.inka.ncg.nduniversal.hidden.Certification;
 import com.inka.ncg.nduniversal.hidden.CertificationHelper;
 import com.inka.ncg2.Ncg2Exception;
+import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
 import com.inka.netsync.common.AppConstants;
@@ -100,7 +101,7 @@ public class SDRecentlyFragment extends BaseFragment implements SDExplorerRecent
         mPlayType = AppConstants.TYPE_PLAY_PLAYEDLIST;
         super.onCreate(savedInstanceState);
         EventBus.getDefault().registerEventUpdateContentListener(onEventUpdateContentListener);
-        mCertification = CertificationHelper.getDefault().initCertification(getActivity(), Build.VERSION.SDK_INT);
+        mCertification = CertificationHelper.getDefault().initCertification(getActivity(), Build.VERSION.SDK_INT, BaseConfiguration.getDefault().getStrCardManufacturer());
         mRecentlyViewEntries = new ArrayList<RecentlyViewEntry>();
         setHasOptionsMenu(true);
     }

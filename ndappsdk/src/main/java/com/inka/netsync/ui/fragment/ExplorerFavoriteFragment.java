@@ -100,7 +100,6 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
         super.onCreate(savedInstanceState);
         EventBus.getDefault().registerEventUpdateContentListener(this);
         mFavoriteEntries = new ArrayList<FavoriteViewEntry>();
-
         setHasOptionsMenu(true);
     }
 
@@ -266,9 +265,7 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
                 return;
             }
         }
-
     }
-
 
     @Override
     protected void restoreActionBar() {
@@ -310,7 +307,6 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
 
     @Override
     public void onSDcardMountedEvent(String externalPath) {
-        LogUtil.INSTANCE.info("birdgangbroadcast", "ExplorerFavoriteFragment > onSDcardMountedEvent > externalPath : " + externalPath);
         try {
             Handler handler = new Handler();
             handler.postDelayed(mRunUpdataMountedEvent, 2000);
@@ -321,7 +317,6 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
 
     @Override
     public void onSDcardEjectedEvent() {
-        LogUtil.INSTANCE.info("birdgangbroadcast", "ExplorerFavoriteFragment > onSDcardEjectedEvent > onSDcardEjectedEvent ");
         try {
             Handler handler = new Handler();
             handler.postDelayed(mRunUpdataEjectedEvent, 1000);
@@ -373,7 +368,6 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
             }
 
             String path = favoriteViewEntry.getContentPath();
-            LogUtil.INSTANCE.info("birdgangclickevent", "onItemClick > path : " + path);
             boolean availableContent = checkAvailableContent(path);
             if (!availableContent) {
                 return;
@@ -415,17 +409,14 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
 
     @Override
     public void onUpdateLMSExplorerContentList(String playType) {
-        LogUtil.INSTANCE.info("birdgangnotify" , "onEventUpdateContentListener > onUpdateLMSExplorerContentList > playType : " + playType);
         if (StringUtils.equals(AppConstants.TYPE_PLAY_DOWNLOAD, playType)) {
             refleshContents();
         }
     }
 
-
     @Override
     public void onListOrderContents(String type) {
     }
-
 
     @Override
     public void onLoadInputSerialDialog(final File file) {
@@ -488,11 +479,8 @@ public class ExplorerFavoriteFragment extends BaseFragment implements ExplorerFa
         try {
             String response = responseSerialAuthEntry.getResponse();
             String serialNumber = responseSerialAuthEntry.getSerialNumber();
-            String cid = responseSerialAuthEntry.getCid();
             String message = responseSerialAuthEntry.getMessage();
             String filePath = responseSerialAuthEntry.getOrginFilePat();
-
-            LogUtil.INSTANCE.info("birdgangresponseserialauth" , "responseSerialAuthEntry : " + responseSerialAuthEntry.toString());
 
             if (StringUtils.equals(ResponseCode.RESPONSE_CODE_SUCCESS, response)) {
                 if (StringUtils.isBlank(message)) {

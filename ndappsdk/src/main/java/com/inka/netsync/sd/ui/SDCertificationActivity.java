@@ -18,6 +18,7 @@ import com.inka.ncg.nduniversal.exception.Ncg2CoreException;
 import com.inka.ncg.nduniversal.hidden.Certification;
 import com.inka.ncg.nduniversal.hidden.CertificationHelper;
 import com.inka.ncg.nduniversal.model.ResponseNcgEntry;
+import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
 import com.inka.netsync.command.Command;
@@ -80,7 +81,7 @@ public class SDCertificationActivity extends BaseActivity implements SDCertifica
 
     @Override
     protected void setUp() {
-        mCertification = CertificationHelper.getDefault().initCertification(this, Build.VERSION.SDK_INT);
+        mCertification = CertificationHelper.getDefault().initCertification(this, Build.VERSION.SDK_INT, BaseConfiguration.getDefault().getStrCardManufacturer());
     }
 
     @OnClick({R2.id.request})

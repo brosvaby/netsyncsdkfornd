@@ -101,8 +101,6 @@ public class ListFavoriteAdapter extends HeaderFooterRecyclerViewAdapter impleme
         String contentName = StringUtil.removeAllExtension(favoriteEntry.getContentName());
         String contentFormatName = StringUtil.removeExtension(favoriteEntry.getContentName());
 
-        LogUtil.INSTANCE.info("birdgangmedia", " contentName : " + contentName);
-
         ImageView imageFileItemImage = holder.getIvFileItemImage();
         imageFileItemImage.setScaleType(ImageView.ScaleType.FIT_XY);
         if (StringUtils.contains(contentFormatName, "mp4")) {
@@ -148,7 +146,6 @@ public class ListFavoriteAdapter extends HeaderFooterRecyclerViewAdapter impleme
             if (mContentItemClickListener == null) {
                 return;
             }
-            LogUtil.INSTANCE.info("birdgangstorage", "v tag : " + v.getTag());
             mContentItemClickListener.onItemClick(v);
         } catch (Exception e) {
         }

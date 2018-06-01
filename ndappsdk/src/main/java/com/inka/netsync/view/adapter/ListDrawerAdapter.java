@@ -38,15 +38,11 @@ public class ListDrawerAdapter extends HeaderFooterRecyclerViewAdapter implement
         this.mContentItemClickListener = contentItemClickListener;
     }
 
-
     public void updateDrawer (String tag) {
-        LogUtil.INSTANCE.info(TAG, "updateDrawer > tag : " + tag);
-
         int count = getContentItemCount();
         try {
             for (int i=0; i<count; i++) {
                 DrawerMenuViewEntry drawerMenuViewEntry = getItem(i);
-                LogUtil.INSTANCE.info(TAG, "updateDrawer > tag : " + tag + " , drawerMenuViewEntry.mTabTag : " + drawerMenuViewEntry.mTabTag);
                 if (StringUtils.equals(drawerMenuViewEntry.mTabTag, tag)) {
                     drawerMenuViewEntry.setHasSelected(true);
                 } else {
@@ -109,7 +105,6 @@ public class ListDrawerAdapter extends HeaderFooterRecyclerViewAdapter implement
     @Override
     protected RecyclerView.ViewHolder onCreateContentItemViewHolder(ViewGroup parent, int contentViewType) {
         BaseViewHolder viewHolder = null;
-        LogUtil.INSTANCE.info("birdgangadapterviewtype", "onCreateContentItemViewHolder > contentViewType : " + contentViewType);
         if (contentViewType == DrawerMenuViewEntry.DrawerMenuType.SECTION.ordinal()) {
             viewHolder = new ListDrawerSectionViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_drawermenu_section, parent, false), contentViewType);
         }
@@ -132,8 +127,6 @@ public class ListDrawerAdapter extends HeaderFooterRecyclerViewAdapter implement
         try {
             DrawerMenuViewEntry item = mDrawerMenuItemEntries.get(position);
             int viewType = getContentItemViewType(position);
-            LogUtil.INSTANCE.info("birdgangadapter", "onBindContentItemViewHolder > viewType : " + viewType);
-
             if (viewType == DrawerMenuViewEntry.DrawerMenuType.SECTION.ordinal()) {
                 fillContentDrawerMenuSection(item, (ListDrawerSectionViewHolder) contentViewHolder, position);
             }
@@ -151,7 +144,6 @@ public class ListDrawerAdapter extends HeaderFooterRecyclerViewAdapter implement
         textDrawerMenuHeader.setFocusable(true);
         textDrawerMenuHeader.setClickable(false);
     }
-
 
     private void fillContentDrawerMenuItem (final DrawerMenuViewEntry drawerMenuEntry, ListDrawerItemViewHolder holder, int position) throws Exception {
         RelativeLayout containerRoot = holder.getLayoutRoot();
@@ -190,10 +182,7 @@ public class ListDrawerAdapter extends HeaderFooterRecyclerViewAdapter implement
         } else {
             view.setVisibility(View.GONE);
         }
-
-        LogUtil.INSTANCE.info("ListItemViewHolder", "drawerMenuEntry : " + drawerMenuEntry.toString());
     }
-
 
     @Override
     public void onClick(View v) {

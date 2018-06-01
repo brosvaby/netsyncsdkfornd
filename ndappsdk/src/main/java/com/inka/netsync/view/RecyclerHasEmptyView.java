@@ -17,10 +17,7 @@ import com.inka.netsync.logs.LogUtil;
 /**
  * Created by birdgang on 2018. 2. 7..
  */
-
 public class RecyclerHasEmptyView extends RelativeLayout {
-
-    private Context mContext;
 
     private RecyclerView mRecyclerView;
     private LinearLayout mInputView;
@@ -43,10 +40,8 @@ public class RecyclerHasEmptyView extends RelativeLayout {
 
     public RecyclerHasEmptyView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        this.mContext = context;
         init();
     }
-
 
     private void init () {
         LogUtil.INSTANCE.info("RecyclerHasEmptyView", "RecyclerHasEmptyView > init");
@@ -73,7 +68,6 @@ public class RecyclerHasEmptyView extends RelativeLayout {
     }
 
     public void input () {
-        LogUtil.INSTANCE.info("RecyclerHasEmptyView", "RecyclerHasEmptyView > input");
         mInputView.setVisibility(View.VISIBLE);
         mRetryView.setVisibility(View.GONE);
         mEmptyView.setVisibility(View.GONE);
@@ -81,7 +75,6 @@ public class RecyclerHasEmptyView extends RelativeLayout {
     }
 
     public void loading() {
-        LogUtil.INSTANCE.info("RecyclerHasEmptyView", "RecyclerHasEmptyView > loading");
         mInputView.setVisibility(View.GONE);
         mRetryView.setVisibility(View.GONE);
         mEmptyView.setVisibility(View.GONE);
@@ -89,7 +82,6 @@ public class RecyclerHasEmptyView extends RelativeLayout {
     }
 
     public void empty() {
-        LogUtil.INSTANCE.info("RecyclerHasEmptyView", "RecyclerHasEmptyView > empty");
         mInputView.setVisibility(View.GONE);
         mEmptyView.setVisibility(View.VISIBLE);
         mRetryView.setVisibility(View.GONE);
@@ -104,7 +96,6 @@ public class RecyclerHasEmptyView extends RelativeLayout {
     }
 
     public void success() {
-        LogUtil.INSTANCE.info("RecyclerHasEmptyView", "RecyclerHasEmptyView > success");
         mInputView.setVisibility(View.GONE);
         mRetryView.setVisibility(View.GONE);
         mEmptyView.setVisibility(View.GONE);
@@ -126,7 +117,6 @@ public class RecyclerHasEmptyView extends RelativeLayout {
     public void setOnRetryClick(OnRetryClick onRetryClick) {
         mOnRetryClick = onRetryClick;
     }
-
 
     public void scrollToPosition (int position) {
         mRecyclerView.scrollToPosition(position);

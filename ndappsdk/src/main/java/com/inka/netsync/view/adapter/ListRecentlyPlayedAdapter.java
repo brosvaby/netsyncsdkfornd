@@ -105,10 +105,7 @@ public class ListRecentlyPlayedAdapter extends HeaderFooterRecyclerViewAdapter i
         String contentName = StringUtil.removeAllExtension(playedListEntry.getContentName());
         String contentFormatName = StringUtil.removeExtension(playedListEntry.getContentName());
         String rate = playedListEntry.getLmsRate();
-
         Date lastPlayDate = playedListEntry.getPlayDateToDate();
-
-        LogUtil.INSTANCE.info("birdgangplayedlist", " contentName : " + contentName + " , rate : " + rate + " , lastPlayDate.toLocaleString() : " + lastPlayDate.toLocaleString());
 
         TextView textPlayedContentName = holder.getTvItemName();
         textPlayedContentName.setText(contentName);
@@ -147,7 +144,6 @@ public class ListRecentlyPlayedAdapter extends HeaderFooterRecyclerViewAdapter i
             if (mContentItemClickListener == null) {
                 return;
             }
-            LogUtil.INSTANCE.info("birdgangstorage", "v tag : " + v.getTag());
             mContentItemClickListener.onItemClick(v);
         } catch (Exception e) {
         }

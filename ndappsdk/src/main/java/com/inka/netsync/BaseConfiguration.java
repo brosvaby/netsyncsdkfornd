@@ -18,6 +18,8 @@ public class BaseConfiguration {
         return defaultInstance;
     }
 
+    private String 	strCardManufacturer = "";
+
     private BaseConfiguration() { }
 
     public String getApplicationContentId () {
@@ -36,4 +38,11 @@ public class BaseConfiguration {
         APPLICATION_DIALOG_BTN_COLOR = color;
     }
 
+    public String getStrCardManufacturer() {
+        return strCardManufacturer;
+    }
+
+    public void setStrCardManufacturer(String strCardManufacturer) {
+        this.strCardManufacturer = strCardManufacturer;
+    }
 }

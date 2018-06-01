@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.inka.netsync.common.bus.ClickListener;
-import com.inka.netsync.logs.LogUtil;
 import com.inka.netsync.view.adapter.fragment.GuideIntroFragment;
 import com.inka.netsync.view.adapter.fragment.GuidePlayerFragment;
 import com.inka.netsync.view.model.GuideViewEntry;
@@ -14,7 +13,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class PagerGuideAdapter extends FragmentStatePagerAdapter {
 
@@ -27,8 +25,6 @@ public class PagerGuideAdapter extends FragmentStatePagerAdapter {
         this.guideEntries = guideEntries;
         this.fragments = new ArrayList<>();
         this.conClickListener = conClickListener;
-
-        LogUtil.INSTANCE.info("birdgangguides" , "PagerGuideAdapter > guideType : " + guideType);
 
         if (StringUtils.equals(guideType, GuideViewEntry.GuidesType.INTRO.getType())) {
             createIntroFragments();

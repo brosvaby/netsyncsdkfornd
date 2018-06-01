@@ -20,6 +20,7 @@ import com.inka.ncg.nduniversal.exception.Ncg2CoreException;
 import com.inka.ncg.nduniversal.hidden.CertificationHelper;
 import com.inka.ncg.nduniversal.model.ResponseNcgEntry;
 import com.inka.netsync.BaseApplication;
+import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
 import com.inka.netsync.common.AppConstants;
@@ -302,7 +303,7 @@ public class SplashActivity extends BaseActivity implements SplashMvpView, OnPer
     }
 
     protected void setNextContentView () throws Ncg2CoreException {
-        CertificationHelper.getDefault().initCertification(this, Build.VERSION.SDK_INT);
+        CertificationHelper.getDefault().initCertification(this, Build.VERSION.SDK_INT, BaseConfiguration.getDefault().getStrCardManufacturer());
         ResponseNcgEntry responseNcgEntry = CertificationHelper.getDefault().checkAvailCard();
 
         int resultCode = responseNcgEntry.getResultCode();

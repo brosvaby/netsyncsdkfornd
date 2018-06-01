@@ -174,7 +174,7 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
     @SuppressLint("NewApi")
     @Override
     public void setUp(View view) {
-        mCertification = CertificationHelper.getDefault().initCertification(getActivity(), Build.VERSION.SDK_INT);
+        mCertification = CertificationHelper.getDefault().initCertification(getActivity(), Build.VERSION.SDK_INT, BaseConfiguration.getDefault().getStrCardManufacturer());
 
         Bundle args = getArguments();
         if (args != null && args.containsKey(MediaStorage.TYPE_STORAGE)) {

@@ -183,8 +183,6 @@ public class ExplorerFragment extends BaseFragment implements ExplorerStackMvpVi
         if (args != null && args.containsKey(MediaStorage.TYPE_STORAGE)) {
             mStrStorageType = args.getString(MediaStorage.TYPE_STORAGE);
         }
-        LogUtil.INSTANCE.info(TAG, "setUp > mStrStorageType : " + mStrStorageType);
-
         final int version = Build.VERSION.SDK_INT;
         if (version >= 23) {
             view.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.white));

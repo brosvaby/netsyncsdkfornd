@@ -121,13 +121,4 @@ public class DefaultFragment extends BaseFragment implements DefaultMvpView {
     public void onSDcardEjectedEvent() {
     }
 
-//    @Override
-//    protected void sendBroadcastPlayContent(String path) {
-//    }
-//
-//    @Override
-//    protected void sendBroadcastPlayContent(int contentId, String path) {
-//    }
-
-
 }
