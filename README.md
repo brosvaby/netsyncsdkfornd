@@ -102,7 +102,7 @@ protected String provideApplicationContentId() {
  **/
 @Override
 protected String provideCardManufacturer () {
-    return getString(R.string.mango_content_id);
+    return getString(R.string.mango_card_manufacturer);
 }
     
 
