@@ -11,27 +11,19 @@ public class ModuleConfig {
     public static boolean ENABLE_NOT_NEED_TO_SIRIAL_NUMBER = false;  // 시리얼 번호를 입력할 필요가 없다
     public static boolean ENABLE_EXTRACT_DATABASE = false;            // 데이타베이스 축출
     public static boolean ENABLE_NO_LIMIT_BY_CID = false;            // content id로 app에서 컨텐츠 제한 유무
-    public static boolean ENABLE_NO_CERTIFICATION = false;            // 인증 유무
-    public static boolean ENABLE_NO_DEVICE_CHECK = false;            // 디바이스 제한 체크 유무
-    public static boolean ENABLE_NO_SDCARD_MANUFACTIRER_CHECK = false;      // SD카드 제조 업체 체크 - 현재 두이 업체만 확인하고 있음.
     public static boolean ENABLE_NO_LICENSE = false;                 // 라이센스 체크 유무
 
     public static boolean ENABLE_NO_DRAWER_MENU = false;        // 사이드 메뉴 활성화 유무
-    public static boolean ENABLE_CUSTOM_WEBVIEW_RESOURCE = false;   // 홈쪽 외부 리소스 사용유무
     public static boolean ENABLE_FORCE_USE_BASE_PLAYER = false;
     public static boolean ENABLE_NO_SECURITY_MODE = false;               // 보안모드
-    public static boolean ENABLE_NO_ANTI_MIRRORING_MODE = false;               // 외부출력
     public static boolean ENABLE_NO_SCAN_MEDIA = false;
     public static boolean ENABLE_SCAN_MEDIA_MP4 = false;             // mp4파일 스캔 유무
     public static boolean ENABLE_SCAN_MEDIA_MP4_ONLY = false;        //
     public static boolean ENABLE_FORCE_INTRO_GUIDE = false;
-    
+
     public static boolean ENABLE_MODE_PREVIEW_APP = false;
 
-    public static final int CERTIFICATION_FORCE_LEVEL = -1;    // Build.VERSION_CODES.KITKAT , Build.VERSION_CODES.LOLLIPOP
-
     public static HashMap<String, String> usedSerials = new HashMap<String, String>();
-
 
     static {
         usedSerials.put("LG-V498", "X27MKOQE9VCWEP472C015AEA");
