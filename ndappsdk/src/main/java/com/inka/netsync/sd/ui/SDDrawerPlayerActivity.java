@@ -19,7 +19,6 @@ import android.widget.FrameLayout;
 
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
-import com.inka.netsync.admin.ModuleConfig;
 import com.inka.netsync.command.Command;
 import com.inka.netsync.command.CommandHandler;
 import com.inka.netsync.common.AppConstants;
@@ -51,7 +50,6 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 
 public abstract class SDDrawerPlayerActivity extends DrawerActivity implements ScanEventBus.ScanResultOnUi, DevicesDiscoveryCb {
 
@@ -345,18 +343,10 @@ public abstract class SDDrawerPlayerActivity extends DrawerActivity implements S
 
 
     public void setDrawerState() {
-        if (!ModuleConfig.ENABLE_NO_DRAWER_MENU) {
-            mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
-            mActionBarDrawerToggle.onDrawerStateChanged(DrawerLayout.LOCK_MODE_UNLOCKED);
-            mActionBarDrawerToggle.setDrawerIndicatorEnabled(true);
-            mActionBarDrawerToggle.syncState();
-        }
-        else {
-            mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-            mActionBarDrawerToggle.onDrawerStateChanged(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-            mActionBarDrawerToggle.setDrawerIndicatorEnabled(false);
-            mActionBarDrawerToggle.syncState();
-        }
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+        mActionBarDrawerToggle.onDrawerStateChanged(DrawerLayout.LOCK_MODE_UNLOCKED);
+        mActionBarDrawerToggle.setDrawerIndicatorEnabled(true);
+        mActionBarDrawerToggle.syncState();
     }
 
 

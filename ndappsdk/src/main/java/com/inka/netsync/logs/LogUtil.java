@@ -3,7 +3,7 @@ package com.inka.netsync.logs;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.inka.netsync.admin.ModuleConfig;
+import com.inka.ncg.nduniversal.ModuleConfig;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 

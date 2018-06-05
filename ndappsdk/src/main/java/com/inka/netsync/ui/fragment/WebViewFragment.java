@@ -26,7 +26,6 @@ import android.widget.EditText;
 import com.inka.netsync.BaseConfigurationPerSite;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
-import com.inka.netsync.admin.ModuleConfig;
 import com.inka.netsync.common.utils.NetworkUtils;
 import com.inka.netsync.data.cache.pref.PreferencesCacheHelper;
 import com.inka.netsync.logs.LogUtil;
@@ -36,7 +35,6 @@ import com.inka.netsync.ui.mvpview.BaseWebViewMvpView;
 import com.inka.netsync.view.web.BaseWebViewClient;
 import com.inka.netsync.view.web.OffLineWebViewClient;
 import com.inka.netsync.view.web.OnLineWebViewClient;
-import com.inka.netsync.view.web.PreViewWebViewClient;
 import com.inka.netsync.view.web.WebViewJavaScriptInterface;
 import com.inka.netsync.view.web.callback.WebViewClientCallback;
 
@@ -50,7 +48,6 @@ import butterknife.ButterKnife;
 /**
  * Created by birdgang on 2017. 4. 18..
  */
-
 public class WebViewFragment extends BaseFragment implements BaseWebViewMvpView {
 
     @Inject
@@ -123,16 +120,11 @@ public class WebViewFragment extends BaseFragment implements BaseWebViewMvpView 
 
     @Override
     public void setUp(View view) {
-        if (ModuleConfig.ENABLE_MODE_PREVIEW_APP) {
-            mBaseWebViewClient = new PreViewWebViewClient(getActivity(), mWebView, mWebViewClientCallback, mWebViewJavaScriptInterface);
-        }
-        else {
-            boolean isNetworkConncted = NetworkUtils.isNetworkConnected(getActivity());
-            if (isNetworkConncted) {
-                mBaseWebViewClient = new OnLineWebViewClient(getActivity(), mWebView, mWebViewClientCallback, mWebViewJavaScriptInterface);
-            } else {
-                mBaseWebViewClient = new OffLineWebViewClient(getActivity(), mWebView, mWebViewClientCallback, mWebViewJavaScriptInterface);
-            }
+        boolean isNetworkConncted = NetworkUtils.isNetworkConnected(getActivity());
+        if (isNetworkConncted) {
+            mBaseWebViewClient = new OnLineWebViewClient(getActivity(), mWebView, mWebViewClientCallback, mWebViewJavaScriptInterface);
+        } else {
+            mBaseWebViewClient = new OffLineWebViewClient(getActivity(), mWebView, mWebViewClientCallback, mWebViewJavaScriptInterface);
         }
 
         mBaseWebViewClient.initData(BaseConfigurationPerSite.getInstance().getHomeUrl(), BaseConfigurationPerSite.getInstance().getSubHomeUrl());

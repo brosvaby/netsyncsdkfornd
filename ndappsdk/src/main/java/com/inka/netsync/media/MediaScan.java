@@ -1,6 +1,6 @@
 package com.inka.netsync.media;
 
-import com.inka.netsync.admin.ModuleConfig;
+import com.inka.ncg.nduniversal.ModuleConfig;
 import com.inka.netsync.common.utils.StringUtil;
 import com.inka.netsync.logs.LogUtil;
 import com.inka.netsync.media.bus.ScanEventBus;

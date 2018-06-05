@@ -3,10 +3,10 @@ package com.inka.netsync.controler;
 import android.os.Environment;
 import android.support.v4.util.ArrayMap;
 
+import com.inka.ncg.nduniversal.ModuleConfig;
 import com.inka.ncg2.Ncg2Exception;
 import com.inka.netsync.BaseApplication;
 import com.inka.netsync.BaseConfiguration;
-import com.inka.netsync.admin.ModuleConfig;
 import com.inka.netsync.common.utils.DateTimeUtil;
 import com.inka.netsync.common.utils.StringUtil;
 import com.inka.netsync.data.cache.db.dao.ContentDao;
@@ -41,7 +41,6 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * Created by birdgang on 2017. 12. 13..
  */
-
 public class MediaControler {
 
     private final String TAG = "MediaControler";
@@ -378,7 +377,7 @@ public class MediaControler {
 
                 LogUtil.INSTANCE.info(TAG , "onUpdateMedia > totalSize : " + totalSize + " , applicationContentId : " + applicationContentId + " , contentId : " + contentId + " , scanEntry : " + scanEntry.toString());
 
-                if (!StringUtils.equals(applicationContentId, contentId) && !ModuleConfig.ENABLE_NO_LIMIT_BY_CID && !ModuleConfig.ENABLE_MODE_PREVIEW_APP) {
+                if (!StringUtils.equals(applicationContentId, contentId) && !ModuleConfig.ENABLE_NO_LIMIT_BY_CID) {
                     LogUtil.INSTANCE.info(TAG , "onUpdateMedia > return!! > contentId : " + contentId);
                 }
                 else {
@@ -677,7 +676,7 @@ public class MediaControler {
             String applicationContentId = BaseConfiguration.getDefault().getApplicationContentId();
             String contentId = NetSyncSdkHelper.getDefault().getContentId(filePath);
 
-            if (!StringUtils.equals(applicationContentId, contentId) && !ModuleConfig.ENABLE_NO_LIMIT_BY_CID && !ModuleConfig.ENABLE_MODE_PREVIEW_APP) {
+            if (!StringUtils.equals(applicationContentId, contentId) && !ModuleConfig.ENABLE_NO_LIMIT_BY_CID) {
                 LogUtil.INSTANCE.info(TAG, " is not equal contentId : " + contentId + " , filePath : " + filePath);
                 return false;
             }

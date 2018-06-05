@@ -43,6 +43,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.inka.ncg.nduniversal.ModuleConfig;
 import com.inka.ncg.nduniversal.exception.Ncg2CoreException;
 import com.inka.ncg2.Ncg2Agent;
 import com.inka.ncg2.Ncg2Exception;
@@ -54,7 +55,6 @@ import com.inka.netsync.BaseApplication;
 import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
-import com.inka.netsync.admin.ModuleConfig;
 import com.inka.netsync.common.AppConstants;
 import com.inka.netsync.common.IntentParams;
 import com.inka.netsync.common.bus.ClickListener;

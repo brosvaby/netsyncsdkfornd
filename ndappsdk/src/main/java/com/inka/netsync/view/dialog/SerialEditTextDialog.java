@@ -12,9 +12,9 @@ import android.view.animation.AnimationSet;
 import android.view.animation.Transformation;
 import android.widget.TextView;
 
+import com.inka.ncg.nduniversal.ModuleConfig;
 import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
-import com.inka.netsync.admin.ModuleConfig;
 import com.inka.netsync.logs.LogUtil;
 import com.inka.netsync.view.dialog.anim.OptAnimationLoader;
 import com.inka.netsync.view.widget.EditTextViewSerialNumberWidget;
@@ -25,7 +25,6 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * Created by birdgang on 2017. 11. 24..
  */
-
 public class SerialEditTextDialog extends Dialog implements View.OnClickListener {
 
     private View mDialogView;
@@ -157,11 +156,6 @@ public class SerialEditTextDialog extends Dialog implements View.OnClickListener
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
     }
-
-//    private void restore () {
-//        mConfirmButton.setVisibility(View.VISIBLE);
-//        mConfirmButton.setBackgroundResource(R.drawable.btn_blue_background);
-//    }
 
     private void restore () {
         LogUtil.INSTANCE.info("birdgangcustomalertdialog" , "restore > mConfirmBtnColor : " + mConfirmBtnColor + " , mCancelBtnColor : " + mCancelBtnColor);

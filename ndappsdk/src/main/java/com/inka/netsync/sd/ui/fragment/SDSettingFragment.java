@@ -17,12 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.inka.ncg.nduniversal.ModuleConfig;
 import com.inka.netsync.BaseApplication;
 import com.inka.netsync.BaseConfigurationPerSite;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
 import com.inka.netsync.admin.Extractor;
-import com.inka.netsync.admin.ModuleConfig;
 import com.inka.netsync.common.bus.ContentSettingItemClickListener;
 import com.inka.netsync.common.bus.EventBus;
 import com.inka.netsync.controler.SettingControler;

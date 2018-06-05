@@ -1,6 +1,6 @@
 package com.inka.netsync.media;
 
-import com.inka.netsync.admin.ModuleConfig;
+import com.inka.ncg.nduniversal.ModuleConfig;
 import com.inka.netsync.logs.LogUtil;
 
 import org.apache.commons.lang3.StringUtils;
@@ -13,7 +13,6 @@ import java.util.Locale;
 /**
  * Created by birdgang on 2017. 4. 20..
  */
-
 public class MediaItemFilter implements FileFilter {
 
     public final static HashSet<String> FOLDER_BLACKLIST;

@@ -21,11 +21,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.inka.ncg.nduniversal.ModuleConfig;
 import com.inka.ncg2.Ncg2Exception;
 import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
-import com.inka.netsync.admin.ModuleConfig;
 import com.inka.netsync.command.Command;
 import com.inka.netsync.command.CommandHandler;
 import com.inka.netsync.common.ActivityCalls;
@@ -608,7 +608,6 @@ public class ExplorerFragment extends BaseFragment implements ExplorerStackMvpVi
                             }
 
                             mPresenter.checkSerialNumberValid(getActivity(), file.getPath(), serialNumber);
-//                            mPresenter.requestApiSerialAuth(file.getPath(), serialNumber);
                         } catch (Exception e) {
                             e.getMessage();
                         }

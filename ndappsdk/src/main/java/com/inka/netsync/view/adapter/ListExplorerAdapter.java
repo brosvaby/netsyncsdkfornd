@@ -290,7 +290,7 @@ public class ListExplorerAdapter extends HeaderFooterRecyclerViewAdapter impleme
         int textRateColorForLms = contentViewEntry.getTextRateColorForLms();
 
         String rate = contentViewEntry.getLmsRate();
-        if (StringUtils.isBlank(rate)) {
+        if (StringUtils.isBlank(rate) || StringUtils.equals("0", rate)) {
             progressLmsPercent.setProgress(0);
             txtlmsPercent.setText(0 + "%");
             txtlmsPercent.setTextColor(context.getResources().getColor(R.color.text_color_explorer_rate_number_none));
@@ -378,8 +378,6 @@ public class ListExplorerAdapter extends HeaderFooterRecyclerViewAdapter impleme
         imageFileItemImage.setImageResource(R.drawable.img_doc);
 
     }
-
-
 
 
     public void updateContentFavorite (boolean needToUpdate, ContentViewEntry contentViewEntry) {

@@ -18,12 +18,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.inka.ncg.nduniversal.ModuleConfig;
 import com.inka.ncg.nduniversal.hidden.Certification;
 import com.inka.ncg2.Ncg2Exception;
 import com.inka.netsync.BaseConfiguration;
 import com.inka.netsync.R;
 import com.inka.netsync.R2;
-import com.inka.netsync.admin.ModuleConfig;
 import com.inka.netsync.common.AppConstants;
 import com.inka.netsync.common.bus.ContentItemClickListener;
 import com.inka.netsync.common.bus.EventBus;

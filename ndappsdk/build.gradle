@@ -56,7 +56,7 @@ android {
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api fileTree(include: ['*.jar'], dir: 'libsncg2sdk')
-    api files('libsndsdkuniversal/ndsdkuniversal.jar')
+    api files('libsndsdkuniversal/ndsdkuniversal_log.jar')
 
     //noinspection GradleCompatible
     api "com.android.support:appcompat-v7:$rootProject.ext.supportAppcompatVersion"
