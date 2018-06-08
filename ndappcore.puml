@@ -1,0 +1,29 @@
+@startuml
+
+
+note top of NCG2SDK : LIB - DRM SDK by pallycon.
+note top of ND_DRM_SDK : LIB - ND SDK.
+note top of ND_APP_SDK : UI and UX platfrom for generate application.
+note top of VISUALON_LAYER : double speed media player.
+note top of PLYER_MANGO : template mango sample.
+
+package "NCG2SDK" {
+    NCG2SDK ..> ND_APP_SDK
+}
+
+package "ND_DRM_SDK" {
+    ND_DRM_SDK ..> ND_APP_SDK
+}
+
+package "ND_APP_SDK" {
+    ND_APP_SDK ..> PLYER_MANGO
+}
+
+package "VISUALON_LAYER" {
+    VISUALON_LAYER ..> PLYER_MANGO
+}
+
+package "PLYER_MANGO" {
+}
+
+@enduml
