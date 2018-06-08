@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.inka.ncg.nduniversal.hidden.Certification;
 import com.inka.ncg.nduniversal.hidden.CertificationHelper;
@@ -306,6 +307,7 @@ public class SDSearchFragment extends BaseFragment implements SDExplorerSearchMv
 
     @Override
     public void onLoadToastMessage(String message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
 
     @Override

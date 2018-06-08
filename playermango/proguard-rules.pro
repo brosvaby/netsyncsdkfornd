@@ -55,3 +55,5 @@
 -keep class com.inka.ncg.** { *; }
 -keep class com.inka.ncg2.** { *; }
 
+#
+-keep public class *extends java.lang.annotation.Annotation {*;}

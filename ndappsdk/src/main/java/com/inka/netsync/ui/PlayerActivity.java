@@ -3014,17 +3014,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
         @Override
         public void surfaceDestroyed(SurfaceHolder holder) {
             mIsSurfaceCreated = false;
-
-//            if (ModuleConfig.ENABLE_LOG) {
-//                LogUtil.INSTANCE.info("birdgangscreenrate", " surfaceDestroyed ");
-//                if (null == holder) {
-//                    LogUtil.INSTANCE.info("birdgangscreenrate", " surfaceDestroyed > null == holder ");
-//                } else {
-//                    int width = holder.getSurfaceFrame().width();
-//                    int height = holder.getSurfaceFrame().height();
-//                    LogUtil.INSTANCE.info("birdgangscreenrate", " surfaceDestroyed > null != holder > width : " + width + " , height : " + height);
-//                }
-//            }
         }
 
         @Override
@@ -3046,17 +3035,6 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
         @Override
         public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
             mIsSurfaceCreated = true;
-
-            if (ModuleConfig.ENABLE_LOG) {
-                if (null == holder) {
-                    LogUtil.INSTANCE.info("birdgangscreenrate", " surfaceChanged > null == holder ");
-                } else {
-                    LogUtil.INSTANCE.info("birdgangscreenrate", " surfaceChanged > null != holder > width : " + width + " , height : " + height);
-                }
-
-                LogUtil.INSTANCE.info("birdgangscreenrate", " surfaceChanged  > format: " + format + " , width : " + width + " , height : " + height);
-                LogUtil.INSTANCE.info("birdgangscreenrate", " surfaceChanged  > mNcg2Player.getVideoHeight(): " + mNcg2Player.getVideoHeight() + " , mNcg2Player.getVideoWidth() : " + mNcg2Player.getVideoWidth());
-            }
         }
     };
 

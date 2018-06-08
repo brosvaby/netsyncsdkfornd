@@ -140,7 +140,6 @@ public class SDCertificationActivity extends BaseActivity implements SDCertifica
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent resultData) {
-        LogUtil.INSTANCE.info("birdganginit", "onActivityResult > requestCode : " + requestCode + " , resultCode : " + resultCode + " , resultData : " + resultData);
         if (requestCode == IntentParams.REQUEST_CODE_GET_PERMISSION_WRITE_SDCARD) {
             // 폴더 선택
             if (resultCode == -1) {
@@ -189,10 +188,15 @@ public class SDCertificationActivity extends BaseActivity implements SDCertifica
             int resultCode = responseNcgEntry.getResultCode();
             LogUtil.INSTANCE.info("birdganginit", "resultCode : " + resultCode + " , responseNcgEntry.isHasPallyconsd() : " + responseNcgEntry.isHasPallyconsd() + " , responseNcgEntry.isHasNotuse() : " + responseNcgEntry.isHasNotuse());
 
-            if (responseNcgEntry.isHasNotuse()) {
-                ActivityCalls.callOpenDocumentTree(this);
+            boolean existCard = responseNcgEntry.isExistCard();
+            if (existCard) {
+                if (responseNcgEntry.isHasNotuse()) {
+                    ActivityCalls.callOpenDocumentTree(this);
+                } else {
+                    onLoadNextContentView();
+                }
             } else {
-                onLoadNextContentView();
+                Toast.makeText(this, getString(R.string.sd_business_logic_not_exist_hidden), Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

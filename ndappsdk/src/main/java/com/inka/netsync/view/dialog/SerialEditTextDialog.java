@@ -323,7 +323,6 @@ public class SerialEditTextDialog extends Dialog implements View.OnClickListener
         }
     }
 
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -333,7 +332,6 @@ public class SerialEditTextDialog extends Dialog implements View.OnClickListener
             dismissWithAnimation();
         }
     }
-
 
     public SerialEditTextDialog setDialogTypeLarge () {
         ViewGroup.LayoutParams params = getWindow().getAttributes();

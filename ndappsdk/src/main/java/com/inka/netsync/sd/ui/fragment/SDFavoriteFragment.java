@@ -255,7 +255,6 @@ public class SDFavoriteFragment extends BaseFragment implements SDExplorerFavori
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-
         FragmentActivity activity = getActivity();
         if (activity instanceof DrawerActivity) {
             // 슬라이드 메뉴가 열려 있다면
@@ -453,6 +452,7 @@ public class SDFavoriteFragment extends BaseFragment implements SDExplorerFavori
 
     @Override
     public void onLoadToastMessage(String message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
 
     @Override

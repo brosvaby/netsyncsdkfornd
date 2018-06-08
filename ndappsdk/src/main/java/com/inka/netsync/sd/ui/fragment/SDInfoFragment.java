@@ -34,7 +34,6 @@ import butterknife.ButterKnife;
 /**
  * Created by birdgang on 2017. 4. 18..
  */
-
 public class SDInfoFragment extends BaseFragment implements SDInfoMvpView {
 
     @Inject

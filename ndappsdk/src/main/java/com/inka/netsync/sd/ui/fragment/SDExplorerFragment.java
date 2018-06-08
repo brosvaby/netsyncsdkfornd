@@ -584,8 +584,15 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
 
     @Override
     public void onLoadToastMessage(String message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
 
+
+    /**
+     * get license
+     * @param contentId
+     * @param file
+     */
     @Override
     public void onRequestLicense(int contentId, File file) {
         try {
@@ -630,6 +637,12 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
         }
     }
 
+
+    /***
+     * check license
+     * @param contentId
+     * @param file
+     */
     @Override
     public void onResponseCheckLicenseValid(int contentId, File file) {
         mPresenter.checkSDLicense(getActivity(), contentId, file, mCertification);

@@ -89,12 +89,19 @@ public class SDExplorerPresenter<V extends SDExplorerMvpView> extends BasePresen
         try {
             ResponseNcgEntry responseNcgEntry = certification.checkNewSdCard();
             int resultCode = responseNcgEntry.getResultCode();
+            LogUtil.INSTANCE.info("birdgangacquirelicense", "checkSDLicense > resultCode : " + resultCode);
+
+            if (!responseNcgEntry.isExistCard()) {
+                getMvpView().onLoadToastMessage(context.getString(R.string.sd_business_logic_not_exist_hidden));
+                return;
+            }
 
             if (resultCode == NcgResponseCode.SUCCESS && Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT) {
                 getMvpView().onLoadOfflineAuthenticationDialog(contentId, file); // 인증 진행 확인
             } else {
                 responseNcgEntry = certification.checkLicense();
                 resultCode = responseNcgEntry.getResultCode();
+                LogUtil.INSTANCE.info("birdgangacquirelicense", "checkSDLicense > checkLicense() > resultCode : " + resultCode);
                 if (resultCode == NcgResponseCode.SUCCESS) {
                     getMvpView().onRequestLicense(contentId, file);
                 } else {
