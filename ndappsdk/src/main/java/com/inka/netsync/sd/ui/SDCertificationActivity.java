@@ -188,15 +188,34 @@ public class SDCertificationActivity extends BaseActivity implements SDCertifica
             int resultCode = responseNcgEntry.getResultCode();
             LogUtil.INSTANCE.info("birdganginit", "resultCode : " + resultCode + " , responseNcgEntry.isHasPallyconsd() : " + responseNcgEntry.isHasPallyconsd() + " , responseNcgEntry.isHasNotuse() : " + responseNcgEntry.isHasNotuse());
 
-            boolean existCard = responseNcgEntry.isExistCard();
-            if (existCard) {
+            if (resultCode == NcgResponseCode.SUCCESS) {
                 if (responseNcgEntry.isHasNotuse()) {
                     ActivityCalls.callOpenDocumentTree(this);
                 } else {
                     onLoadNextContentView();
                 }
-            } else {
-                Toast.makeText(this, getString(R.string.sd_business_logic_not_exist_hidden), Toast.LENGTH_SHORT).show();
+            }
+            else {
+                int errorCode = responseNcgEntry.getErrorCode();
+                LogUtil.INSTANCE.info("birdganginit", "errorCode : " + errorCode);
+                if (NcgResponseCode.SD_ERROR_NOT_EXIST_HIDDEN == errorCode) {
+                    Toast.makeText(this, getString(R.string.sd_business_logic_not_exist_hidden), Toast.LENGTH_SHORT).show();
+                }
+                else if (NcgResponseCode.SD_ERROR_DIFFERENT_DEVICEID == errorCode) {
+                    Toast.makeText(this, getString(R.string.sd_business_logic_different_deviceid), Toast.LENGTH_SHORT).show();
+                }
+                else if (NcgResponseCode.SD_ERROR_COPIED_FILE == errorCode) {
+                    Toast.makeText(this, getString(R.string.sd_business_logic_copied_file), Toast.LENGTH_SHORT).show();
+                }
+                else if (NcgResponseCode.SD_ERROR_DIFFERENT_SDCARD == errorCode) {
+                    Toast.makeText(this, getString(R.string.sd_business_logic_different_deviceid), Toast.LENGTH_SHORT).show();
+                }
+                else if (NcgResponseCode.SD_ERROR_DIFFERENT_HIDDEN == errorCode) {
+                    Toast.makeText(this, getString(R.string.sd_business_logic_decrypt_fail_card), Toast.LENGTH_SHORT).show();
+                }
+                else if (NcgResponseCode.SD_ERROR_CRASH_CARD == errorCode) {
+                    Toast.makeText(this, getString(R.string.sd_business_logic_crash_card), Toast.LENGTH_SHORT).show();
+                }
             }
         } catch (Exception e) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

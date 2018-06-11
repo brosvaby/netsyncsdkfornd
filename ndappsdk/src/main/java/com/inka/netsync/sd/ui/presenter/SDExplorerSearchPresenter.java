@@ -94,7 +94,35 @@ public class SDExplorerSearchPresenter<V extends SDExplorerSearchMvpView> extend
                 if (resultCode == NcgResponseCode.SUCCESS) {
                     getMvpView().onRequestLicense(contentId, file);
                 } else {
-                    getMvpView().onLoadToastMessage(context.getString(R.string.sd_business_logic_fail_to_device_certification)); // 인증 진행 확인
+                    int errorCode = responseNcgEntry.getErrorCode();
+                    LogUtil.INSTANCE.info("birdgangacquirelicense", "checkSDLicense > checkLicense() > resultCode : " + resultCode + " , errorCode : " + errorCode);
+                    if (resultCode == NcgResponseCode.SUCCESS) {
+                        getMvpView().onRequestLicense(contentId, file);
+                    } else {
+                        String message = "";
+                        if (NcgResponseCode.SD_ERROR_NOT_EXIST_HIDDEN == errorCode) {
+                            message = getDataManager().getContext().getString(R.string.sd_business_logic_not_exist_hidden);
+                        }
+                        else if (NcgResponseCode.SD_ERROR_DIFFERENT_DEVICEID == errorCode) {
+                            message = getDataManager().getContext().getString(R.string.sd_business_logic_different_deviceid);
+                        }
+                        else if (NcgResponseCode.SD_ERROR_COPIED_FILE == errorCode) {
+                            message = getDataManager().getContext().getString(R.string.sd_business_logic_copied_file);
+                        }
+                        else if (NcgResponseCode.SD_ERROR_DIFFERENT_SDCARD == errorCode) {
+                            message = getDataManager().getContext().getString(R.string.sd_business_logic_different_deviceid);
+                        }
+                        else if (NcgResponseCode.SD_ERROR_DIFFERENT_HIDDEN == errorCode) {
+                            message = getDataManager().getContext().getString(R.string.sd_business_logic_decrypt_fail_card);
+                        }
+                        else if (NcgResponseCode.SD_ERROR_CRASH_CARD == errorCode) {
+                            message = getDataManager().getContext().getString(R.string.sd_business_logic_crash_card);
+                        }
+                        else {
+                            message = getDataManager().getContext().getString(R.string.sd_business_logic_fail_to_device_certification);
+                        }
+                        getMvpView().onLoadToastMessage(message);
+                    }
                 }
             }
         }  catch (Exception e) {

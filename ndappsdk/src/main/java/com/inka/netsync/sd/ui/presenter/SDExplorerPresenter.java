@@ -84,6 +84,13 @@ public class SDExplorerPresenter<V extends SDExplorerMvpView> extends BasePresen
     }
 
 
+    /**
+     *
+     * @param context
+     * @param contentId
+     * @param file
+     * @param certification
+     */
     @Override
     public void checkSDLicense(Context context, int contentId, File file, Certification certification) {
         try {
@@ -101,11 +108,34 @@ public class SDExplorerPresenter<V extends SDExplorerMvpView> extends BasePresen
             } else {
                 responseNcgEntry = certification.checkLicense();
                 resultCode = responseNcgEntry.getResultCode();
-                LogUtil.INSTANCE.info("birdgangacquirelicense", "checkSDLicense > checkLicense() > resultCode : " + resultCode);
+                int errorCode = responseNcgEntry.getErrorCode();
+                LogUtil.INSTANCE.info("birdgangacquirelicense", "checkSDLicense > checkLicense() > resultCode : " + resultCode + " , errorCode : " + errorCode);
                 if (resultCode == NcgResponseCode.SUCCESS) {
                     getMvpView().onRequestLicense(contentId, file);
                 } else {
-                    getMvpView().onLoadToastMessage(context.getString(R.string.sd_business_logic_fail_to_device_certification)); // 인증 진행 확인
+                    String message = "";
+                    if (NcgResponseCode.SD_ERROR_NOT_EXIST_HIDDEN == errorCode) {
+                        message = getDataManager().getContext().getString(R.string.sd_business_logic_not_exist_hidden);
+                    }
+                    else if (NcgResponseCode.SD_ERROR_DIFFERENT_DEVICEID == errorCode) {
+                        message = getDataManager().getContext().getString(R.string.sd_business_logic_different_deviceid);
+                    }
+                    else if (NcgResponseCode.SD_ERROR_COPIED_FILE == errorCode) {
+                        message = getDataManager().getContext().getString(R.string.sd_business_logic_copied_file);
+                    }
+                    else if (NcgResponseCode.SD_ERROR_DIFFERENT_SDCARD == errorCode) {
+                        message = getDataManager().getContext().getString(R.string.sd_business_logic_different_deviceid);
+                    }
+                    else if (NcgResponseCode.SD_ERROR_DIFFERENT_HIDDEN == errorCode) {
+                        message = getDataManager().getContext().getString(R.string.sd_business_logic_decrypt_fail_card);
+                    }
+                    else if (NcgResponseCode.SD_ERROR_CRASH_CARD == errorCode) {
+                        message = getDataManager().getContext().getString(R.string.sd_business_logic_crash_card);
+                    }
+                    else {
+                        message = getDataManager().getContext().getString(R.string.sd_business_logic_fail_to_device_certification);
+                    }
+                    getMvpView().onLoadToastMessage(message);
                 }
             }
         }  catch (Exception e) {
@@ -117,6 +147,12 @@ public class SDExplorerPresenter<V extends SDExplorerMvpView> extends BasePresen
     public void sortListContent(List<ContentViewEntry> contentViewEntries) {
     }
 
+    /**
+     *
+     * @param contentId
+     * @param file
+     * @throws Ncg2Exception
+     */
     @Override
     public void requestAddLicense(int contentId, File file) throws Ncg2Exception {
         if (!FileUtil.existsFile(file.getPath())) {
@@ -139,7 +175,6 @@ public class SDExplorerPresenter<V extends SDExplorerMvpView> extends BasePresen
                         LogUtil.INSTANCE.info("birdgangobservable" , "throwable.getMessage() : " + throwable.getMessage());
                     }
                 });
-
     }
 
 
@@ -186,7 +221,7 @@ public class SDExplorerPresenter<V extends SDExplorerMvpView> extends BasePresen
                     // 파일 존재 유무 체크
                     String localFilePath = file.getAbsolutePath();
                     if (!FileUtil.existsFile(localFilePath)) {
-                        //Toast.makeText(context, context.getString(R.string.fragment_narmal_file_not_exist), Toast.LENGTH_SHORT).show();
+                        getMvpView().onLoadToastMessage(getDataManager().getContext().getString(R.string.message_for_toast_file_not_exist));
                         return addLicenseEntry;
                     }
 
