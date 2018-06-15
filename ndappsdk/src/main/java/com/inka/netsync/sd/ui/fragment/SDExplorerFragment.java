@@ -514,6 +514,10 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
 
 
     public ContentItemClickListener mContentItemClickListener = new ContentItemClickListener() {
+        /**
+         * on click directory
+         * @param view
+         */
         @Override
         public void onItemCategoryClick(View view) {
             try {
@@ -532,6 +536,10 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
             }
         }
 
+        /**
+         * on click file or media
+         * @param view
+         */
         @Override
         public void onItemClick(View view) {
             try {
@@ -602,6 +610,11 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
         }
     }
 
+
+    /**
+     * ready update license and play.
+     * @param addLicenseEntry
+     */
     @Override
     public void onPrepareExecutePlay(AddLicenseEntry addLicenseEntry) {
         try {
@@ -648,6 +661,10 @@ public class SDExplorerFragment extends BaseFragment implements SDExplorerStackM
         mPresenter.checkSDLicense(getActivity(), contentId, file, mCertification);
     }
 
+    /**
+     * override from child
+     * @param playerEntry
+     */
     @Override
     public void onLoadPlaybackActivity(PlayerEntry playerEntry) {
         Toast.makeText(getActivity(), "Must be override 'onLoadPlaybackActivity' method. for playback", Toast.LENGTH_SHORT).show();

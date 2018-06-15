@@ -842,14 +842,11 @@ public class PlayerActivity extends BaseActivity implements PlayerMvpView {
                 LogUtil.INSTANCE.error(TAG, e);
             }
         }
-
         return result;
     }
 
-
     private void changeBrightness(float delta) throws Exception {
         LogUtil.INSTANCE.info("birdganglifecycl" , "PlayerActivity > changeBrightness");
-
         WindowManager.LayoutParams lp = getWindow().getAttributes();
         float brightness = Math.min(Math.max(lp.screenBrightness + delta, 0.01f), 1f);
         setWindowBrightness(brightness);

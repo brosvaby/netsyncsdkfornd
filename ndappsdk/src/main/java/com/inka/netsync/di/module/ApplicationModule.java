@@ -84,15 +84,4 @@ public class ApplicationModule {
         return appApiHelper;
     }
 
-
-//    @Provides
-//    @Singleton
-//    CalligraphyConfig provideCalligraphyDefaultConfig() {
-//        return new CalligraphyConfig.Builder()
-//                .setDefaultFontPath("fonts/source-sans-pro/SourceSansPro-Regular.ttf")
-//                .setFontAttrId(R.attr.fontPath)
-//                .build();
-//    }
-
-
 }

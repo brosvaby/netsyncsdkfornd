@@ -252,7 +252,6 @@ public class SDSettingFragment extends BaseFragment implements SDSettingMvpView 
         }
     };
 
-
     public void itemSwitch (int id, boolean enable) {
         if (id == SettingMenuViewEntry.ID_GESTURE_ALLOW) {
             SettingControler.getDefault().setEnableGestureOnPlayer(enable);
@@ -262,7 +261,6 @@ public class SDSettingFragment extends BaseFragment implements SDSettingMvpView 
             Toast.makeText(getActivity(), "Currently not supported.", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     public void itemClick(SettingMenuViewEntry settingMenuEntry) {
         if (null == settingMenuEntry) {
@@ -294,149 +292,6 @@ public class SDSettingFragment extends BaseFragment implements SDSettingMvpView 
             Extractor.getDefault().extractDatabaseFile(getActivity(), databaseLocation, getAppName());
         }
     }
-
-//    public void itemClick(SettingMenuViewEntry settingMenuEntry) {
-//        if (null == settingMenuEntry) {
-//            return;
-//        }
-//
-//        long commonId = settingMenuEntry.getId();
-//
-//        if (commonId == SettingMenuViewEntry.ID_PLAYER) {
-//            showChangePlayerDialog();
-//        }
-//        if (commonId == SettingMenuViewEntry.ID_SWXPLAY_ALLOW) {
-//            showChangeDecoderDialog();
-//        }
-//        else if (commonId == SettingMenuViewEntry.ID_GESTURE_ALLOW) {
-//            settingMenuEntry.getValue();
-//        }
-//        else if (commonId == SettingMenuViewEntry.ID_BASIC_INFO_APP_VERSION) {
-//            if (settingMenuEntry.isEnableMarketUpdate()) {
-//                Uri uri = Uri.parse("market://details?id=" + getAppPackage());
-//                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-//                getActivity().startActivity(intent);
-//            }
-//        }
-//        else if(commonId == SettingMenuViewEntry.ID_BASIC_FNC_PRIVACY) {
-//            String privacyPolicyUrl = BaseConfigurationPerSite.getInstance().getPrivacyPolicyUrl();
-//            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(privacyPolicyUrl));
-//            startActivity(intent);
-//        }
-//        else if (commonId == SettingMenuViewEntry.ID_BASIC_FNC_EXTRACT_DATABASE) {
-//            String databaseLocation = BaseApplication.getContext().getDatabasePath(MetaData.DATABASE_NAME).getPath();
-//            Extractor.getDefault().extractDatabaseFile(getActivity(), databaseLocation, getAppName());
-//        }
-//    }
-
-
-//    public void showChangePlayerDialog() {
-//        try {
-//            // origin source
-//            String[] strings = getResources().getStringArray(R.array.array_setting_check_player);
-//
-//            int value = PreferencesCacheHelper.getPreferenceValueForInteger(PreferencesCacheHelper.SETTING_PLAYER, PreferencesCacheHelper.VISUALON_PLAYER);
-//            LogUtil.INSTANCE.info("birdgangbasesettingdialog" , "showChangePlayerDialog > value : " + value);
-//
-//            List<SingleCheckViewEntry> singleSelectViewEntries = new ArrayList<>();
-//            singleSelectViewEntries.add(new SingleCheckViewEntry(PreferencesCacheHelper.BASE_PLAYER, strings[0], (value == PreferencesCacheHelper.BASE_PLAYER) ? true : false));
-//            singleSelectViewEntries.add(new SingleCheckViewEntry(PreferencesCacheHelper.VISUALON_PLAYER, strings[1], (value == PreferencesCacheHelper.VISUALON_PLAYER) ? true : false));
-//
-//            new SingleChoiceWithDescriptionAlertDialog(getActivity())
-//                    .setDataSource(singleSelectViewEntries)
-//                    .setCanceled(true)
-//                    .setTitleText(getResources().getString(R.string.setting_info_player))
-//                    .setDescriptionText(getResources().getString(R.string.setting_description_native_player))
-//                    .setConfirmText(getString(R.string.dialog_ok))
-//                    .setConfirmClickListener(new SingleChoiceWithDescriptionAlertDialog.OnSweetClickListener() {
-//                        @Override
-//                        public void onClickListContent(SingleChoiceWithDescriptionAlertDialog sDialog) {
-//                            try {
-//                                int selectedId = sDialog.getSelectedId();
-//                                LogUtil.INSTANCE.info("birdgangbasesettingdialog" , "onClick > selectedId : " + selectedId);
-//
-//                                PreferencesCacheHelper.setPreferenceValueForInteger(PreferencesCacheHelper.SETTING_PLAYER, selectedId);
-//                                for (SettingMenuViewEntry entry : mSettingMenuEntries) {
-//                                    if (entry.getId() == SettingMenuViewEntry.ID_PLAYER) {
-//                                        if (sDialog.getSelectedId() == 0) {
-//                                            entry.setValue(getResources().getString(R.string.setting_player_base));
-//                                        } else {
-//                                            entry.setValue(getResources().getString(R.string.setting_player_double_speed));
-//                                        }
-//                                        mListSettingAdapter.updateSettingMenus(SettingMenuViewEntry.ID_PLAYER, entry);
-//                                    }
-//                                }
-//                            } catch (Exception e) {
-//                                LogUtil.INSTANCE.error(TAG, e);
-//                            } finally {
-//                                sDialog.cancel();
-//                            }
-//                        }
-//
-//                        @Override
-//                        public void onClick(SingleChoiceWithDescriptionAlertDialog sDialog) {}
-//                    })
-//                    .show();
-//
-//        } catch (Exception e) {
-//            LogUtil.INSTANCE.error(TAG, e);
-//        }
-//    }
-//
-//
-//    // SwXPlay 다이얼로그
-//    public void showChangeDecoderDialog() {
-//        try {
-//            // origin source
-//            String[] strings = getResources().getStringArray(R.array.array_setting_check_decoder);
-//
-//            int value = PreferencesCacheHelper.getPreferenceValueForInteger(PreferencesCacheHelper.SETTING_DECODER, PreferencesCacheHelper.DECODER_HARDWARE);
-//            LogUtil.INSTANCE.info("birdgangbasesettingdialog" , "showChangeDecoderDialog > value : " + value);
-//
-//            List<SingleCheckViewEntry> singleSelectViewEntries = new ArrayList<>();
-//            singleSelectViewEntries.add(new SingleCheckViewEntry(PreferencesCacheHelper.DECODER_HARDWARE, strings[0], (value == PreferencesCacheHelper.DECODER_HARDWARE) ? true : false));
-//            singleSelectViewEntries.add(new SingleCheckViewEntry(PreferencesCacheHelper.DECODER_SOFTWARE, strings[1], (value == PreferencesCacheHelper.DECODER_SOFTWARE) ? true : false));
-//
-//            new SingleChoiceWithDescriptionAlertDialog(getActivity())
-//                    .setDataSource(singleSelectViewEntries)
-//                    .setCanceled(true)
-//                    .setTitleText(getResources().getString(R.string.setting_info_decoder))
-//                    .setDescriptionText(getResources().getString(R.string.setting_description_decoder))
-//                    .setConfirmText(getString(R.string.dialog_ok))
-//                    .setConfirmClickListener(new SingleChoiceWithDescriptionAlertDialog.OnSweetClickListener() {
-//                        @Override
-//                        public void onClickListContent(SingleChoiceWithDescriptionAlertDialog sDialog) {
-//                            try {
-//                                int selectedId = sDialog.getSelectedId();
-//                                LogUtil.INSTANCE.info("birdgangbasesettingdialog" , "onClick > selectedId : " + selectedId);
-//                                PreferencesCacheHelper.setPreferenceValueForInteger(PreferencesCacheHelper.SETTING_DECODER, selectedId);
-//
-//                                for (SettingMenuViewEntry entry : mSettingMenuEntries) {
-//                                    if (entry.getId() == SettingMenuViewEntry.ID_SWXPLAY_ALLOW) {
-//                                        if (sDialog.getSelectedId() == 0) {
-//                                            entry.setValue(getResources().getString(R.string.setting_decoder_hardware));
-//                                        } else {
-//                                            entry.setValue(getResources().getString(R.string.setting_decoder_software));
-//                                        }
-//                                        mListSettingAdapter.updateSettingMenus(SettingMenuViewEntry.ID_SWXPLAY_ALLOW, entry);
-//                                    }
-//                                }
-//                            } catch (Exception e) {
-//                                LogUtil.INSTANCE.error(TAG, e);
-//                            } finally {
-//                                sDialog.cancel();
-//                            }
-//                        }
-//
-//                        @Override
-//                        public void onClick(SingleChoiceWithDescriptionAlertDialog sDialog) {}
-//                    })
-//                    .show();
-//        } catch (Exception e) {
-//            LogUtil.INSTANCE.error(TAG, e);
-//        }
-//    }
-
 
     public String getAppName() {
         return provideApplicationName();

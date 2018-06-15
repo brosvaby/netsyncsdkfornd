@@ -69,7 +69,7 @@ public class SDExplorerPresenter<V extends SDExplorerMvpView> extends BasePresen
             }
             else if (NcgValidationCheck.ScreenRecorderDetected == checkLicenseValid) {
                 String packageName = NetSyncSdkHelper.getDefault().getScreenRecorderDetectedPackageName(path);
-                getMvpView().onLoadToastMessage(context.getString(R.string.license_screen_recorder_detected, packageName));
+                getMvpView().onLoadToastMessage(getDataManager().getContext().getString(R.string.license_screen_recorder_detected, packageName));
             }
             else {
                 String contentIdInHeaderInformation = NetSyncSdkHelper.getDefault().getContentId(path);
@@ -99,7 +99,7 @@ public class SDExplorerPresenter<V extends SDExplorerMvpView> extends BasePresen
             LogUtil.INSTANCE.info("birdgangacquirelicense", "checkSDLicense > resultCode : " + resultCode);
 
             if (!responseNcgEntry.isExistCard()) {
-                getMvpView().onLoadToastMessage(context.getString(R.string.sd_business_logic_not_exist_hidden));
+                getMvpView().onLoadToastMessage(getDataManager().getContext().getString(R.string.sd_business_logic_not_exist_hidden));
                 return;
             }
 
